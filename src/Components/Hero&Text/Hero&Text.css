@@ -1,0 +1,120 @@
+/* Components/HeroText/HeroText.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between; 
+    padding: 6rem;
+    margin-top: 5rem;
+    width: 100%;
+    gap: 20rem; 
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    text-align: right; 
+     align-self: flex-end; 
+}
+
+.text-content {
+    
+    text-align: left; 
+    align-self: flex-start; 
+}
+
+.title {
+    font-family: 'Inter', sans-serif; 
+    font-size: 4.5rem; 
+    font-weight: 700;
+    color: rgb(240, 98, 67);
+    margin-bottom: 2rem;
+    text-align: left; 
+
+}
+
+.description {
+    font-family: 'Inter', sans-serif; 
+    font-size: 1.6rem; 
+    color: #374151;
+    text-align: left; 
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-align: left;
+    max-width: 100%;
+}
+
+.image-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.image {
+    width: 700px; 
+    height: 600px; 
+    border-radius: 16px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 3rem 1.5rem;
+        align-items: center;
+    }
+    
+    .reverse {
+        flex-direction: column;
+    }
+    
+    .text-content {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+        text-align: center; 
+        line-height: 1.6;
+    }
+    
+    .image {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+}

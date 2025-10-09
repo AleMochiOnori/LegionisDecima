@@ -1,0 +1,56 @@
+.Wrapper-Home{
+    display: flex;
+    flex-direction: column;
+}
+
+.Section1 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.fotoPrincipale {
+    background-image: url("../../assets/main.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    text-align: center;
+    position: relative; /* Per l'overlay */
+}
+
+
+
+
+/* Overlay scuro per opacizzare l'immagine */
+.fotoPrincipale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.475); /* Opacità nera - regola il valore (0.5 = 50%) */
+    z-index: 1;
+}
+
+.containerTitle {
+    position: relative; /* Porta il contenuto sopra l'overlay */
+    z-index: 2;
+}
+
+.Title {
+    color: rgb(255, 255, 255);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}

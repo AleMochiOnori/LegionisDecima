@@ -1,0 +1,41 @@
+.Header-Container{
+    height: 3.5rem;
+    width: 100%;
+    position: sticky;
+    background-color: rgb(240, 98, 67);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5rem;
+}
+
+.Right-Header-Content {
+    margin-right: 12rem;
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+    color : white;
+}
+
+.Left-Header-Content {
+    margin-left: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logInSession {
+    display: flex;
+}
+
+
+.logoCombat {
+    width: 120px;
+    border-radius: 50%;
+}
+
+
+.Section1 {
+    display: flex;
+
+}

@@ -1,0 +1,148 @@
+.testoPrincipale {
+    color :black;
+    font-size: 2.2rem;
+    margin-top: 100px;
+    padding: 5rem;
+}
+
+.MidSection {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+/* AboutUs.css */
+.Container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.testoPrincipale {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #374151;
+    text-align: justify;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+.slider-section {
+    position: relative;
+    margin: 3rem 0;
+}
+
+.slider-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #dc2626;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cards-slider {
+    flex: 1;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.cards-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.slider-track {
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 0.5rem;
+    min-width: min-content;
+}
+
+.slider-arrow {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #374151;
+    flex-shrink: 0;
+}
+
+.slider-arrow:hover {
+    background: #dc2626;
+    color: white;
+    border-color: #dc2626;
+    transform: scale(1.1);
+}
+
+.slider-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.slider-arrow:disabled:hover {
+    background: white;
+    color: #374151;
+    border-color: #e5e7eb;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .Container {
+        padding: 1rem;
+    }
+    
+    .testoPrincipale {
+        font-size: 1rem;
+        padding: 0;
+    }
+    
+    .slider-title {
+        font-size: 2rem;
+    }
+    
+    .slider-container {
+        gap: 0.5rem;
+    }
+    
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .slider-track {
+        gap: 1rem;
+        padding: 0.5rem 0.25rem;
+    }
+}
+
+
+.slider-track > * {
+    flex: 0 0 auto;
+    width: 350px; /* Larghezza fissa per le card */
+}
+
+/* Animazione per le card */
+.slider-track > * {
+    transition: transform 0.3s ease;
+}
+
+.slider-track > *:hover {
+    transform: translateY(-5px);
+}
