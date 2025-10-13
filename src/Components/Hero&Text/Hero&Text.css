@@ -2,78 +2,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 .container {
-    display: flex;
-    align-items: flex-start; 
-    justify-content: space-between; 
-    padding: 6rem;
-    margin-top: 5rem;
-    width: 100%;
-    gap: 20rem; 
-    max-width: 2000px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  width: 100%;
+  gap: 15rem;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow-x: hidden; /* evita scorrimento laterale */
 }
+
 
 .reverse {
     flex-direction: row-reverse;
-    text-align: right; 
-     align-self: flex-end; 
 }
 
+
+
 .text-content {
-    
-    text-align: left; 
-    align-self: flex-start; 
+    text-align: center;
+    max-width: 600px;
 }
 
 .title {
     font-family: 'Inter', sans-serif; 
-    font-size: 4.5rem; 
+    font-size: 3rem; /* ridotto da 4.5rem */
     font-weight: 700;
     color: rgb(240, 98, 67);
-    margin-bottom: 2rem;
-    text-align: left; 
-
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .description {
     font-family: 'Inter', sans-serif; 
-    font-size: 1.6rem; 
+    font-size: 1.1rem; /* ridotto da 1.6rem */
     color: #374151;
-    text-align: left; 
-    line-height: 1.7;
+    line-height: 1.6;
     font-weight: 400;
     letter-spacing: -0.01em;
-    text-align: left;
-    max-width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 .image-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
-.image {
-    width: 700px; 
-    height: 600px; 
-    border-radius: 16px; 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+.image { 
+    width: 500px; /* ridotto da 700px */
+    height: 420px; /* ridotto da 600px */
+    border-radius: 14px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); 
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .image:hover {
     transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
+@media (min-width : 1920px) {
+    .image {
+        width: 600px;
+        height: 500px;
+    }
 
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+        gap: 20rem;
+    }
+}
+
+@media (max-width : 1920px) {
+    .image {
+        width: 600px;
+        height: 500px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .description{
+        font-size : 1.5rem
+    }
+    .container {
+        gap: 15rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .container {
+        gap: 6rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .image {
+        width: 420px;
+        height: 360px;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         gap: 3rem;
-        padding: 3rem 1.5rem;
-        align-items: center;
     }
     
     .reverse {
@@ -87,34 +138,33 @@
     
     .title {
         font-size: 1.8rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
     }
     
     .description {
-        font-size: 1.3rem;
-        text-align: center; 
+        font-size: 1rem;
         line-height: 1.6;
     }
     
-    .image {
-        width: 100%;
-        max-width: 400px;
-        height: 300px;
-    }
 }
 
+/* Small mobile */
 @media (max-width: 480px) {
     .container {
-        padding: 2rem 1rem;
         gap: 2rem;
     }
     
     .title {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     
     .description {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 350px;
+        height: 260px;
     }
 }

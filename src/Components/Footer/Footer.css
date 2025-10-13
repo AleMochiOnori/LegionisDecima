@@ -1,0 +1,134 @@
+.footer-container {
+  background: #1a1919;
+  color: #f1f1f1;
+  padding: 50px 20px 20px;
+  font-family: "Inter", sans-serif;
+  margin-top: 20rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* LOGO */
+.footer-logo {
+  flex: 1 1 220px;
+  flex-direction: column;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.textSize {
+    font-size: 1.3rem;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  color: #e63946;
+  margin-bottom: 5px;
+}
+
+.footer-logo p {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+/* SEZIONI */
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  color: #e63946;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-left: 3px solid #e63946;
+  padding-left: 10px;
+  margin-bottom: 3.5rem;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #eee;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #e63946;
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-icons a {
+  background: #222;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #e63946;
+  color: white;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    align-items: center;
+  }
+
+  .footer-section h3 {
+    border: none;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

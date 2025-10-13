@@ -4,6 +4,7 @@ import "./Home.css"
 import BoxeImage from "../../assets/pugilato.jpeg"
 import Thai from "../../assets/thai.jpg"
 import Kick from "../../assets/kick.jpeg"
+import Main from "./../../assets/ChatGPT Image 13 ott 2025, 14_46_50.png"
 
 const Home: React.FC = () => {
     return (
@@ -11,12 +12,12 @@ const Home: React.FC = () => {
             <div className="Section1">
                 <div className="fotoPrincipale">
                     <div className="containerTitle">
-                        <h1 className="Title">LEGIONIS DECIMA TORRINO</h1>              
+                        <img className="PrimaryImage" src={Main} alt="" />
                     </div>
                 </div>
             </div>
         
-            <div className="Section2Boxe">
+            <div style={{marginTop : "10rem"}} className="Section2Boxe marging">
                 <HeroText 
                     image={BoxeImage}
                     title="Pugilato"
@@ -24,7 +25,7 @@ const Home: React.FC = () => {
                     Dietro ai guantoni e ai colpi, c’è una profonda etica fatta di sacrificio, disciplina e autocontrollo."
                 />
             </div>
-            <div className="Section3">
+            <div className="Section3 marging">
                 <HeroText 
                     image={Thai}
                     title="Muay Thai"

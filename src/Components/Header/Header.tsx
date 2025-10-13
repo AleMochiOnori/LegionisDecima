@@ -9,8 +9,12 @@ const Header = () => {
                     <Link to={`/`}>
                         <img className="logoCombat" src={logoCombat} alt="" />
                     </Link>
+                    <h2>Legionis Decima Torrino</h2>
                 </div>
                 <div className="Right-Header-Content">
+                      <Link to={`/`}>
+                        <p>Home</p>
+                    </Link>
                     <Link to={`/aboutUs`}>
                         <p>Su di Noi</p>
                     </Link>

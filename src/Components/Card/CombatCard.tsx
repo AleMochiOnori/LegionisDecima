@@ -4,10 +4,12 @@ import "./CombatCard.css"
 interface CardProps {
   image: string;
   title: string;
+  subtitle : string
   text: string;
+
 }
 
-const CombatCard: React.FC<CardProps> = ({ image, title, text }) => {
+const CombatCard: React.FC<CardProps> = ({ image, title, subtitle, text }) => {
   return (
     <div className="combat-card">
       <div className="card-image-container">
@@ -17,6 +19,7 @@ const CombatCard: React.FC<CardProps> = ({ image, title, text }) => {
       
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
+        <p className='sottoTitolo'>{subtitle}</p>
         <p className="card-text">{text}</p>
       </div>
     </div>

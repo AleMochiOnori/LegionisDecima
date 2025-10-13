@@ -1,8 +1,8 @@
 .Header-Container{
-    height: 3.5rem;
+    height: 1.5rem;
     width: 100%;
     position: sticky;
-    background-color: rgb(240, 98, 67);
+    background-color: rgb(38, 36, 36);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@
 
 
 .logoCombat {
-    width: 120px;
+    width: 100px;
     border-radius: 50%;
 }
 
