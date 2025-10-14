@@ -16,8 +16,12 @@ const Header = () => {
                         <p>Home</p>
                     </Link>
                     <Link to={`/aboutUs`}>
-                        <p>Su di Noi</p>
+                        <p>Staff</p>
                     </Link>
+                    <Link to={`/courses`}>
+                        <p>Orari corsi</p>
+                    </Link>
+                    
                     <Link to={`/contacts`}>
                         <p>Contatti</p>
                     </Link>

@@ -26,10 +26,7 @@ const AboutUs = () => {
     return (
         <>
             <div className="ContainerAbout">
-                <div className="testoPrincipale">
-                    Legionis Decima Torrino è molto più di una palestra: è un luogo dove corpo, mente e spirito si forgiano ogni giorno. Situata nei pressi del Torrino Sporting Center, nel cuore di Roma Sud, la scuola si dedica all'insegnamento del pugilato, della kickboxing/K-1 e della muay thai con passione, rigore e attenzione verso ogni studente.
-                    Ogni lezione è strutturata per migliorare tecnica, resistenza e strategia, ma senza dimenticare il rispetto reciproco e la disciplina, pilastri fondamentali nella nostra pratica. Legionis Decima Torrino accoglie principianti e atleti esperti, offrendo un ambiente inclusivo che spinge ciascuno a superare i propri limiti, migliorarsi, e crescere anche dentro e fuori dal ring.
-                </div>
+              
                 
                 <div className="slider-section">
                     <h2 style={{marginBottom : "5rem"}} className="slider-title">I Nostri Istruttori</h2>

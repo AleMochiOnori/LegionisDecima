@@ -4,10 +4,52 @@
     align-items: center;
     margin-top: 10rem;
     gap: 10rem;
-    padding: 10rem ;
+    padding: 10rem;
 }
 
 .Mail {
     display: flex;
-    flex-direction: start;
+    flex-direction: column; 
+}
+
+.SocialIcons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+
+.instaSvg {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.instaSvg:hover {
+    cursor: pointer;
+    transform: translateY(-5px) scale(1.1);
+}
+
+
+.youtubeSvg {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+
+.youtubeSvg:hover {
+    cursor: pointer;
+    transform: translateY(-5px) scale(1.1);
+}
+
+
+.faceBook{
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+
+.faceBook:hover{
+    cursor: pointer;
+    transform: translateY(-5px) scale(1.1);
 }

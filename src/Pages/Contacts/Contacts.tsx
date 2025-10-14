@@ -1,6 +1,9 @@
 import EmailForm from "../../Components/EmailForm/EmailForm";
 import "./Contacts.css"
-const Contacts = () => {
+import Instagram from "../../assets/instagram-svgrepo-com.svg"
+import Youtube from "../../assets/youtube-svgrepo-com.png"
+import Facebook from "../../assets/facebook-svgrepo-com.png"
+ const Contacts = () => {
     return (
         <>
         <div className="Container">
@@ -9,7 +12,12 @@ const Contacts = () => {
             </div>
         
             <div>
-                <p style={{color : "black"}}>Seguici Anche Sui Social</p>
+                <p style={{color : "black" , fontSize : "2rem" , fontWeight : "600"}}>Seguici Anche Sui Social</p>
+                <div className="SocialIcons">
+                    <img className="instaSvg" src={Instagram} alt="" />
+                    <img className="youtubeSvg" src={Youtube} alt="" />
+                    <img className="faceBook" src={Facebook} alt="" />
+                </div>
             </div>
         </div>
         </>

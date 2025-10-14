@@ -7,6 +7,7 @@ import Contacts from "../src/Pages/Contacts/Contacts" // Crea questi componenti
 import Login from "./Pages/LogIn/LogIn"
 import Register from "./Pages/Register/Register"
 import Footer from './Components/Footer/Footer'
+import Courses from './Pages/Courses/Courses'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

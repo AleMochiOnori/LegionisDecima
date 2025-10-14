@@ -8,6 +8,18 @@
     flex-direction: column;
 }
 
+.testoPrincipale {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #374151;
+    text-align: justify;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+    margin-top: 7rem;
+    max-width: 1600PX;
+    margin: 0 auto;
+}
 
 .fotoPrincipale {
     background-image: url("../../assets/main.jpeg");
@@ -64,5 +76,16 @@
 @media (max-width : 1024px) {
     .Title {
         font-size: 3.5rem;
+    }
+
+    .PrimaryImage{
+        width: 350px;
+    }
+}
+
+@media (max-width : 480px) {
+
+    .PrimaryImage{
+        width: 250px;
     }
 }

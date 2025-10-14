@@ -1,0 +1,193 @@
+.schedule-container {
+  max-width: 100%;
+  margin: 3rem auto;
+  padding: 3rem;
+  border-radius: 1%;
+  box-shadow: 0 8px 24px rgba(11, 22, 40, 0.06);
+  text-align: center;
+  background-color: #fafafa;
+  overflow-x: auto; 
+}
+
+
+.schedule-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #111827;
+}
+
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin: 0 auto;
+}
+
+
+.schedule-table th {
+  background-color: #111827;
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+
+.schedule-table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #e6e9ee;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal; /
+}
+
+
+.course-name {
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: left;
+  padding-left: 22px;
+  width: 220px;
+  color: black;
+}
+
+.times-cell {
+  min-width: 140px;
+}
+
+.course-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; 
+  justify-content: center;
+}
+
+
+.course-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(2, 6, 23, 0.06);
+  width: 70%;
+}
+
+/* Ora in evidenza */
+.pill-time {
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+/* Maestro sotto */
+.pill-coach {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+
+.empty-slot {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+
+.legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.legend-swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(2, 6, 23, 0.06);
+}
+
+.legend-label {
+  text-transform: capitalize;
+}
+
+
+@media (max-width: 820px) {
+  .schedule-container {
+    padding: 1.5rem;
+  }
+
+  .schedule-table {
+    width: 100%;
+    table-layout: auto;
+    overflow-x: auto; 
+    display: block;   
+  }
+
+  .schedule-table thead {
+    display: table-header-group; 
+  }
+
+  .schedule-table tbody {
+    display: table-row-group; 
+  }
+
+  .schedule-table tr {
+    display: table-row;
+  }
+
+  .course-name {
+    width: 100%;
+    padding-left: 0;
+    font-size: 1rem;
+  }
+
+  .times-cell {
+    min-width: 80px; 
+  }
+
+  .course-stack {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+  }
+
+  .course-pill {
+    width: 100%;
+    max-width: calc(100vw / 3); 
+    min-width: 70px;            
+    font-size: 0.85rem;         
+    padding: 8px 10px;
+  }
+
+  .pill-time {
+    font-size: 0.88rem;
+  }
+
+  .pill-coach {
+    font-size: 0.75rem;
+  }
+}
+
