@@ -11,6 +11,10 @@
 body {
   font-family: var(--font-primary);
 }
+
+body {
+  padding-top: 100px; /* altezza della tua header */
+}
 .logo {
   height: 6em;
   padding: 1.5em;

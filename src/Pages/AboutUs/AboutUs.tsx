@@ -7,27 +7,39 @@ import Matteo from "../../assets/matteo.jpg"
 import Giuseppe from "../../assets/Giuseppe.png"
 import Leandro from "../../assets/leandro.jpg"
 import Caterina from "../../assets/Caterina.png"
+import Francesco from "../../assets/Francesco.jpg"
 
 const AboutUs = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
-
+    const width = window.innerWidth
     const scrollLeft = () => {
         if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: -600, behavior: 'smooth' });
+            
+            if (width > 1130) {
+                sliderRef.current.scrollBy({ left: -1050, behavior: 'smooth' });
+            }
+            if ( width <= 1130) {
+                sliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+            }
+            
         }
     };
 
     const scrollRight = () => {
         if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: 600, behavior: 'smooth' });
+            if (width > 1130) {
+                sliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
+               
+            }
+            if ( width <= 1130) {
+                sliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+            }
         }
     };
 
     return (
         <>
             <div className="ContainerAbout">
-              
-                
                 <div className="slider-section">
                     <h2 style={{marginBottom : "5rem"}} className="slider-title">I Nostri Istruttori</h2>
                     
@@ -70,13 +82,18 @@ const AboutUs = () => {
                                     subtitle='MuayThai Corso base'
                                     text="Leandro Cosentino è un insegnante specializzato nelle basi della Muay Thai, conosciuto per la chiarezza pedagogica e per il modo in cui rende accessibile anche ai principianti una disciplina complessa. "
                                 />
-                                 <CombatCard
+                                <CombatCard
                                     image={Caterina}
                                     title="Caterina Lanza"
                                     subtitle='Gym Boxe Femminile'
                                     text="Caterina Lanza è allenatrice di boxe dedicata al femminile, con la capacità di comprendere non solo la tecnica, ma anche le esigenze specifiche di chi si approccia alla boxe in un contesto tutto al femminile."
                                 />
-                                {/* Puoi aggiungere altre card qui se necessario */}
+                                <CombatCard
+                                    image={Francesco}
+                                    title="Francesco Loreti"
+                                    subtitle='Avvio Combat'
+                                    text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato, dedicato a tutti coloro che muovono i primi passi in questi mondi. Con empatia e precisione, insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
+                                />
                             </div>
                         </div>
                         

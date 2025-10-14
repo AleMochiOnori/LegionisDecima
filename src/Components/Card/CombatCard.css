@@ -115,18 +115,6 @@
   transform: translateX(3px);
 }
 
-/* ======== VARIANTI COLORE ======== */
-.combat-card.martial-arts {
-  border-top: 3px solid #dc2626;
-}
-
-.combat-card.boxing {
-  border-top: 3px solid #2563eb;
-}
-
-.combat-card.mma {
-  border-top: 3px solid #059669;
-}
 
 /* ======== EFFETTO PROFONDITÀ ======== */
 .combat-card::before {
@@ -171,7 +159,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .combat-card {
-    width: 550px;
+    width: 350px !important;
     margin: 1rem auto;
   }
 
@@ -199,7 +187,7 @@
 
 @media (max-width: 1920px) {
   .combat-card {
-    max-width: 360px;
+     width: 380px !important;
   }
 
   .card-image-container {
@@ -207,11 +195,11 @@
   }
 
   .card-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .card-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .card-content {
@@ -219,10 +207,15 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  
+}
+
 /* ======== SCHERMI MOLTO GRANDI (1920px+) ======== */
 @media (min-width: 1920px) {
   .combat-card {
-    max-width: 340px;
+    width: 380px !important;
   }
 
   .card-image-container {

@@ -12,6 +12,8 @@ import Courses from './Pages/Courses/Courses'
 function App() {
   return (
     <>
+
+      
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

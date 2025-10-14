@@ -26,7 +26,7 @@
 
 .slider-title {
     font-family: 'Inter', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #dc2626;
     text-align: center;
@@ -37,7 +37,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .cards-slider {
@@ -54,14 +54,14 @@
 
 .slider-track {
     display: flex;
-    gap: 5rem;
+    gap: 9rem;
     padding: 1rem 0.5rem;
     min-width: min-content;
 }
 
 .slider-arrow {
     background: white;
-    border: 2px solid #e5e7eb;
+    border: 2px solid #858585;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -93,7 +93,26 @@
     transform: none;
 }
 
+
+
+
 /* Responsive */
+
+@media (max-width: 1130px) {
+    .ContainerAbout {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0.2rem;
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 3rem;
+        padding: 1rem 0.5rem;
+        min-width: min-content;
+}
+}
+
 @media (max-width: 768px) {
     .Container {
         padding: 1rem;
@@ -121,6 +140,27 @@
         gap: 1rem;
         padding: 0.5rem 0.25rem;
     }
+}
+
+
+@media (max-width : 550px) {
+    .slider-container{
+        width: 100%;
+    }
+        .slider-arrow {
+        display: none;
+    }
+    
+    .slider-track {
+        gap: 1rem;
+        padding: 0.5rem 0.25rem;
+    }
+
+    .ContainerAbout {
+        padding: 1rem;
+    }
+    
+    
 }
 
 
