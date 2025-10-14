@@ -16,8 +16,9 @@ interface CourseSchedule {
 const COURSE_COLORS: Record<string, string> = {
   "muay thai / kickboxing": "#e74c3c",
   "gym boxe": "#3498db",
-  "avvio combat": "#f1c40f",
+  "avvio combat": "#6B21A8",
   "athletic training": "#27ae60",
+  "gym boxe femminile" : "#800020"
 };
 
 const CoursesSchedule = () => {
@@ -30,7 +31,7 @@ const CoursesSchedule = () => {
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
         tuesday: [
-          { range: "10:00 - 11:00", coach: "Leandro Cosentino" },
+          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
           { range: "20:00 - 21:00", coach: "Giacomo Ratti" },
         ],
         wednesday: [
@@ -38,7 +39,7 @@ const CoursesSchedule = () => {
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
         thursday: [
-          { range: "10:00 - 11:00", coach: "Leandro Cosentino" },
+          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
           { range: "20:00 - 21:00", coach: "Giacomo Ratti" },
         ],
         friday: [
@@ -46,7 +47,9 @@ const CoursesSchedule = () => {
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
         saturday : [
-            {range : "12:00 - 13:00" , coach : "Alessio Marabucci"}
+            { range : "11:00 - 12:00" , coach : "Giacomo Ratti"},
+            { range : "12:00 - 13:00" , coach : "Leandro Cosentino"}
+
         ]
       },
     },
@@ -55,38 +58,31 @@ const CoursesSchedule = () => {
       days: {
         monday: [
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "18:00 - 19:00", coach: "Caterina Lanza" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
           
         ],
-        tuesday: [],
+        tuesday: [ 
+            { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+            { range : "19:00 - 20:00", coach : "Alessandro"}
+
+        ],
         wednesday: [
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "18:00 - 19:00", coach: "Caterina Lanza" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
         ],
-        thursday: [],
+        thursday: [
+            { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+            { range : "19:00 - 20:00" , coach: "Alessandro"}
+        ],
+
         friday: [
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "17:30 - 19:00", coach: "Caterina Lanza" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
         ],
         saturday : []
       },
     },
-    {
-      course: "Athletic training",
-      days: {
-        monday: [],
-        tuesday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
-        wednesday: [],
-        thursday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
-        friday: [],
-        saturday : [
-        ]
-      },
-
-    },
+    
     {
       course: "Avvio Combat",
       days: {
@@ -96,6 +92,31 @@ const CoursesSchedule = () => {
         thursday: [],
         friday: [{ range: "17:00 - 18:00", coach: "Francesco Loreti" }],
         saturday : []
+      },
+
+    },
+    {
+      course: "Gym boxe femminile",
+      days: {
+        monday: [],
+        tuesday:[{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
+        wednesday: [],
+        thursday: [{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
+        friday: [],
+        saturday : []
+      },
+
+    },
+    {
+      course: "Athletic training",
+      days: {
+        monday: [{ range : "18:00 - 19:00" , coach : "Giuseppe Pannella"}],
+        tuesday: [],
+        wednesday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
+        thursday: [],
+        friday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
+        saturday : [
+        ]
       },
 
     },

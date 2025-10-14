@@ -78,6 +78,7 @@
   font-size: 1rem;
   box-shadow: 0 4px 12px rgba(2, 6, 23, 0.06);
   width: 70%;
+  
 }
 
 /* Ora in evidenza */
@@ -85,6 +86,7 @@
   font-weight: 800;
   font-size: 1rem;
   margin-bottom: 4px;
+  color : white;
 }
 
 /* Maestro sotto */
@@ -92,6 +94,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   opacity: 0.95;
+  color : white;
 }
 
 
@@ -127,6 +130,8 @@
   font-weight: 700;
   font-size: 0.85rem;
   box-shadow: 0 2px 6px rgba(2, 6, 23, 0.06);
+  color: white;
+  padding: 0.2rem;
 }
 
 .legend-label {
