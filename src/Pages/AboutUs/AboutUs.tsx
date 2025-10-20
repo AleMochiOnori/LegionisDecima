@@ -11,28 +11,30 @@ import Francesco from "../../assets/Francesco.jpg"
 
 const AboutUs = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
-    const width = window.innerWidth
+   
     const scrollLeft = () => {
+        const width = window.innerWidth
         if (sliderRef.current) {
-            
-            if (width > 1130) {
-                sliderRef.current.scrollBy({ left: -1050, behavior: 'smooth' });
-            }
             if ( width <= 1130) {
-                sliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                sliderRef.current.scrollBy({ left: -850, behavior: 'smooth' });
             }
+            else if (width > 1130) {
+                sliderRef.current.scrollBy({ left: -1570, behavior: 'smooth' });
+            }
+           
             
         }
     };
 
     const scrollRight = () => {
         if (sliderRef.current) {
-            if (width > 1130) {
-                sliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
-               
-            }
+            const width = window.innerWidth
             if ( width <= 1130) {
-                sliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                sliderRef.current.scrollBy({ left: 850, behavior: 'smooth' });
+            }
+            else if (width > 1130) {
+                sliderRef.current.scrollBy({ left: 1570, behavior: 'smooth' });
+               
             }
         }
     };
@@ -67,7 +69,7 @@ const AboutUs = () => {
                                 <CombatCard
                                     image={Matteo}
                                     title="Matteo Chiavolini"
-                                    subtitle='Boxe'
+                                    subtitle='Gym Boxe'
                                     text="Matteo Chiavolini è un istruttore le cui doti mescolano tecnica, passione e dedizione, sempre con l'obiettivo di far emergere il meglio in ogni allievo."
                                 />
                                 <CombatCard
@@ -92,7 +94,13 @@ const AboutUs = () => {
                                     image={Francesco}
                                     title="Francesco Loreti"
                                     subtitle='Avvio Combat'
-                                    text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato, dedicato a tutti coloro che muovono i primi passi in questi mondi. Con empatia e precisione, insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
+                                    text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato. Insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
+                                />
+                                <CombatCard
+                                    image={Francesco}
+                                    title="Alessandro"
+                                    subtitle='Gym boxe'
+                                    text="Alessandro è un tecnico della boxe , grazie a lui imparerai le tecniche della nobile arte."
                                 />
                             </div>
                         </div>

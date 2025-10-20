@@ -25,11 +25,14 @@ const Header = () => {
                     <Link to={`/contacts`}>
                         <p>Contatti</p>
                     </Link>
-                    <div className="logInSession">
-                        <Link to={`/Login`}><p>Accedi</p></Link>
-                         <p style={{marginLeft : "7px" , marginRight : "7px"}}>/</p>
-                        <Link to={`/register`}><p>Registrati</p></Link>
-                    </div>
+                     <Link to={`/privateLesson`}>
+                        <p>Lezione privata</p>
+                    </Link>
+                     <Link to={`/comments`}>
+                        <p>Recensioni</p>
+                    </Link>
+                    
+                   
 
                 </div>
                 

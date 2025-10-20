@@ -8,12 +8,12 @@ import Login from "./Pages/LogIn/LogIn"
 import Register from "./Pages/Register/Register"
 import Footer from './Components/Footer/Footer'
 import Courses from './Pages/Courses/Courses'
+import ScrollToTop from './utils/ScrollToTop'
 
 function App() {
   return (
     <>
-
-      
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
