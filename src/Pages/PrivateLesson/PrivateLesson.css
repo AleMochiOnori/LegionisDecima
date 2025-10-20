@@ -1,0 +1,404 @@
+/* PrivateLesson.css */
+
+/* Main wrapper per allineare le card */
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5rem;
+}
+
+/* Titolo principale */
+.mainTitle {
+  margin-top: 10rem;
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* Container unico per entrambe le card */
+.cards-container {
+  display: flex;
+  gap: 5rem;
+  max-width: 1400px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Swipe element unico e centrato */
+.private-lesson-swipe-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto 3rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.private-lesson-swipe-element {
+  background: linear-gradient(135deg, #ea666d 0%, #1c1b1c 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: privateLessonSwipeIn 1.2s ease-out 0.5s forwards;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.private-lesson-swipe-element::before {
+  content: '👈 Swipe';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  opacity: 0.7;
+  animation: privateLessonSwipePulse 2s infinite;
+}
+
+.private-lesson-swipe-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.private-lesson-swipe-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.private-lesson-swipe-text {
+  flex: 1;
+}
+
+.private-lesson-swipe-text h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.private-lesson-swipe-text p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Animazioni swipe */
+@keyframes privateLessonSwipeIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes privateLessonSwipePulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-5px);
+  }
+}
+
+/* Hover effects per swipe */
+.private-lesson-swipe-element:hover {
+  transform: translateX(0) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.private-lesson-swipe-element:hover::before {
+  opacity: 0;
+}
+
+/* Card singola */
+.private-lesson-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.private-lesson-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.private-lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Sezione contenuto */
+.private-lesson-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.private-lesson-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #ea666d 0%, #1c1b1c 100%);
+}
+
+.private-lesson-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+}
+
+.private-lesson-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #e74c3c;
+  border-radius: 2px;
+}
+
+.private-lesson-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.private-lesson-intro {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 500;
+  border-left: 3px solid #db3434;
+  padding-left: 1.5rem;
+  background: linear-gradient(90deg, rgba(219, 52, 52, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.private-lesson-contact {
+  background: #ecf0f1;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #e74c3c;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Badge sport */
+.private-lesson-badges {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.private-lesson-badge {
+  background: linear-gradient(135deg, #ea666d 0%, #1c1b1c 100%);
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.private-lesson-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Sezione immagine */
+.private-lesson-image {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ea666d 0%, #1c1b1c 100%);
+  height: 300px;
+}
+
+.private-lesson-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  filter: grayscale(0.1) contrast(1.1);
+}
+
+#imageGiacomo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: all 0.3s ease;
+  filter: grayscale(0.1) contrast(1.1);
+}
+
+
+.private-lesson-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(44, 62, 80, 0.1) 0%, rgba(231, 76, 60, 0.1) 100%);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.private-lesson-card:hover .private-lesson-img {
+  transform: scale(1.05);
+}
+
+.private-lesson-card:hover .private-lesson-image::before {
+  background: linear-gradient(45deg, rgba(44, 62, 80, 0.05) 0%, rgba(231, 76, 60, 0.05) 100%);
+}
+
+/* Animazioni specifiche per questo componente */
+@keyframes privateLessonFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.private-lesson-content > * {
+  animation: privateLessonFadeInUp 0.6s ease-out;
+}
+
+.private-lesson-title {
+  animation-delay: 0.1s;
+}
+
+.private-lesson-intro {
+  animation-delay: 0.2s;
+}
+
+.private-lesson-badges {
+  animation-delay: 0.3s;
+}
+
+.private-lesson-contact {
+  animation-delay: 0.4s;
+}
+
+/* Focus per accessibilità */
+.private-lesson-cta:focus {
+  outline: 3px solid #db3434;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .private-lesson-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .private-lesson-swipe-element::before {
+    content: '👈 Scorri';
+    font-size: 0.7rem;
+  }
+  
+  .private-lesson-swipe-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .private-lesson-swipe-icon {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainWrapper {
+    padding: 1rem;
+  }
+  
+  .mainTitle {
+    font-size: 1.8rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .private-lesson-content {
+    padding: 1.5rem;
+  }
+  
+  .private-lesson-title {
+    font-size: 1.7rem;
+  }
+  
+  .private-lesson-text {
+    font-size: 0.95rem;
+  }
+  
+  .private-lesson-badges {
+    justify-content: center;
+  }
+  
+  .private-lesson-swipe-element {
+    padding: 1rem;
+  }
+  
+  .private-lesson-swipe-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .private-lesson-swipe-text p {
+    font-size: 0.9rem;
+  }
+}

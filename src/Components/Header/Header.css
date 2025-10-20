@@ -21,6 +21,10 @@
     color: white;
 }
 
+.Right-Header-Content a:hover{
+    color:#eb2525;
+}
+
 /* Contenuto sinistro (logo + testo) */
 .Left-Header-Content {
     margin-left: 3rem;

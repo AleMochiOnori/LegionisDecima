@@ -8,6 +8,7 @@ import Giuseppe from "../../assets/Giuseppe.png"
 import Leandro from "../../assets/leandro.jpg"
 import Caterina from "../../assets/Caterina.png"
 import Francesco from "../../assets/Francesco.jpg"
+import Mary from "../../assets/Mary.jpg"
 
 const AboutUs = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -101,6 +102,12 @@ const AboutUs = () => {
                                     title="Alessandro"
                                     subtitle='Gym boxe'
                                     text="Alessandro è un tecnico della boxe , grazie a lui imparerai le tecniche della nobile arte."
+                                />
+                                 <CombatCard
+                                    image={Mary}
+                                    title="Maria Chiara Capizzi"
+                                    subtitle='Gym boxe / Private Lesson'
+                                    text="Mary è una giovane istruttrice capace e appassionata, che trasmette con energia le basi del pugilato e della kickboxing. Nonostante la sua giovane età, unisce competenza e entusiasmo."
                                 />
                             </div>
                         </div>
