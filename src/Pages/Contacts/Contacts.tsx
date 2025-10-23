@@ -20,7 +20,7 @@ const Contacts = () => {
     },
     {
       question: "Quali sono gli orari delle lezioni?",
-      answer: "Le lezioni si svolgono dal lunedì al sabato, dalle 9:00 alle 21:00, per ulteriori dettagli visualizzare la sezione 'Orari corsi' "
+      answer: "Le lezioni si svolgono dal lunedì al sabato, per ulteriori dettagli visualizzare la sezione 'Orari corsi' "
     },
     {
       question: "Offrite corsi per bambini?",

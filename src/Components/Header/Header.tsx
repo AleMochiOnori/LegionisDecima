@@ -28,7 +28,7 @@ const Header = () => {
                      <Link to={`/privateLesson`}>
                         <p>Lezione privata</p>
                     </Link>
-                     <Link to={`/comments`}>
+                     <Link to={`/rating`}>
                         <p>Recensioni</p>
                     </Link>
                     

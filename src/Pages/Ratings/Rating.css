@@ -1,0 +1,270 @@
+/* Reset base */
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recensioni-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+}
+
+/* Riepilogo */
+.riepilogo {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.riepilogo h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.voto-medio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.voto-medio .numero {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.voto-medio .totale {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Stelle */
+.stelle {
+  display: flex;
+  gap: 2px;
+}
+
+.stella {
+  font-size: 1.5rem;
+  cursor: default;
+}
+
+.stella.piena {
+  color: #f39c12;
+}
+
+.stella.vuota {
+  color: #ddd;
+}
+
+/* Form nuova recensione */
+.nuova-recensione {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.nuova-recensione h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.recensione-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-group input {
+    color : white
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 3px solid #efe9e9;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  transition: border-color 0.3s ease;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #db3434;
+}
+
+/* Selezione voto */
+.selezione-voto {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.voto-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.voto-option:hover {
+  border-color: #db3434;
+}
+
+.voto-option input[type="radio"] {
+  display: none;
+}
+
+.voto-option input[type="radio"]:checked + .stella-radio {
+  background-color: #db3434;
+  color: white;
+}
+
+.stella-radio {
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Bottone invio */
+.btn-invia {
+  background: #cc2e2e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+
+/* Lista recensioni */
+
+.lista-recensioni {
+  margin-top: 5rem;
+}
+
+
+.lista-recensioni h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.nessuna-recensione {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+}
+
+.recensioni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.recensione-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #db3434;
+}
+
+.recensione-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.nome-utente {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.data {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.testo-recensione {
+  color: #495057;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recensioni-container {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .voto-medio {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .recensioni-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .recensione-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .selezione-voto {
+    justify-content: center;
+  }
+}

@@ -13,7 +13,7 @@ const PrivateLesson = () => {
               <div className="private-lesson-swipe-icon">🥊</div>
               <div className="private-lesson-swipe-text">
                 <h3>Istruttori Specializzati</h3>
-                <p>Scopri le lezioni personalizzate con i nostri esperti di arti marziali</p>
+                <p>Scopri le lezioni private con i nostri esperti di arti marziali</p>
               </div>
             </div>
           </div>
