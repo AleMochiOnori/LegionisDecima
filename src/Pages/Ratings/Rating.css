@@ -25,17 +25,21 @@ body {
 
 /* Riepilogo */
 .riepilogo {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-  text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* spazio tra titolo e contenuto */
 }
 
 .riepilogo h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
+    color: #000; /* titolo nero */
+    margin-bottom: 10px;
+    font-size: 1.8rem;
 }
 
 .voto-medio {
@@ -96,6 +100,99 @@ body {
   gap: 20px;
 }
 
+.text-area-recensione {
+  background-color: white;
+  height: 200px;
+  color: #000000; /* colore del testo */
+  font-size: 1.2rem;   
+}
+
+
+.text-area-modifica {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: white;
+}
+
+.btn-salva {
+  background: #cc2e2e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none; /* per Safari/Chrome */
+    -moz-appearance: none;    /* per Firefox */
+    appearance: none;         /* standard */
+    width: 20px;
+    height: 20px;
+    border: 3px solid #555555;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+}
+input[type="radio"]:checked::before:hover {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dd1515;
+    transform: translate(-50%, -50%);
+}
+input[type="radio"]:checked {
+    border-color: #dd1515; /* bordo rosso */
+}
+
+.selezione-rating label {
+    display: flex;
+    align-items: center; /* centra verticalmente radio e testo */
+    gap: 5px; /* spazio tra pallino e stella */
+    cursor: pointer;
+}
+
+.selezione-rating label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: #000; /* colore testo e stelle */
+  font-weight: 600; /* più leggibile */
+  font-size: 1.2rem;
+}
+
+.selezione-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .form-group {
   display: flex;
@@ -114,7 +211,7 @@ body {
 
 .form-group input,
 .form-group textarea {
-  padding: 12px;
+  padding: 10px;
   border: 3px solid #efe9e9;
   border-radius: 6px;
   font-size: 1rem;
@@ -187,6 +284,9 @@ body {
   margin-top: 5rem;
 }
 
+.colorText {
+  color: black;
+}
 
 .lista-recensioni h2 {
   color: #2c3e50;
@@ -239,6 +339,29 @@ body {
   line-height: 1.6;
   margin-top: 15px;
 }
+.ModElimContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.Modifca, .Elimina {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.Modifca {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+.Elimina {
+  background-color: #ff2a2a;
+  color: #fff;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -268,3 +391,4 @@ body {
     justify-content: center;
   }
 }
+

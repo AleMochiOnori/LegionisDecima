@@ -16,7 +16,6 @@ const CombatCard: React.FC<CardProps> = ({ image, title, subtitle, text }) => {
         <img className="combat-image" src={image} alt={title} />
         <div className="image-overlay"></div>
       </div>
-      
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
         <p className='sottoTitolo'>{subtitle}</p>

@@ -1,0 +1,81 @@
+/* Overlay sfocato e centrato */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Contenitore modale */
+.modal-container {
+  background: #ffffff;
+  color: #f0f0f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  transform: scale(0.95);
+  opacity: 0;
+  animation: popIn 0.3s ease forwards;
+  padding: 3.5rem;
+}
+
+/* Header con bottone chiusura */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #dc1b1b;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* Corpo della modale */
+.modal-body {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

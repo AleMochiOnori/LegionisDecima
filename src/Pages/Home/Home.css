@@ -1,6 +1,7 @@
 .Wrapper-Home{
     display: flex;
     flex-direction: column;
+    margin-top: -2rem;
 }
 
 .Section1 {
@@ -15,7 +16,6 @@
     color: #374151;
     text-align: justify;
     margin-bottom: 4rem;
- 
     margin-top: 7rem;
     max-width: 1450px;
     margin: 0 auto;

@@ -1,5 +1,5 @@
 .Header-Container {
-    height: 4rem; /* ridotta l’altezza generale */
+    height: 3rem; /* ridotta l’altezza generale */
     width: 100%;
     position: fixed;
     z-index: 1000;

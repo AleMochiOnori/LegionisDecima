@@ -29,7 +29,7 @@ const Contacts = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, alt: "Instagram", url: "#" },
+    { icon: Instagram, alt: "Instagram", url: "https://www.instagram.com/legionis_decima_torrino/" },
     { icon: Youtube, alt: "YouTube", url: "#" },
     { icon: Facebook, alt: "Facebook", url: "#" }
   ];

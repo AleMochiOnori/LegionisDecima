@@ -12,6 +12,8 @@ import ScrollToTop from './utils/ScrollToTop'
 import PrivateLesson from './Pages/PrivateLesson/PrivateLesson'
 import Rating from './Pages/Ratings/Rating'
 
+
+
 function App() {
   return (
     <>

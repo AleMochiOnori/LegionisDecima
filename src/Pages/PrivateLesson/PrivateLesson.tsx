@@ -6,7 +6,6 @@ const PrivateLesson = () => {
   return (
     <>
       <div className="mainWrapper">
-        {/* Swipe Element Unico e Centrato */}
         <div className="private-lesson-swipe-container">
           <div className="private-lesson-swipe-element">
             <div className="private-lesson-swipe-content">
@@ -18,16 +17,13 @@ const PrivateLesson = () => {
             </div>
           </div>
         </div>
-
-        {/* Container per entrambe le card affiancate */}
         <div className="cards-container">
-          {/* Card Giacomo */}
           <div className="private-lesson-container">
             <div className="private-lesson-card">
               <div className="private-lesson-content">
                 <h1 className="private-lesson-title">Giacomo Ratti</h1>
                 <p className="private-lesson-text private-lesson-intro">
-                  Ciao sono Giacomo maestro di muayThail, kickboxing e boxe. Se vieni ad allenarti con me potresti morire
+                  Ciao sono Giacomo maestro di MuayThai, kickboxing e boxe. Ti guiderò passo dopo passo nel tuo percorso di apprendimento.
                 </p>
                 
                 <div className="private-lesson-badges">
@@ -51,19 +47,16 @@ const PrivateLesson = () => {
               </div>
             </div>
           </div>
-          
-          {/* Card Maria */}
           <div className="private-lesson-container">
             <div className="private-lesson-card">
               <div className="private-lesson-content">
                 <h1 className="private-lesson-title">Maria Chiara Capizzi</h1>
                 <p className="private-lesson-text private-lesson-intro">
-                  Ciao sono Maria Chiara Capizzi e ti guiderò nell'apprendimento della boxe e della kick boxing
+                  Ciao sono Maria Chiara Capizzi e ti guiderò nell'apprendimento della boxe 
                 </p>
                 
                 <div className="private-lesson-badges">
                   <span className="private-lesson-badge">Boxe</span>
-                  <span className="private-lesson-badge">Kick Boxing</span>
                 </div>
                 
                 <p className="private-lesson-text private-lesson-contact">
@@ -75,7 +68,7 @@ const PrivateLesson = () => {
                 <img 
                   className="private-lesson-img" 
                   src={Mary} 
-                  alt="Maria Chiara Capizzi - Istruttrice di Boxe e Kick Boxing" 
+                  alt="Maria Chiara Capizzi - Istruttrice di Boxe" 
                 />
               </div>
             </div>
