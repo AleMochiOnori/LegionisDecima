@@ -22,6 +22,22 @@ body {
   color: #2c3e50;
   font-size: 2.5rem;
 }
+.star-rating {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.star.active {
+  color: red; /* colore quando attiva */
+}
 
 /* Riepilogo */
 .riepilogo {
@@ -65,6 +81,7 @@ body {
 .stelle {
   display: flex;
   gap: 2px;
+  justify-content: center;
 }
 
 .stella {
@@ -107,6 +124,9 @@ body {
   font-size: 1.2rem;   
 }
 
+.modal-container {
+  min-width: 800px;
+}
 
 .text-area-modifica {
   width: 100%;
@@ -218,12 +238,16 @@ input[type="radio"]:checked {
   color: rgb(0, 0, 0);
   transition: border-color 0.3s ease;
   background-color: white;
+  width: 70%;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #db3434;
+}
+.text-area-modifica {
+  color : black
 }
 
 /* Selezione voto */
@@ -343,6 +367,7 @@ input[type="radio"]:checked {
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
+  justify-content: space-around;
 }
 
 .Modifca, .Elimina {
@@ -356,11 +381,15 @@ input[type="radio"]:checked {
 .Modifca {
   background-color: #ff9900;
   color: #fff;
+  padding: 10px;
+  font-weight: 600;
 }
 
 .Elimina {
   background-color: #ff2a2a;
   color: #fff;
+  padding: 10px;
+  font-weight: 600;
 }
 
 /* Responsive */

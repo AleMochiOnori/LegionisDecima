@@ -47,15 +47,11 @@
 .close-btn {
   background: transparent;
   border: none;
-  color: #aaa;
+  color: #828282;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: color 0.2s;
 }
 
-.close-btn:hover {
-  color: #fff;
-}
 
 /* Corpo della modale */
 .modal-body {

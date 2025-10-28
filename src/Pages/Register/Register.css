@@ -17,9 +17,10 @@
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.register-card:hover {
-  transform: translateY(-4px);
+.form-group input{
+  width: 98%!important;
 }
+
 
 .register-title {
   text-align: center;
@@ -58,11 +59,11 @@
 }
 
 .register-btn {
-  width: 100%;
-  padding: 0.9rem;
+  width: 40%;
+  padding: 1rem;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(90deg, #ff0000, #b30000);
+  background:#ff0000;
   color: white;
   font-weight: 600;
   font-size: 1rem;
@@ -71,7 +72,7 @@
 }
 
 .register-btn:hover {
-  background: linear-gradient(90deg, #b30000, #ff0000);
+
   transform: scale(1.03);
 }
 
