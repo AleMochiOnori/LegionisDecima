@@ -44,3 +44,85 @@
     height: 60px;
     border-radius: 50%;
 }
+
+/* Sidebar mobile nascosta di default */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* fuori dallo schermo */
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(38, 36, 36);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 9999;
+}
+
+/* Quando aperta */
+.mobile-sidebar.open {
+    right: 0;
+    
+}
+.close-sidebar {
+    position: absolute;
+    top: 1rem;
+    right: 0.1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10000; /* più alto della sidebar */
+
+}
+
+/* Link sidebar */
+.mobile-sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
+.mobile-sidebar a:hover {
+    color: #eb2525;
+}
+
+/* Hamburger solo su mobile */
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .Left-Header-Content {
+        margin-left: -1.5rem;
+    }
+
+    .logoCombat{
+        width: 50px;
+        height: 50px;
+    }
+
+    .Right-Header-Content {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+        margin-left: -5rem;
+    }
+    .titleHeader {
+        font-size: 1.1rem;
+    }
+
+    .hamburger-react{
+        margin-right: 2.5rem!important;
+    }
+    .whited{
+        z-index: 9999999;
+        fill: white;
+    }
+}
