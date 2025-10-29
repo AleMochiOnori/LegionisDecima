@@ -19,6 +19,7 @@
     margin-top: 7rem;
     max-width: 1450px;
     margin: 0 auto;
+    margin-top: 5rem;
 }
 
 .fotoPrincipale {
@@ -81,9 +82,14 @@
     .PrimaryImage{
         width: 350px;
     }
+
 }
 
 @media (max-width : 480px) {
+
+    .testoPrincipale{
+        padding: 3rem;
+    }
 
     .PrimaryImage{
         width: 250px;

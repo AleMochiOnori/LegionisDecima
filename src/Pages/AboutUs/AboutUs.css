@@ -9,16 +9,6 @@
     margin-bottom: -15rem;
 }
 
-.testoPrincipale {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #374151;
-    text-align: justify;
-    margin-bottom: 4rem;
-    padding: 0 1rem;
-    margin-top: 7rem;
-}
 
 .slider-section {
     position: relative;
@@ -124,11 +114,7 @@
         padding: 1rem;
     }
     
-    .testoPrincipale {
-        font-size: 1rem;
-        padding: 0;
-    }
-    
+
     .slider-title {
         font-size: 2rem;
     }
