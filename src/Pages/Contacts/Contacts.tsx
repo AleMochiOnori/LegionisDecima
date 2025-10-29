@@ -37,7 +37,7 @@ const Contacts = () => {
   const teachers = [
     { name: "Maestro Alessio Marabucci", phone: "+39 333 564 7574" },
     { name: "Maestro Giacomo Ratti", phone: "+39 324 234 234" },
-    { name: "Maestro Matteo Chiavolini", phone: "+39 343 564 6465" }
+    { name: "Maestro Matteo Chiavolini", phone: "++39 392 246 8852" }
   ];
 
   const toggleFaq = (index: number) => {

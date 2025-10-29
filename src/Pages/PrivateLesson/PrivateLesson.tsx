@@ -33,7 +33,7 @@ const PrivateLesson = () => {
                 </div>
                 
                 <p className="private-lesson-text private-lesson-contact">
-                  📞 Telefono: <strong>234 234 234</strong>
+                  📞 Telefono: <strong>+39 380 425 1705</strong>
                 </p>
               </div>
               
@@ -60,7 +60,7 @@ const PrivateLesson = () => {
                 </div>
                 
                 <p className="private-lesson-text private-lesson-contact">
-                  📞 Telefono: <strong>234 234 234</strong>
+                  📞 Telefono: <strong>+39 345 889 7770</strong>
                 </p>
               </div>
               
