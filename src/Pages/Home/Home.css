@@ -22,20 +22,18 @@
 }
 
 .fotoPrincipale {
-    background-image: url("../../assets/main.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;      
-    text-align: center;
-    position: relative;
+  background-image: url("../../assets/main.jpeg");
+  background-repeat: no-repeat;
+  background-position: center 47%; /* 🔹 30% mostra una parte più alta dell'immagine */
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+  position: relative;
 }
-
-
 .PrimaryImage {
     width: 600px;
 }
