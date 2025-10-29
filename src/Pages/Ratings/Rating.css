@@ -122,8 +122,12 @@ body {
   height: 200px;
   color: #000000; /* colore del testo */
   font-size: 1.2rem;   
+  outline: none;
 }
 
+.text-area-recensione:focus {
+  border: 2px solid red; /* bordo rosso */
+}
 .modal-container {
   min-width: 800px;
 }
@@ -289,7 +293,7 @@ input[type="radio"]:checked {
 
 /* Bottone invio */
 .btn-invia {
-  background: #cc2e2e;
+  background: #de0909;
   color: white;
   border: none;
   padding: 15px 30px;

@@ -2,7 +2,7 @@ import type React from 'react';
 import "./CombatCard.css"
 
 interface CardProps {
-  image: string;
+  image?: string;
   title: string;
   subtitle : string
   text: string;
@@ -13,7 +13,7 @@ const CombatCard: React.FC<CardProps> = ({ image, title, subtitle, text }) => {
   return (
     <div className="combat-card">
       <div className="card-image-container">
-        <img className="combat-image" src={image} alt={title} />
+        {image && <img className="combat-image" src={image} alt={title} />}
         <div className="image-overlay"></div>
       </div>
       <div className="card-content">

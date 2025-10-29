@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Rating.css';
 import CustomModal from '../../Components/Modal/CustomModal';
-import StarRating from '../../Components/StarRating/Starrating';
+import StarRating from '../../Components/StarRating/StarRating';
 import { fetchReviews, createReview, updateReview, deleteReview } from './RatingService';
 import type { Recensione, NuovaRecensione } from './RatingTypes';
 

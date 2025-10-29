@@ -98,8 +98,7 @@ const AboutUs = () => {
                                     text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato. Insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
                                 />
                                 <CombatCard
-                                    image={Francesco}
-                                    title="Alessandro"
+                                    title="Alessandro Mastrelli"
                                     subtitle='Gym boxe'
                                     text="Alessandro è un tecnico della boxe , grazie a lui imparerai le tecniche della nobile arte."
                                 />
