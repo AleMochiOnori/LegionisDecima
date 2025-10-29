@@ -70,7 +70,7 @@ const AboutUs = () => {
                                 <CombatCard
                                     image={Matteo}
                                     title="Matteo Chiavolini"
-                                    subtitle='Gym Boxe'
+                                    subtitle='Boxe'
                                     text="Matteo Chiavolini è un istruttore le cui doti mescolano tecnica, passione e dedizione, sempre con l'obiettivo di far emergere il meglio in ogni allievo."
                                 />
                                 <CombatCard
