@@ -22,7 +22,7 @@ html {
   transform-origin: top left;
   width: 125vw;
   height: 125vh;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 body {
