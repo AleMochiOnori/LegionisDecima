@@ -36,7 +36,7 @@ const Home: React.FC = () => {
                     reverse={true}
                 />
             </div>
-            <div className="Section4">
+            <div className="Section4 marging">
                 <HeroText 
                     image={Kick}
                     title="Kick Boxing - K1"

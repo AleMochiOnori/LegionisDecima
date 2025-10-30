@@ -19,17 +19,19 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/privateLesson" element={<PrivateLesson />} />
-        <Route path="/rating" element={<Rating />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+      <div className='main-scaled'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/privateLesson" element={<PrivateLesson />} />
+          <Route path="/rating" element={<Rating />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
       <Footer />
+      </div>
     </>
   )
 }

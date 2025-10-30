@@ -17,16 +17,11 @@
 
 
 /* Global scale */
-html {
-  transform: scale(0.8);
-  transform-origin: top left;
-  width: 125vw;
-  height: 125vh;
-  overflow-x: hidden;
-}
 
 body {
   font-family: var(--font-primary);
+  overflow-x: hidden;
+
 }
 html, body, #root {
   height: 100%;
@@ -81,6 +76,8 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* Applica la scala solo al contenuto principale */
 
 @media (prefers-color-scheme: light) {
   :root {

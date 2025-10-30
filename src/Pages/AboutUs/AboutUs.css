@@ -1,12 +1,12 @@
-.MidSection {
-    justify-content: space-evenly;
-    gap: 30px;
-}
 .ContainerAbout {
     max-width: 1600px;
     margin: 0 auto;
     padding: 2rem;
-    margin-bottom: -15rem;
+    margin-bottom: -10rem;
+}
+.MidSection {
+    justify-content: space-evenly;
+    gap: 30px;
 }
 
 

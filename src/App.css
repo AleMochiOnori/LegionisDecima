@@ -1,3 +1,6 @@
+
+
+
 #root {
   width: 100%;
   text-align: center;
@@ -7,6 +10,16 @@
 :root {
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.main-scaled {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125vw;
+  overflow-x: hidden;
+  margin-top: -1.3rem;
+}
+
+
 
 body {
   font-family: var(--font-primary);
