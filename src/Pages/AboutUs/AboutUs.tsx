@@ -89,7 +89,7 @@ const AboutUs = () => {
                                     image={Caterina}
                                     title="Caterina Lanza"
                                     subtitle='Gym Boxe Femminile'
-                                    text="Caterina è un’allenatrice di boxe nell’ambito femminile, capace di unire la competenza tecnica a una profonda comprensione delle esigenze specifiche di chi si avvicina a questo sport in un contesto dedicato alle donne."
+                                    text="Caterina è un’allenatrice di Gym boxe che ha scelto di promuovere corsi esclusivamente al femminile, con l’obiettivo di offrire alle donne uno spazio in cui esprimere forza, determinazione e consapevolezza di sé. Con passione, dedizione e competenza tecnica, accompagna ogni atleta in un percorso di crescita personale e sportiva."
                                 />
                                 <CombatCard
                                     image={Francesco}
