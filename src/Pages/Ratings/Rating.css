@@ -406,6 +406,12 @@ input[type="radio"]:checked {
     font-size: 2rem;
   }
   
+
+ .btn-invia {
+  align-self: center;
+}
+
+
   .voto-medio {
     flex-direction: column;
     gap: 10px;
