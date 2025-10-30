@@ -71,7 +71,7 @@ const AboutUs = () => {
                                     image={Matteo}
                                     title="Matteo Chiavolini"
                                     subtitle='Boxe'
-                                    text="Matteo Chiavolini è un istruttore le cui doti mescolano tecnica, passione e dedizione, sempre con l'obiettivo di far emergere il meglio in ogni allievo."
+                                    text="Matteo Chiavolini è un istruttore le cui doti mescolano tecnica, passione e dedizione, con un passato da agonista nella Kickboxing (Cintura Nera) e come tecnico di pugilato della FPI, sempre con l'obiettivo di far emergere il meglio in ogni allievo."
                                 />
                                 <CombatCard
                                     image={Giuseppe}
