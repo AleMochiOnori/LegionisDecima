@@ -89,7 +89,7 @@ const AboutUs = () => {
                                     image={Caterina}
                                     title="Caterina Lanza"
                                     subtitle='Gym Boxe Femminile'
-                                    text="Caterina Lanza è allenatrice di boxe dedicata al femminile, con la capacità di comprendere non solo la tecnica, ma anche le esigenze specifiche di chi si approccia alla boxe in un contesto tutto al femminile."
+                                    text="Caterina è un’allenatrice di boxe nell’ambito femminile, capace di unire la competenza tecnica a una profonda comprensione delle esigenze specifiche di chi si avvicina a questo sport in un contesto dedicato alle donne."
                                 />
                                 <CombatCard
                                     image={Francesco}
@@ -97,6 +97,8 @@ const AboutUs = () => {
                                     subtitle='Avvio Combat'
                                     text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato. Insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
                                 />
+                                
+                                
                                 <CombatCard
                                     title="Alessandro Mastrelli"
                                     subtitle='Gym boxe'
