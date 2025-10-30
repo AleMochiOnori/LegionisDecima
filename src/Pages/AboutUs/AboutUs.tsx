@@ -83,7 +83,7 @@ const AboutUs = () => {
                                     image={Leandro}
                                     title="Leandro Cosentino"
                                     subtitle='MuayThai Corso base'
-                                    text="Leandro Cosentino è un insegnante specializzato nelle basi della Muay Thai, conosciuto per la chiarezza pedagogica e per il modo in cui rende accessibile anche ai principianti una disciplina complessa. "
+                                    text="Leandro Cosentino, laureato in Scienze Motorie, è un insegnante di Muay Thai che unisce competenza tecnica e conoscenza scientifica del movimento, rendendo accessibile anche ai principianti una disciplina complessa e affascinante. "
                                 />
                                 <CombatCard
                                     image={Caterina}
