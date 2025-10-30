@@ -83,7 +83,7 @@ const AboutUs = () => {
                                     image={Leandro}
                                     title="Leandro Cosentino"
                                     subtitle='MuayThai Corso base'
-                                    text="Leandro Cosentino, laureato in Scienze Motorie, è un insegnante di Muay Thai che unisce competenza tecnica e conoscenza scientifica del movimento, rendendo accessibile anche ai principianti una disciplina complessa e affascinante. "
+                                    text="Leandro Cosentino, laureato in Scienze Motorie e attualmente iscritto alla magistrale in AMPA (Attività Motorie Preventive e Adattate), è un insegnante di Muay Thai che unisce competenza tecnica e conoscenza scientifica del movimento, rendendo accessibile anche ai principianti una disciplina complessa e affascinante. "
                                 />
                                 <CombatCard
                                     image={Caterina}
