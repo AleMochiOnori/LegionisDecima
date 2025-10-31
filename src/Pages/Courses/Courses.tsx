@@ -63,7 +63,7 @@ const CoursesSchedule = () => {
         ],
         tuesday: [ 
             { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-            { range : "19:00 - 20:00", coach : "Alessandro"}
+            { range : "19:00 - 20:00", coach : "Alessandro Mastrelli"}
 
         ],
         wednesday: [
@@ -72,7 +72,7 @@ const CoursesSchedule = () => {
         ],
         thursday: [
             { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-            { range : "19:00 - 20:00" , coach: "Alessandro"}
+            { range : "19:00 - 20:00" , coach: "Alessandro Mastrelli"}
         ],
 
         friday: [
@@ -86,11 +86,11 @@ const CoursesSchedule = () => {
     {
       course: "Avvio Combat",
       days: {
-        monday: [{ range: "17:00 - 18:00", coach: "Francesco Loreti" }],
+        monday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
         tuesday: [],
-        wednesday: [{ range: "17:00 - 18:00", coach: "Francesco Loreti" }],
+        wednesday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
         thursday: [],
-        friday: [{ range: "17:00 - 18:00", coach: "Francesco Loreti" }],
+        friday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
         saturday : []
       },
 
