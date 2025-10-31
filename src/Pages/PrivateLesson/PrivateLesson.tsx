@@ -1,5 +1,6 @@
 import Mary from "../../assets/Mary.jpg"
-import Giacomo2 from "../../assets/Giacomo2.jpeg"
+
+import GiacomoPrivateLesson from "../../assets/Giacomo2.jpg"
 import "./PrivateLesson.css"
 
 const PrivateLesson = () => {
@@ -40,7 +41,7 @@ const PrivateLesson = () => {
               <div className="private-lesson-image">
                 <img 
                   className="private-lesson-img" 
-                  src={Giacomo2} 
+                  src={ GiacomoPrivateLesson} 
                   alt="Giacomo Ratti - Istruttore di Muay Thai, Kick Boxing e Boxe" 
                   id="imageGiacomo"
                 />

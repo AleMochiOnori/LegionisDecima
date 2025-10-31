@@ -2,13 +2,14 @@ import { useRef } from 'react';
 import CombatCard from "../../Components/Card/CombatCard";
 import "./AboutUs.css"
 import Alessio from "../../assets/Alessio.jpg"
-import Giacomo from "../../assets/Giacomo.png"
+import Giacomo from "../../assets/Giacomo.jpg"
 import Matteo from "../../assets/matteo.jpg"
 import Giuseppe from "../../assets/Giuseppe.png"
 import Leandro from "../../assets/leandro.jpg"
 import Caterina from "../../assets/Caterina.png"
 import Francesco from "../../assets/Francesco.jpg"
 import Mary from "../../assets/Mary.jpg"
+import Mastrelli2 from "../../assets/Mastrelli2.jpg"
 
 const AboutUs = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -100,6 +101,7 @@ const AboutUs = () => {
                                 
                                 
                                 <CombatCard
+                                    image={Mastrelli2}
                                     title="Alessandro Mastrelli"
                                     subtitle='Gym boxe'
                                     text="Alessandro è un tecnico della boxe , grazie a lui imparerai le tecniche della nobile arte."
