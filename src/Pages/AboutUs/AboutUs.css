@@ -1,5 +1,5 @@
 .ContainerAbout {
-    max-width: 1600px;
+    max-width: 2145px;
     margin: 0 auto;
     padding: 2rem;
     margin-bottom: -10rem;
@@ -53,8 +53,8 @@
     background: white;
     border: 2px solid #858585;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,6 +62,11 @@
     transition: all 0.3s ease;
     color: #374151;
     flex-shrink: 0;
+
+}
+
+.slider-arrow-right{
+
 }
 
 .slider-arrow:hover {

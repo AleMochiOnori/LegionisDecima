@@ -111,7 +111,7 @@
         font-size: 2rem;
     }
     .description {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .image {
         width: 420px;
@@ -140,7 +140,7 @@
     }
     
     .description {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.6;
     }
     
@@ -157,7 +157,7 @@
     }
     
     .description {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         padding: 1.2rem;
     }
 

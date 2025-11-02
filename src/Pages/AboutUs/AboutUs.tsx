@@ -49,7 +49,7 @@ const AboutUs = () => {
                     
                     <div className="slider-container">
                         <button className="slider-arrow slider-arrow-left" onClick={scrollLeft}>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <svg className='arrow' width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                         </button>
@@ -97,6 +97,11 @@ const AboutUs = () => {
                                     title="Francesco Loreti"
                                     subtitle='Avvio Combat'
                                     text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato. Insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
+                                />
+                                  <CombatCard
+                                    title="Francesco Cerqua"
+                                    subtitle='Avvio Combat'
+                                    text="Francesco Cerqua è un giovane e appassionato insegnante di boxe. Con un approccio dinamico e motivante, Francesco trasmette tecnica, disciplina e fiducia, creando un ambiente ideale per imparare divertendosi."
                                 />
                                 
                                 

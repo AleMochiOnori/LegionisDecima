@@ -96,4 +96,14 @@
     .PrimaryImage{
         width: 250px;
     }
+
+    .Section2Boxe {
+        margin-bottom: -1px;
+    }
+    .Section3{
+        margin-bottom: -1px;
+    }
+    .Section4{
+        margin-bottom: -1px;
+    }
 }
