@@ -64,6 +64,7 @@
   .modal-container {
     padding: 2rem;
     min-width: 400px;
+    margin-bottom: 20rem;
   }
 
   .modal-header h2 {
