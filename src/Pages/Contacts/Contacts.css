@@ -24,7 +24,6 @@
 
 
 
-
 /* ==========================
    MAIN CONTAINER
 ========================== */
@@ -79,7 +78,9 @@
 
 .form-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1); 
+  box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);
+ 
 }
 
 /* ==========================
@@ -99,12 +100,14 @@
   border: 1px solid var(--border-light);
   transition: var(--transition);
   margin-top: 10rem;
+  
 }
 
 .faq-card:hover,
 .contact-info-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  -webkit-box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1); 
+  box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);
 }
 
 /* ==========================
@@ -228,6 +231,7 @@
 
 .phone-link:hover {
   color: var(--primary-dark);
+  
 }
 
 /* ==========================
