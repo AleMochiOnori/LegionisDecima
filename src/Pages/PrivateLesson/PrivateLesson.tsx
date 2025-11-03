@@ -1,5 +1,5 @@
 import Mary from "../../assets/Mary.jpg"
-import Leandro from "../../assets/Leandro.jpg"
+import Leandro from "../../assets/leandro.jpg"
 import GiacomoPrivateLesson from "../../assets/Giacomo2.jpg"
 import "./PrivateLesson.css"
 
@@ -96,7 +96,7 @@ const PrivateLesson = () => {
               <div className="private-lesson-image">
                 <img 
                   className="private-lesson-img LeandroIamgeFix" 
-                  src={ Leandro} 
+                  src={Leandro} 
                   alt="Giacomo Ratti - Istruttore di Muay Thai, Kick Boxing e Boxe" 
                   id="imageGiacomo"
                 />
