@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 70vh;
-  padding: 2rem;
+  padding: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -363,6 +363,7 @@
     gap: 0.5rem;
   }
 
+ 
   .private-lesson-card {
     width: 100%;
   }
@@ -388,7 +389,12 @@
     padding: 1rem;
   }
 
-  
+   .private-lesson-card.LeandroIamgeFix{
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover;
+  }
+
 
   .private-lesson-container {
     flex-direction: column;

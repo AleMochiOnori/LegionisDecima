@@ -18,8 +18,12 @@
 /* LOGO */
 .footer-logo {
   flex: 1 1 220px;
-  flex-direction: column;
+  display: flex;          /* aggiungi */
+  flex-direction: column; /* già presente */
+  align-items: center;    /* centra tutti i figli */
+  text-align: center;     /* centra testo */
 }
+
 
 .footer-logo img {
   width: 80px;
@@ -27,6 +31,14 @@
   object-fit: contain;
   margin-bottom: 10px;
   border-radius: 50%;
+}
+
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra i loghi orizzontalmente nel contenitore */
+  gap: 20px;
 }
 
 .textSize {
@@ -44,6 +56,26 @@
   color: #ccc;
 }
 
+.tsc-background {
+  display: flex;           /* trasforma il div in flex */
+  justify-content: center; /* centra il logo dentro il div */
+  align-items: center;     /* centra verticalmente */
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;  
+  margin-bottom: 10px;           /* elimina padding extra che sposta il logo */
+}
+
+
+.tsc-background img {
+  width: 60px;             /* dimensione interna del logo */
+  height: 60px;
+}
+
+.logoTsc2{
+    margin-top: 0.8em!important;
+}
 /* SEZIONI */
 .footer-section {
   flex: 1 1 220px;

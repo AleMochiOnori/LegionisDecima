@@ -141,6 +141,18 @@
   text-transform: capitalize;
 }
 
+/* 2kpx e oltre */
+
+@media (min-width:1920px) {
+  .pill-coach {
+    font-weight: 700;
+  }
+  .pill-time{
+    font-weight: 700;
+  }
+}
+
+/* Schermi piccoli e medi */
 
 @media (max-width: 820px) {
   .schedule-container {

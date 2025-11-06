@@ -5,6 +5,7 @@ import BoxeImage from "../../assets/pugilato.jpeg"
 import Thai from "../../assets/thai.jpg"
 import Kick from "../../assets/kick.jpeg"
 import Main from "./../../assets/ChatGPT Image 13 ott 2025, 14_46_50.png"
+import tsc from "../../assets/tsc-logo_ok2.png"
 
 const Home: React.FC = () => {
     return (
@@ -44,6 +45,12 @@ const Home: React.FC = () => {
                     reverse={false}
                 />
             </div>
+            <div className="TorrinoSportingCenterInfo ">
+                <h2 className="tscTitle">In collabborazione con Torrino Sporting Center</h2>
+                <a href="https://www.torrinosportingcenter.it/"><img className="logoTsc" src={tsc} alt="" /></a>
+                
+            </div>
+
         </div>
     );
 };

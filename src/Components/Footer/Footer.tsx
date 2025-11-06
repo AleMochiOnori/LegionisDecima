@@ -1,12 +1,18 @@
 import "./Footer.css";
 import logo from "../../assets/Logo_Combat.jpg"
 import { Link } from "react-router-dom";
+import tscLogo from "../../assets/tsc-logo_ok2.png"
 const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={logo} alt="Torrino Muay Thai" />
+          <div className="logos">
+            <img className="legionis" src={logo} alt="Torrino Muay Thai" />
+            <div className="tsc-background">
+              <img className="logoTsc2" src= {tscLogo} alt="" />
+            </div>
+          </div>
           <h2 className="textSize">Legionis Decima Torrino</h2>
           <p className="textSize">Passione, Disciplina, Rispetto</p>
         </div>
@@ -30,7 +36,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="textSize">Seguici</h3>
           <div className="social-icons">
-            <a  href="https://www.instagram.com/legionis_decima_torrino/" target="_blank" className="instagram textSize">Instagram</a>
+            <a href="https://www.instagram.com/legionis_decima_torrino/" target="_blank" className="instagram textSize">Instagram</a>
             <a href="#" target="_blank" className="facebook textSize">Facebook</a>
             <a href="#" target="_blank" className="youtube textSize">YouTube</a>
           </div>
