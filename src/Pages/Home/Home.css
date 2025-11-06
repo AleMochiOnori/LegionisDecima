@@ -86,7 +86,8 @@
 
 
 .TorrinoSportingCenterInfo {
-    margin-top: 1.5rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;

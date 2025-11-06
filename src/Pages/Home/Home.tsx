@@ -21,6 +21,11 @@ const Home: React.FC = () => {
                 Legionis Decima Torrino è molto più di una palestra: è un luogo dove corpo, mente e spirito si forgiano ogni giorno. Situata nei pressi del Torrino Sporting Center, nel cuore di Roma Sud, la scuola si dedica all'insegnamento del pugilato, della kickboxing/K-1 e della muay thai con passione, rigore e attenzione verso ogni studente.
                 Ogni lezione è strutturata per migliorare tecnica, resistenza e strategia, ma senza dimenticare il rispetto reciproco e la disciplina, pilastri fondamentali nella nostra pratica. Legionis Decima Torrino accoglie principianti e atleti esperti, offrendo un ambiente inclusivo che spinge ciascuno a superare i propri limiti, migliorarsi, e crescere anche dentro e fuori dal ring.
             </div>
+            <div className="TorrinoSportingCenterInfo ">
+                <h2 className="tscTitle">In collabborazione con Torrino Sporting Center</h2>
+                <a href="https://www.torrinosportingcenter.it/"><img className="logoTsc" src={tsc} alt="" /></a>
+                
+            </div>
             <div style={{marginTop : "10rem"}} className="Section2Boxe marging">
                 <HeroText 
                     image={BoxeImage}
@@ -45,11 +50,7 @@ const Home: React.FC = () => {
                     reverse={false}
                 />
             </div>
-            <div className="TorrinoSportingCenterInfo ">
-                <h2 className="tscTitle">In collabborazione con Torrino Sporting Center</h2>
-                <a href="https://www.torrinosportingcenter.it/"><img className="logoTsc" src={tsc} alt="" /></a>
-                
-            </div>
+            
 
         </div>
     );
