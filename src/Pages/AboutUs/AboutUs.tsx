@@ -85,13 +85,13 @@ const AboutUs = () => {
                                     image={Leandro}
                                     title="Leandro Cosentino"
                                     subtitle='MuayThai Corso base'
-                                    text="Leandro Cosentino, laureato in Scienze Motorie e attualmente iscritto alla magistrale in AMPA (Attività Motorie Preventive e Adattate), è un insegnante di Muay Thai che unisce competenza tecnica e conoscenza scientifica del movimento, rendendo accessibile anche ai principianti una disciplina complessa e affascinante. "
+                                    text="Leandro Cosentino, laureato in Scienze Motorie e attualmente iscritto alla magistrale AMPA, è un insegnante di Muay Thai che insegna le basi della disciplina in modo coinvolgente e accattivante. "
                                 />
                                 <CombatCard
                                     image={Caterina}
                                     title="Caterina Lanza"
                                     subtitle='Gym Boxe Femminile'
-                                    text="Caterina è un’allenatrice di Gym boxe che ha scelto di promuovere corsi esclusivamente al femminile, con l’obiettivo di offrire alle donne uno spazio in cui esprimere forza, determinazione e consapevolezza di sé. Con passione, dedizione e competenza tecnica, accompagna ogni atleta in un percorso di crescita personale e sportiva."
+                                    text="Caterina è un’allenatrice di Gym boxe che ha scelto di promuovere corsi esclusivamente al femminile, con l’obiettivo di offrire alle donne uno spazio in cui esprimere forza, determinazione e consapevolezza di sé."
                                 />
                                 <CombatCard
                                     image={Francesco}
