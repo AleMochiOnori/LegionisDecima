@@ -85,5 +85,6 @@
 @media (max-width: 480px) {
   .register-card {
     padding: 1.8rem;
+    width: 80%;
   }
 }
