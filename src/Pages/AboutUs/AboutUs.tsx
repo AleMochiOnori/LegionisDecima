@@ -10,6 +10,7 @@ import Caterina from "../../assets/Caterina.png"
 import Francesco from "../../assets/Francesco.jpg"
 import Mary from "../../assets/Mary.jpg"
 import Mastrelli2 from "../../assets/Mastrelli2.jpg"
+import Cerqua from "../../assets/Cerqua.jpg"
 
 const AboutUs = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -99,6 +100,7 @@ const AboutUs = () => {
                                     text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato. Insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
                                 />
                                   <CombatCard
+                                    image = {Cerqua}
                                     title="Francesco Cerqua"
                                     subtitle='Avvio Combat'
                                     text="Francesco Cerqua è un giovane e appassionato insegnante di boxe. Con un approccio dinamico e motivante, Francesco trasmette tecnica, disciplina e fiducia, creando un ambiente ideale per imparare divertendosi."
