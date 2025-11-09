@@ -39,7 +39,6 @@ src/
 ```bash
 git clone https://github.com/<tuo-username>/LegionisDecima-Frontend.git
 
-
 cd LegionisDecima-Frontend
 
 
@@ -53,6 +52,7 @@ npm install
 
 
 
+
 3️⃣ Configura le variabili d’ambiente
 
 Crea un file .env nella root del progetto con:
@@ -61,11 +61,13 @@ VITE_API_URL=http://localhost:5000/api
 
 
 
+
 4️⃣ Avvia il server di sviluppo
 
 Il sito sarà disponibile su:
 
 👉 http://localhost:5173
+
 
 
 
@@ -78,6 +80,7 @@ Il sito sarà disponibile su:
 -npm run preview	Avvia un’anteprima locale della build
 
 -npm run lint	Esegue il linter per TypeScript/JS
+
 
 
 
