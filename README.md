@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# 🥊 Legionis Decima Torrino — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Benvenuto nel repository **Legionis Decima Torrino (Frontend)**, l’interfaccia web ufficiale della scuola di Muay Thai e Kickboxing “Legionis Decima Torrino”.  
+Il progetto è sviluppato in **React + TypeScript**, con gestione dello stato e connessione ad un backend REST API per recensioni, prenotazioni e gestione contenuti.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologie principali
 
-## React Compiler
+- ⚛️ **React 18 + TypeScript**
+- 💄 **CSS Modules / Custom CSS**
+- 📦 **Vite** (per sviluppo rapido e build ottimizzata)
+- 🔐 **Axios** (per chiamate API)
+- 🌙 **React-Bootstrap** (modali e componenti UI selezionati)
+- 💬 **JWT Auth** (per autenticazione)
+- 🌍 **REST API** (collegamento al backend Node.js/Express)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Struttura del progetto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+src/
+├── assets/ # Immagini e loghi
+├── components/ # Componenti riutilizzabili (Navbar, Footer, Modali, ecc.)
+├── Pages/ # Pagine principali (Home, Ratings, Prenotazioni, ecc.)
+├── styles/ # File CSS globali o moduli
+├── App.tsx # Entry point dell'app
+└── main.tsx # Montaggio React root
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installazione e avvio
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1️⃣ Clona il repository
+
+```bash
+git clone https://github.com/<tuo-username>/LegionisDecima-Frontend.git
+cd LegionisDecima-Frontend
+
+
+
+
+2️⃣ Installa le dipendenze
+
+Assicurati di avere Node.js ≥ 18 installato, poi esegui:
+
+
+npm install
+
+
+3️⃣ Configura le variabili d’ambiente
+
+
+Crea un file .env nella root del progetto con:
+
+
+VITE_API_URL=http://localhost:5000/api
+
+
+4️⃣ Avvia il server di sviluppo
+
+Il sito sarà disponibile su:
+👉 http://localhost:5173
+
+
+
+🛠️ Script disponibili
+Comando	Descrizione
+npm run dev	Avvia il server di sviluppo Vite
+npm run build	Compila il progetto per la produzione
+npm run preview	Avvia un’anteprima locale della build
+npm run lint	Esegue il linter per TypeScript/JS
+
+
+
+
+🔗 Collegamento al Backend
+
+Il frontend comunica con l’API Node.js / Express (progetto “Legionis Decima Backend”) per:
+
+Creazione e modifica recensioni
+
+Autenticazione utente
+
+Gestione prenotazioni
+
+Assicurati che il backend sia in esecuzione su http://localhost:5000 o sull’URL specificato in .env.
+
+
+
+
+
+🧠 Note per lo sviluppo
+
+Evita di importare direttamente CSS globali di Bootstrap: usa componenti isolati o modali personalizzate per non influenzare l’intero layout.
+
+Le chiamate Axios includono il token JWT salvato nel localStorage.
+
+In caso di errori ERR_NETWORK o CORS, verifica la configurazione del backend e l’origine consentita.
+
+
+
+
+👨‍💻 Autore
+
+Alessandro Mochi Onori
+Progetto sviluppato come frontend per la palestra Legionis Decima Torrino.
+
+---
