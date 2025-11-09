@@ -37,6 +37,7 @@ src/
 
 ```bash
 git clone https://github.com/AleMochiOnori/LegionisDecima.git
+
 cd LegionisDecima
 ```
 
@@ -109,7 +110,8 @@ Assicurati che il backend sia in esecuzione su `http://localhost:5000` o sull’
 
 ## 👨‍💻 Autore
 
-**Alessandro Mochi Onori**  
+**Alessandro Mochi Onori**
+  
 Frontend sviluppato per la palestra **Legionis Decima Torrino**.
 
 ---
