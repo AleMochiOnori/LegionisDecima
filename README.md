@@ -37,7 +37,7 @@ src/
 ### 1️⃣ Clona il repository
 
 ```bash
-git clone https://github.com/<tuo-username>/LegionisDecima-Frontend.git
+git clone https://github.com/AleMochiOnori/LegionisDecima.git
 
 cd LegionisDecima-Frontend
 
