@@ -1,4 +1,4 @@
-# 🥊 Legionis Decima Torrino — Frontend
+# 🥊 Legionis Decima Torrino
 
 Benvenuto nel repository **Legionis Decima Torrino (Frontend)**, l’interfaccia web ufficiale della scuola di Muay Thai e Kickboxing “Legionis Decima Torrino”.  
 Il progetto è sviluppato in **React + TypeScript**, con gestione dello stato e connessione ad un backend REST API per recensioni, prenotazioni e gestione contenuti.
@@ -39,7 +39,7 @@ src/
 ```bash
 git clone https://github.com/AleMochiOnori/LegionisDecima.git
 
-cd LegionisDecima-Frontend
+cd LegionisDecima
 
 
 
