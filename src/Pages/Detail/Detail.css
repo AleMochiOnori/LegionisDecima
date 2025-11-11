@@ -1,0 +1,114 @@
+:root {
+  --rosso-legionis: #c00000;
+  --nero-legionis: #000;
+  --bianco-legionis: #fff;
+}
+
+.DetailContainer {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: var(--bianco-legionis);
+  font-family: "Roboto", sans-serif;
+  color: var(--nero-legionis);
+}
+
+/* ---- Sezioni principali ---- */
+.Viaggi,
+.Allenamenti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.immagineThai {
+    width: 700px;
+    object-fit: cover;
+
+}
+
+.LinkToThailand{
+    font-size: 1.5rem;
+}
+
+
+/* ---- Riflessioni ---- */
+.Riflessioni {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.section-card {
+  flex: 1;
+  min-width: 250px;
+  background: var(--bianco-legionis);
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-card h2 {
+  color: var(--rosso-legionis);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.section-card:hover {
+  border-color: var(--rosso-legionis);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(192, 0, 0, 0.2);
+}
+
+/* ---- Allenamenti video/img ---- */
+.Allenamenti video {
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+}
+
+.red-button {
+  display: inline-block;
+  background: #c00000;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .Riflessioni {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .DetailContainer {
+    padding: 1.5rem;
+  }
+
+  .Viaggi img,
+  .Allenamenti img,
+  .Allenamenti video {
+    max-width: 100%;
+  }
+}

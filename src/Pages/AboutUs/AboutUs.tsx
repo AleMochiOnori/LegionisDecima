@@ -73,7 +73,7 @@ const AboutUs = () => {
                                     image={Matteo}
                                     title="Matteo Chiavolini"
                                     subtitle='Boxe'
-                                    text="Matteo Chiavolini è un istruttore le cui doti mescolano tecnica, passione e dedizione, con un passato da agonista nella Kickboxing (Cintura Nera) e come tecnico di pugilato della FPI, sempre con l'obiettivo di far emergere il meglio in ogni allievo."
+                                    text="Matteo Chiavolini è un maestro le cui doti mescolano tecnica, passione e dedizione, con un passato da agonista nella Kickboxing (Cintura Nera) e come tecnico di pugilato della FPI, sempre con l'obiettivo di far emergere il meglio in ogni allievo."
                                 />
                                 <CombatCard
                                     image={Giuseppe}
@@ -96,8 +96,8 @@ const AboutUs = () => {
                                 <CombatCard
                                     image={Francesco}
                                     title="Francesco Loreti"
-                                    subtitle='Avvio Combat'
-                                    text="Francesco è un istruttore specializzato nell’avvio al combat e al pugilato. Insegna le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
+                                    subtitle='Aiuto Boxe'
+                                    text="Francesco è un istruttore specializzato nel pugilato. Insegna , come assistente al maestro Matteo Chiavolini , le basi indispensabili: la postura, il footwork, la guardia, il corretto uso del jab e del direct, oltre ai movimenti difensivi fondamentali."
                                 />
                                   <CombatCard
                                     image = {Cerqua}

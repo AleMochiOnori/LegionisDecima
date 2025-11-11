@@ -11,6 +11,8 @@ import Courses from './Pages/Courses/Courses'
 import ScrollToTop from './utils/ScrollToTop'
 import PrivateLesson from './Pages/PrivateLesson/PrivateLesson'
 import Rating from './Pages/Ratings/Rating'
+import Detail from './Pages/Detail/Detail'
+import ThailandTrip from './Pages/Detail/ThailandTrip'
 
 
 
@@ -27,6 +29,8 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/privateLesson" element={<PrivateLesson />} />
           <Route path="/rating" element={<Rating />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/tripthai" element={<ThailandTrip/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
