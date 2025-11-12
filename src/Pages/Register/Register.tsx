@@ -6,10 +6,18 @@ const Register: React.FC = () => {
     username: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
   const [message, setMessage] = useState("");
-
+  // Verifica che password e confirmPassword coincidano
+  const checkPassword = () => {
+    if (formData.password !== formData.confirmPassword) {
+      setMessage("❌ Le password non corrispondono");
+      return false;
+    }
+    return true;
+  };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -17,19 +25,26 @@ const Register: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage("");
+    // Controllo locale delle password prima della chiamata API
+    if (!checkPassword()) return;
 
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        // Non inviare il campo confirmPassword al server
+        body: JSON.stringify({
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+        }),
       });
 
       const data = await res.json();
 
       if (res.ok) {
         setMessage("✅ Registrazione avvenuta con successo!");
-        setFormData({ username: "", email: "", password: "" });
+        setFormData({ username: "", email: "", password: "", confirmPassword: "" });
       } else {
         setMessage(`❌ Errore: ${data.error || "Qualcosa è andato storto"}`);
       }
@@ -78,6 +93,18 @@ const Register: React.FC = () => {
               name="password"
               placeholder="Crea una password"
               value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Conferma password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Conferma la password"
+              value={formData.confirmPassword}
               onChange={handleChange}
               required
             />

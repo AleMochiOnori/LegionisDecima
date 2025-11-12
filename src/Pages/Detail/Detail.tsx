@@ -6,8 +6,8 @@ const Detail = () => {
     <div className="DetailContainer">
       <div className="Viaggi section-card">
         <img className="immagineThai" src={MainImage} alt="Viaggio studio Thailandia" />
-        <h2>Viaggio Studio in Thailandia</h2>
-        <p>
+        <h2 className="TITOLOTHAI">Viaggio Studio in Thailandia</h2>
+        <p className="thaiDescription">
           Un’esperienza unica per scoprire le radici della Muay Thai, con allenamenti intensi,
           cerimonie tradizionali e momenti indimenticabili vissuti al Kombat Group di Pattaya.
         </p>
@@ -32,8 +32,8 @@ const Detail = () => {
       </div>
 
       <div className="Allenamenti">
-        <img src="/images/allenamento.jpg" alt="Allenamenti Legionis" />
-        <video src="/videos/training.mp4" controls></video>
+        <p className="introAllenamenti">INTRO ALLENAMENTI</p>
+        <video className="trainingVideo" src="/videos/training.mp4" controls aria-label="Video allenamento Legionis"></video>
       </div>
     </div>
   );

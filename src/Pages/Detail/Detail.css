@@ -7,16 +7,23 @@
 .DetailContainer {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin: 0 auto;
-  gap: 2rem;
+  width: min(1880px, 96%);
+  margin: 3rem auto;
+  height:min-content;
+  gap: 8.2rem;
   padding: 3rem;
-  background-color: var(--bianco-legionis);
-  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #fff 0%, #fcfbfb 100%);
+  border-radius: 16px;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--nero-legionis);
+  -webkit-box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1); 
+  box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease;
+  margin-top: -3rem;
 }
 
 /* ---- Sezioni principali ---- */
+
 .Viaggi,
 .Allenamenti {
   display: flex;
@@ -25,90 +32,154 @@
   text-align: center;
 }
 
-.immagineThai {
-    width: 700px;
-    object-fit: cover;
 
+.thaiDescription {
+  font-size: 1.3rem;
+  color: #333;
 }
 
+.immagineThai {
+  width: 85%;
+  
+  height: 680px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto 1rem;
+  box-shadow: 0 12px 34px rgba(192,0,0,0.10);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
 .LinkToThailand{
-    font-size: 1.5rem;
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
+  color : white !important;
+}
+
+.Viaggi .red-button {
+  margin-top: 0.8rem;
 }
 
 
 /* ---- Riflessioni ---- */
+
 .Riflessioni {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  align-items: stretch;
 }
 
+
 .section-card {
-  flex: 1;
-  min-width: 250px;
-  background: var(--bianco-legionis);
-  border: 2px solid transparent;
-  border-radius: 1rem;
+  background: linear-gradient(180deg, #fff 0%, #fff 60%);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.32s cubic-bezier(.2,.8,.2,1), box-shadow 0.32s;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .section-card h2 {
   color: var(--rosso-legionis);
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   letter-spacing: 1px;
+  font-size: 2.25rem;
 }
 
+.section-card p {
+  flex-grow: 1;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+
 .section-card:hover {
-  border-color: var(--rosso-legionis);
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(192, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(192, 0, 0, 0.14);
+  border-color: rgba(192,0,0,0.14);
 }
 
 /* ---- Allenamenti video/img ---- */
-.Allenamenti video {
-  margin-top: 1.5rem;
-  border-radius: 1rem;
+.Allenamenti video,
+.Allenamenti .trainingVideo {
+  margin-top: 1.2rem;
+  width: 100%;
+  height: 720px;
+  border-radius: 14px;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.09);
+  margin-bottom: 20rem;
+}
+
+.introAllenamenti {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--rosso-legionis);
 }
 
 .red-button {
-  display: inline-block;
-  background: #c00000;
-  color: #fff;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(90deg, #c11 0%, #a10000 100%);
+  color: var(--bianco-legionis);
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  font-weight: 800;
+  font-size: 1.03rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: none;
+  box-shadow: 0 10px 26px rgba(192,0,0,0.16);
 }
+
+.red-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(160,0,0,0.14);
+}
+
+.red-button:active { transform: translateY(-1px); }
 
 
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .Riflessioni {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
-  .section-card {
-    width: 100%;
-  }
+  .DetailContainer { padding: 2rem; }
+
+  .immagineThai { height: 420px; }
+  .Allenamenti video, .Allenamenti .trainingVideo { height: 420px; }
 }
 
 @media (max-width: 600px) {
   .DetailContainer {
-    padding: 1.5rem;
+    padding: 0.9rem;
+    margin: 0.8rem auto;
   }
 
-  .Viaggi img,
-  .Allenamenti img,
-  .Allenamenti video {
-    max-width: 100%;
-  }
+  .immagineThai { height: 240px; }
+
+  .section-card { padding: 1.1rem; }
+  .section-card h2 { font-size: 0.98rem; }
+
+  .Allenamenti video, .Allenamenti .trainingVideo { height: 260px; }
+  .red-button { padding: 0.6rem 1rem; font-size: 0.98rem; }
 }
+
+/* Utility */
+.Allenamenti .allenamentoImg { width: 100%; max-width: 900px; border-radius: 12px; object-fit: cover; box-shadow: 0 10px 28px rgba(0,0,0,0.06); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
