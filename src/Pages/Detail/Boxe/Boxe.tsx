@@ -1,5 +1,6 @@
 import "./Boxe.css";
 import boxingClass from "../../../assets/boxingClass.jpeg";
+import pugilatoHero from "../../../assets/pugilatoDetail.jpeg";
 const Boxe = () => {
   return (
     <div className="boxe-container">
@@ -46,7 +47,7 @@ const Boxe = () => {
           <div>
             <img
               className="large"
-              src="/src/assets/pugilatoDetail.jpeg"
+              src={pugilatoHero}
               alt="Allenamento Pugilato"
             />
           </div>
