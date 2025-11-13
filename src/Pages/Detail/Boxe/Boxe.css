@@ -21,7 +21,7 @@
   width: 100%;
   object-fit: cover;
   object-position: 50% 30%;
-  height: clamp(18rem, 50vh, 35rem); /* responsive height */
+  height: clamp(18rem, 60vh, 35rem); /* responsive height */
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   margin-bottom: 10rem;

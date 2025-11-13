@@ -2,9 +2,9 @@ import "./Boxe.css";
 import boxingClass from "../../../assets/boxingClass.jpeg";
 import pugilatoHero from "../../../assets/pugilatoDetail.jpeg";
 const Boxe = () => {
-  return (
+  return (<>
+    <img className="mainBoxingImage" src={boxingClass} alt="" />
     <div className="boxe-container">
-      <img className="mainBoxingImage" src={boxingClass} alt="" />
       <section className="boxe-hero">
         <div className="hero-content">
           <h1 className="hero-title">Boxe - Pugilato Olimpico & Gym Boxe</h1>
@@ -97,6 +97,8 @@ const Boxe = () => {
         </article>
       </section>
     </div>
+  </>
+    
   );
 };
 
