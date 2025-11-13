@@ -80,6 +80,29 @@
     
 }
 
+.matteo-image{
+    /* sposta l'immagine verso il basso e scala in modo controllato */
+    transform: translateY(-20%) translateX(-3%) scale(1.5) !important;
+    object-fit: cover !important;
+    object-position: 50% 60% !important; /* sposta il focus più in basso */
+    transition: transform 0.35s ease, object-position 0.35s ease;
+}
+
+/* Riduci lo spostamento su tablet e mobile per evitare tagli eccessivi */
+@media (max-width: 1024px) {
+    .matteo-image{
+        transform: translateY(10%) scale(1.2) !important;
+        object-position: 50% 58% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .matteo-image{
+        transform: translateY(6%) scale(1.12) !important;
+        object-position: 50% 55% !important;
+    }
+}
+
 .slider-arrow:disabled {
     opacity: 0.3;
     cursor: not-allowed;

@@ -47,8 +47,7 @@ const CoursesSchedule = () => {
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
         saturday : [
-            { range : "11:00 - 12:00" , coach : "Giacomo Ratti"},
-            { range : "12:00 - 13:00" , coach : "Leandro Cosentino"}
+            { range : "11:00 - 12:30" , coach : "Giacomo Ratti"},
 
         ]
       },
@@ -79,7 +78,9 @@ const CoursesSchedule = () => {
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
         ],
-        saturday : []
+        saturday : [
+          { range : "11:00 - 12:30" , coach : "Giacomo Ratti"}
+        ]
       },
     },
     

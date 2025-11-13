@@ -18,12 +18,11 @@
 /* LOGO */
 .footer-logo {
   flex: 1 1 220px;
-  display: flex;          /* aggiungi */
+  display: flex; /* aggiungi */
   flex-direction: column; /* già presente */
-  align-items: center;    /* centra tutti i figli */
-  text-align: center;     /* centra testo */
+  align-items: center; /* centra tutti i figli */
+  text-align: center; /* centra testo */
 }
-
 
 .footer-logo img {
   width: 80px;
@@ -33,7 +32,6 @@
   border-radius: 50%;
 }
 
-
 .logos {
   display: flex;
   align-items: center;
@@ -42,7 +40,7 @@
 }
 
 .textSize {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .footer-logo h2 {
@@ -57,24 +55,23 @@
 }
 
 .tsc-background {
-  display: flex;           /* trasforma il div in flex */
+  display: flex; /* trasforma il div in flex */
   justify-content: center; /* centra il logo dentro il div */
-  align-items: center;     /* centra verticalmente */
+  align-items: center; /* centra verticalmente */
   background-color: #fff;
   width: 80px;
   height: 80px;
-  border-radius: 50%;  
-  margin-bottom: 10px;           /* elimina padding extra che sposta il logo */
+  border-radius: 50%;
+  margin-bottom: 10px; /* elimina padding extra che sposta il logo */
 }
 
-
 .tsc-background img {
-  width: 60px;             /* dimensione interna del logo */
+  width: 60px; /* dimensione interna del logo */
   height: 60px;
 }
 
-.logoTsc2{
-    margin-top: 0.8em!important;
+.logoTsc2 {
+  margin-top: 0.8em !important;
 }
 /* SEZIONI */
 .footer-section {
@@ -112,6 +109,7 @@
 .footer-section a:hover {
   color: #e63946;
 }
+
 
 /* SOCIAL */
 .social-icons {

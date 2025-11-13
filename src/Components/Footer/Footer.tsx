@@ -30,7 +30,9 @@ const Footer = () => {
             <li><Link to={"/aboutUs"}>Staff</Link></li>
             <li><Link to={"/contacts"}>Contatti</Link></li>
             <li><Link to={"/privateLesson"}>Lezione Privata</Link></li>
+            <li><Link to={"/detail"}>Approfondisci</Link></li>
             <li><Link to={"/rating"}>Recensioni</Link></li>
+            <li><Link to={"https://www.torrinosportingcenter.it/"}>Sito Torrino Sporting Center</Link></li>
           </ul>
         </div>
         <div className="footer-section">

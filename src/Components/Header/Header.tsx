@@ -35,7 +35,7 @@ const Header = () => {
                         <p>Recensioni</p>
                     </Link>
                     <Link className="nav-link" to={`/detail`}>
-                        <p>Approdondisci</p>
+                        <p>Approfondisci</p>
                     </Link>
                     <div className="logInSession">
                         <Link className="nav-link" to={`/Login`}><p>Accedi</p></Link>

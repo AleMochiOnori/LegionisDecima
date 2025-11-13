@@ -6,14 +6,14 @@ interface CardProps {
   title: string;
   subtitle : string
   text: string;
-
+  imageClassName?: string;
 }
 
-const CombatCard: React.FC<CardProps> = ({ image, title, subtitle, text }) => {
+const CombatCard: React.FC<CardProps> = ({ image, title, subtitle, text, imageClassName }) => {
   return (
     <div className="combat-card">
       <div className="card-image-container">
-        {image && <img className="combat-image" src={image} alt={title} />}
+        {image && <img className={`combat-image ${imageClassName ?? ''}`} src={image} alt={title} />}
         <div className="image-overlay"></div>
       </div>
       <div className="card-content">
