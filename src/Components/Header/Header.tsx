@@ -57,7 +57,9 @@ const Header = () => {
                 <Link to={`/contacts`} onClick={() => setOpen(false)}>Contatti</Link>
                 <Link to={`/privateLesson`} onClick={() => setOpen(false)}>Lezione privata</Link>
                 <Link to={`/rating`} onClick={() => setOpen(false)}>Recensioni</Link>
-                <Link to={`/detail`} onClick={() => setOpen(false)}><p>Approdondisci</p></Link>
+                <div className="marginLinkDetail">
+                    <Link to={`/detail`} onClick={() => setOpen(false)}><p>Approdondisci</p></Link>
+                </div>
                 <Link to={`/Login`} onClick={() => setOpen(false)}>Accedi</Link>
                 <Link to={`/register`} onClick={() => setOpen(false)}>Registrati</Link>
             </div>

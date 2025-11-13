@@ -74,13 +74,11 @@
   font-size: 1.5rem;
 }
 
-/* Drop cap for the first paragraph */
 .ViaggioContent p:first-of-type::first-letter {
   /* ridotto lo spazio intorno al drop-cap per evitare che appaia troppo distaccata */
-  float: left;
+  padding-right:0.3rem;
   font-size: 3rem;
   line-height: 1;
-  padding-right: 0.3rem;
   padding-top: 0;
   color: var(--rosso);
   font-weight: 700;
@@ -124,6 +122,10 @@
 
 /* Small screens */
 @media (max-width: 1000px) {
+   .ViaggioContent p:first-of-type::first-letter {
+    padding: 0;
+   
+  }
   .main-img {
     height: 420px;
   }
@@ -158,6 +160,8 @@
   }
   .ViaggioContent p:first-of-type::first-letter {
     font-size: 2.2rem;
+    padding-right:0.3rem;
+   
   }
   .ViaggioHeader h1 {
     font-size: 1.4rem;

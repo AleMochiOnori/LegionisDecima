@@ -103,6 +103,12 @@
   display: none;
 }
 
+
+.marginLinkDetail{
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
+
 @media screen and (max-width: 1038px) {
   .Left-Header-Content {
     margin-left: -1.5rem;
