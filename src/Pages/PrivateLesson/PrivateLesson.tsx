@@ -98,7 +98,7 @@ const PrivateLesson = () => {
                   className="private-lesson-img2 LeandroIamgeFix" 
                   src={Leandro} 
                   alt="Giacomo Ratti - Istruttore di Muay Thai, Kick Boxing e Boxe" 
-                  id="imageGiacomo"
+                  id="imageLeandro"
                 />
               </div>
             </div>

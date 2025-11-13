@@ -5,7 +5,7 @@
   --nero: #071018;
   --muted: #6b6f76;
   --bg: #fffaf9;
-  --container-max: 1700px;
+
   --font-detail: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -13,7 +13,7 @@
   background: linear-gradient(180deg, var(--bg), #ffffff 60%);
   color: var(--nero);
   padding: 4rem 2rem;
-  max-width: var(--container-max);
+  max-width: 1700px;
   margin: 2.6rem auto;
   font-family: var(--font-detail);
   line-height: 1.78;
@@ -150,13 +150,13 @@
     border-radius: 10px;
   }
   .main-img {
-    height: 260px;
-    border-radius: 12px;
+    height: 300px;
   }
 
 
   .inline-img {
-    height: 180px;
+    height: 300px;
+    width: 100%;
   }
   .ViaggioContent p:first-of-type::first-letter {
     font-size: 2.2rem;

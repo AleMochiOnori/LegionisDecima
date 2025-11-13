@@ -1,9 +1,9 @@
 import "./ThailandTrip.css";
-import thaiTraning from "../../assets/ThaiTrip/ThaiLandTraining.jpeg";
-import thaiImage2 from "../../assets/ThaiTrip/Thaitrip.jpeg";
-import thaiImage3 from "../../assets/ThaiTrip/thaiTraning2.jpeg";
-import thaiImage4 from "../../assets/ThaiTrip/thaiCeremony.jpeg";
-import thaiImage5 from "../../assets/ThaiTrip/thaiCertificate.jpeg";
+import thaiTraning from "../../../assets/ThaiTrip/ThaiLandTraining.jpeg";
+import thaiImage2 from "../../../assets/ThaiTrip/Thaitrip.jpeg";
+import thaiImage3 from "../../../assets/ThaiTrip/thaiTraning2.jpeg";
+import thaiImage4 from "../../../assets/ThaiTrip/thaiCeremony.jpeg";
+import thaiImage5 from "../../../assets/ThaiTrip/thaiCertificate.jpeg";
 
 const ViaggioThailandia = () => {
   return (

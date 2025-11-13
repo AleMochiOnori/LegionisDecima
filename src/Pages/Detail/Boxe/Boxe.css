@@ -1,0 +1,291 @@
+/* Boxe page styles - responsive and clean layout for Pugilato Olimpico & Gym Boxe */
+:root {
+  --container-max: 2145px;
+  --accent: #dc2626;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --radius: 14px;
+}
+
+.boxe-container {
+  width: 80%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  color: #111827;
+  margin-top: -2.5rem;
+  /* removed negative bottom margin to avoid overlap with following sections */
+}
+
+.mainBoxingImage {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  height: clamp(18rem, 50vh, 35rem); /* responsive height */
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  margin-bottom: 10rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* Hero */
+.boxe-hero {
+  margin-top: 4rem; /* reduced from 10rem to avoid huge gaps */
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  /* remove fixed height so children determine flow and push content */
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  text-align: left;
+  flex: 1 1 480px; /* grow, shrink, basis */
+  min-width: 300px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-lead {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+.fpi-logo-space {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-image: url("../../../assets/FPI.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* prevent flexbox from shrinking or growing */
+  flex: 0 0 140px;
+  min-width: 140px;
+  min-height: 140px;
+
+  /* ensure it doesn't inherit transforms or scaling from parents */
+  transform: none !important;
+}
+
+/* Image area: large training images */
+.hero-images {
+  gap: 0.6rem;
+  flex: 1 1 420px;
+  min-width: 260px;
+}
+
+.hero-images .large {
+  height: clamp(
+    12rem,
+    70vh,
+    42rem
+  ); /* minima, ideale (30% viewport), massima */
+  transition: height 240ms ease;
+  object-position: 50% 8%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #f3f4f6;
+  flex: 1 1 auto;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Course sections - improved visual design */
+.sections {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+  margin-top: 10rem;
+  margin-bottom: -10rem;
+}
+
+.course {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(249, 250, 251, 0.98)
+  );
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  flex: 1 1 calc(50% - 0.75rem);
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.course:hover {
+  transform: translateY(-6px);
+  -webkit-box-shadow: 1px 3px 50px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 50px 18px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.course-badge {
+  background: linear-gradient(135deg, var(--accent) 0%, #b91c1c 100%);
+  color: white;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.18);
+}
+
+.course h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.course p {
+  color: #374151;
+  line-height: 1.8;
+  margin: 0.8rem 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.course .highlight {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.course-cta {
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* CTA */
+.boxe-cta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, #b91c1c 100%);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 1069px) {
+
+  .boxe-container {
+    margin-bottom: -15rem;
+  }
+  .boxe-hero {
+    flex-direction: column;
+  }
+
+  .sections {
+    margin-bottom:0;
+  }
+
+  .hero-images .large {
+    height: 200px;
+  }
+  .large {
+    min-height: 350px;
+  }
+
+  .sections {
+    flex-direction: column;
+  }
+
+  .course {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .course p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .boxe-container {
+    padding: 1rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-images .large {
+    height: 160px;
+  }
+  .course p {
+    font-size: 1.2rem;
+  }
+  .course h3 {
+    font-size: 1.5rem;
+  }
+  .course .highlight {
+    font-size: 1.2rem;
+  }
+}

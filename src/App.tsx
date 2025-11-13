@@ -12,7 +12,10 @@ import ScrollToTop from './utils/ScrollToTop'
 import PrivateLesson from './Pages/PrivateLesson/PrivateLesson'
 import Rating from './Pages/Ratings/Rating'
 import Detail from './Pages/Detail/Detail'
-import ThailandTrip from './Pages/Detail/ThailandTrip'
+import ThailandTrip from './Pages/Detail/ThailandTrip/ThailandTrip'
+import Kickboxing from './Pages/Detail/Kick/KickBoxing'
+import AtleticTraining from './Pages/Detail/Atletic Training/AtleticTraining'
+import Boxe from './Pages/Detail/Boxe/Boxe'
 
 
 
@@ -30,7 +33,10 @@ function App() {
           <Route path="/privateLesson" element={<PrivateLesson />} />
           <Route path="/rating" element={<Rating />} />
           <Route path="/detail" element={<Detail />} />
-          <Route path="/viaggio-thailandia" element={<ThailandTrip/>} />
+          <Route path="/viaggio-thailandia" element={<ThailandTrip />} />
+          <Route path="/kick-muay-thai" element={<Kickboxing />} />
+          <Route path="/boxe" element={<Boxe />} />
+          <Route path="/AtetlicTraining" element={<AtleticTraining />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

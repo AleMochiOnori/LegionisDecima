@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Detail.css";
 import MainImage from "../../assets/ThaiImageMain.jpeg";
+import atleticTrainingImg from "../../assets/SVG/weightlifting-svgrepo-com.png";
+import boxeImg from "../../assets/SVG/boxing-fight-punch-boxer-svgrepo-com.png";
+import kickMuayImg from "../../assets/SVG/kickboxing-svgrepo-com.png";
 const Detail = () => {
   return (
     <div className="DetailContainer">
-      <div className="Viaggi section-card">
+      <div className="Viaggi ">
         <img
           className="immagineThai"
           src={MainImage}
@@ -25,18 +28,21 @@ const Detail = () => {
         <Link to="/AtetlicTraining">
           <div className="AtleticTraining section-card">
             <h2>Allenamento Atletico</h2>
+            <img className="svg" src={atleticTrainingImg} alt="" />
             <p>Preparazione fisica, potenza e resistenza.</p>
           </div>
         </Link>
         <Link to="/boxe">
           <div className="Boxe section-card">
-            <h2>Boxe</h2>
+            <h2>Boxe / Gym Boxe</h2>
+            <img className="svg" src={boxeImg} alt="" />
             <p>Tecnica, velocità e strategia pugilistica.</p>
           </div>
         </Link>
         <Link to={"/kick-muay-thai"}>
           <div className="KickMuay section-card">
             <h2>Kick / Muay Thai</h2>
+            <img className="svg" src={kickMuayImg} alt="" />
             <p>Disciplina, tecnica e spirito da combattente.</p>
           </div>
         </Link>
