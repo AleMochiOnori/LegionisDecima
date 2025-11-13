@@ -59,9 +59,9 @@ const Boxe = () => {
           <p className="decriptionBoxeDetail">
             Il percorso agonistico mira a sviluppare le qualità tecniche e
             tattiche necessarie per la competizione: lavoro specifico con coach
-            certificati, sessioni di sparring controllato e preparazione
-            atletica mirata. I nostri allenatori hanno esperienza in palestre e
-            nei circuiti federali.
+            certificati, sessioni di sparring e preparazione atletica mirata. I
+            nostri allenatori hanno esperienza in palestre e nei circuiti
+            federali.
           </p>
           <p className="highlight">
             Ideale per atleti che vogliono partecipare a competizioni e
@@ -73,7 +73,7 @@ const Boxe = () => {
           <p>
             La Gym Boxe è pensata per chi cerca un allenamento completo:
             combinazione di tecniche di pugilato, interval training e lavoro al
-            sacco per migliorare tono muscolare e resistenza cardiovascolare, in
+            sacco per migliorare tono muscolare e resistenza cardiovascolare, sparring leggero e controllato,in
             un ambiente inclusivo e motivante.
           </p>
           <p className="highlight">
