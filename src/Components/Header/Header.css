@@ -1,133 +1,135 @@
 .Header-Container {
-    height: 2rem; /* ridotta l’altezza generale */
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: rgb(38, 36, 36);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem; /* meno padding = header più bassa */
+  height: 2rem; /* ridotta l’altezza generale */
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(38, 36, 36);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem; /* meno padding = header più bassa */
 }
 
 /* Contenuto destro (link, icone, ecc.) */
 .Right-Header-Content {
-    margin-right: 6rem;
-    display: flex;
-    gap: 25px;
-    font-size: 1.2rem;
-    color: white;
+  margin-right: 6rem;
+  display: flex;
+  gap: 25px;
+  font-size: 1.2rem;
+  color: white;
 }
 
-.Right-Header-Content a:hover{
-    color:#eb2525;
+.Right-Header-Content a:hover {
+  color: #eb2525;
 }
 
 /* Contenuto sinistro (logo + testo) */
 .Left-Header-Content {
-    margin-left: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .titleHeader {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 600;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 /* Sezione login */
 .logInSession {
-    display: flex;
+  display: flex;
 }
 
 /* Logo ridimensionato */
 .logoCombat {
-    width: 50px; /* prima era 100px */
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 8px;
+  width: 50px; /* prima era 100px */
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+
+.nav-link:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Sidebar mobile nascosta di default */
 .mobile-sidebar {
-    position: fixed;
-    top: 0;
-    right: -100%; /* fuori dallo schermo */
-    width: 250px;
-    height: 100vh;
-    background-color: rgb(38, 36, 36);
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: -100%; /* fuori dallo schermo */
+  width: 250px;
+  height: 100vh;
+  background-color: rgb(38, 36, 36);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 9999;
 }
 
 /* Quando aperta */
 .mobile-sidebar.open {
-    right: 0;
-    
+  right: 0;
 }
 .close-sidebar {
-    position: absolute;
-    top: 1rem;
-    right: 0.1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 10000; /* più alto della sidebar */
-
+  position: absolute;
+  top: 1rem;
+  right: 0.1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000; /* più alto della sidebar */
 }
 
 /* Link sidebar */
 .mobile-sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-
 
 /* Hamburger solo su mobile */
 .hamburger-menu {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 1038px) {
-    .Left-Header-Content {
-        margin-left: -1.5rem;
-    }
+  .Left-Header-Content {
+    margin-left: -1.5rem;
+  }
 
-    .logoCombat{
-       height: 50px;
-       width: 50px;
-       margin-left: 10px;
-    }
+  .logoCombat {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+  }
 
-    .Right-Header-Content {
-        display: none;
-    }
-    .hamburger-menu {
-        display: block;
-        margin-left: -5rem;
-    }
-    .titleHeader {
-        display: none;
-    }
+  .Right-Header-Content {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+    margin-left: -5rem;
+  }
+  .titleHeader {
+    display: none;
+  }
 
-    .hamburger-react{
-        margin-right: 2.5rem!important;
-    }
-    .whited{
-        z-index: 9999999;
-        fill: white;
-    }
+  .hamburger-react {
+    margin-right: 2.5rem !important;
+  }
+  .whited {
+    z-index: 9999999;
+    fill: white;
+  }
 }

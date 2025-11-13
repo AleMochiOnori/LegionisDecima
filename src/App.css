@@ -55,6 +55,13 @@ body {
   }
 }
 
+@media (max-width: 14000px) {
+  .main-scaled {
+    overflow-x: hidden;
+  }
+}
+
+
 .card {
   padding: 2em;
 }

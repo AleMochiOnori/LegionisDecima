@@ -38,10 +38,6 @@ a {
   color: #ffffff;
   text-decoration: inherit;
 }
-a:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
 
 body {
   margin: 0;
@@ -87,5 +83,11 @@ button:focus-visible {
 
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 14000px) {
+  :root{
+    overflow-x: hidden;
   }
 }

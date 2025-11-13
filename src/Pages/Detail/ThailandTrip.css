@@ -1,9 +1,12 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
   --rosso: #c00000;
   --nero: #071018;
   --muted: #6b6f76;
   --bg: #fffaf9;
   --container-max: 1700px;
+  --font-detail: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .ViaggioPage {
@@ -12,126 +15,172 @@
   padding: 4rem 2rem;
   max-width: var(--container-max);
   margin: 2.6rem auto;
-  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: var(--font-detail);
   line-height: 1.78;
   border-radius: 16px;
-  -webkit-box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1); 
-  box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 1px 3px 50px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 50px 18px rgba(0, 0, 0, 0.1);
   margin-bottom: -10rem;
 }
 
-.ViaggioHeader{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:0.35rem;
-  margin-bottom:2.2rem;
+.ViaggioHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 2.2rem;
 }
 
-.ViaggioHeader h1{
-  color:var(--rosso);
-  text-transform:uppercase;
-  letter-spacing:1.6px;
-  font-size:4rem;
-  margin:0;
+.ViaggioHeader h1 {
+  color: var(--rosso);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 4rem;
+  margin: 0;
+  font-family: var(--font-detail);
 }
 
-.author{
-  font-style:italic;
-  color:var(--muted);
-  font-size:1.98rem;
+.author {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1.98rem;
+  font-family: var(--font-detail);
 }
-
-.main-img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
-  border-radius:14px;
-  margin:1.2rem 0 2rem 0;
-  box-shadow: 0 22px 60px rgba(7,16,24,0.12);
+.main-img,
+.inline-img {
+  object-fit: cover;
+  object-position: 50% 43%;
+}
+.main-img {
+  width: 90%;
+  height: 460px;
+  border-radius: 14px;
+  margin: 1.2rem 0 2rem 0;
+  box-shadow: 0 22px 60px rgba(7, 16, 24, 0.12);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.main-img:hover{ transform: translateY(-6px) scale(1.01); box-shadow:0 30px 80px rgba(7,16,24,0.14); }
-
-.ViaggioContent{
+.ViaggioContent {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   padding: 5rem;
-  font-size:1.05rem;
+  font-size: 1.05rem;
   color: #222;
 }
 
-.ViaggioContent p{
-  margin:1rem 0;
+.ViaggioContent p {
+  margin: 1rem 0;
   font-size: 1.5rem;
 }
 
 /* Drop cap for the first paragraph */
-.ViaggioContent p:first-of-type::first-letter{
-  float:left;
-  font-size:3.2rem;
-  line-height:1;
-  padding-right:0.6rem;
-  padding-top:0.15rem;
-  color:var(--rosso);
-  font-weight:700;
+.ViaggioContent p:first-of-type::first-letter {
+  /* ridotto lo spazio intorno al drop-cap per evitare che appaia troppo distaccata */
+  float: left;
+  font-size: 3rem;
+  line-height: 1;
+  padding-right: 0.3rem;
+  padding-top: 0;
+  color: var(--rosso);
+  font-weight: 700;
 }
 
-.inline-img{
-  width:100%;
-  height:460px;
-  object-fit:cover;
-  border-radius:12px;
-  margin:1.6rem 0;
-  display:block;
-  box-shadow:0 12px 34px rgba(7,16,24,0.10);
+.inline-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1.6rem 0;
+  display: block;
+  box-shadow: 0 12px 34px rgba(7, 16, 24, 0.1);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
-.inline-img:hover{ transform: translateY(-4px) scale(1.02); box-shadow:0 22px 48px rgba(7,16,24,0.12); }
+.kongol {
+  /* solleva solo questa immagine senza interferire con le trasformazioni al passaggio */
 
-.closing{
-  text-align:right;
-  font-weight:700;
-  margin-top:2.4rem;
-  color:var(--rosso);
+  object-position: 50% 12%; /* mostra porzione più alta dei volti */
+  z-index: 2;
+}
+
+
+.closing {
+  text-align: right;
+  font-weight: 700;
+  margin-top: 2.4rem;
+  color: var(--rosso);
 }
 
 /* Content helpers: pull-quote */
-.pull-quote{
-  border-left:4px solid var(--rosso);
-  padding-left:1rem;
-  margin:1.6rem 0;
-  color:var(--muted);
-  background: rgba(192,0,0,0.02);
-  font-style:italic;
+.pull-quote {
+  border-left: 4px solid var(--rosso);
+  padding-left: 1rem;
+  margin: 1.6rem 0;
+  color: var(--muted);
+  background: rgba(192, 0, 0, 0.02);
+  font-style: italic;
 }
 
 /* Small screens */
-@media (max-width: 1000px){
-  .main-img{ height:420px; }
-  .inline-img{ height:300px; }
-  .ViaggioPage{ padding:3rem 1.25rem; }
-  .ViaggioHeader h1{ font-size:1.8rem; }
+@media (max-width: 1000px) {
+  .main-img {
+    height: 420px;
+  }
+  .inline-img {
+    height: 300px;
+  }
+  .ViaggioPage {
+    padding: 3rem 1.25rem;
+  }
+  .ViaggioHeader h1 {
+    font-size: 1.8rem;
+  }
+  .kongol {
+    top: -15px; /* meno spostamento su schermi piccoli */
+    object-position: 50% 35%;
+  }
 }
 
-@media (max-width: 680px){
-  .ViaggioPage{ padding:2rem 1rem; border-radius:10px; }
-  .main-img{ height:260px; border-radius:12px; }
-  .inline-img{ height:180px; }
-  .ViaggioContent p:first-of-type::first-letter{ font-size:2.2rem; }
-  .ViaggioHeader h1{ font-size:1.4rem; }
-  .ViaggioContent{ font-size:1rem; }
+@media (max-width: 680px) {
+  .ViaggioPage {
+    padding: 2rem 1rem;
+    border-radius: 10px;
+  }
+  .main-img {
+    height: 260px;
+    border-radius: 12px;
+  }
+
+
+  .inline-img {
+    height: 180px;
+  }
+  .ViaggioContent p:first-of-type::first-letter {
+    font-size: 2.2rem;
+  }
+  .ViaggioHeader h1 {
+    font-size: 1.4rem;
+  }
+  .ViaggioContent {
+    font-size: 1rem;
+  }
 }
 
 /* Utility: placeholder image background when path missing */
-.main-img[role="placeholder"], .inline-img[role="placeholder"]{
-  background: linear-gradient(135deg,#f5e9e6,#fff);
-  display:flex; align-items:center; justify-content:center;
-  color:var(--muted); font-weight:600;
+.main-img[role="placeholder"],
+.inline-img[role="placeholder"] {
+  background: linear-gradient(135deg, #f5e9e6, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-weight: 600;
 }
 
 /* Accessibility: focus styles for keyboard users */
-.ViaggioPage a:focus, .ViaggioPage img:focus{ outline: 3px solid rgba(192,0,0,0.18); outline-offset:4px; }
+.ViaggioPage a:focus,
+.ViaggioPage img:focus {
+  outline: 3px solid rgba(192, 0, 0, 0.18);
+  outline-offset: 4px;
+}

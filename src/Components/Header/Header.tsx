@@ -15,32 +15,32 @@ const Header = () => {
                     <h2 className="titleHeader">Legionis Decima Torrino</h2>
                 </div>
                 <div className="Right-Header-Content">
-                      <Link to={`/`}>
+                      <Link className="nav-link" to={`/`}>
                         <p>Home</p>
                     </Link>
-                    <Link to={`/aboutUs`}>
+                    <Link className="nav-link" to={`/aboutUs`}>
                         <p>Staff</p>
                     </Link>
-                    <Link to={`/courses`}>
+                    <Link className="nav-link" to={`/courses`}>
                         <p>Orari corsi</p>
                     </Link>
-                    
-                    <Link to={`/contacts`}>
+
+                    <Link className="nav-link" to={`/contacts`}>
                         <p>Contatti</p>
                     </Link>
-                     <Link to={`/privateLesson`}>
+                    <Link className="nav-link" to={`/privateLesson`}>
                         <p>Lezione privata</p>
                     </Link>
-                    <Link to={`/rating`}>
+                    <Link className="nav-link" to={`/rating`}>
                         <p>Recensioni</p>
                     </Link>
-                    <Link to={`/detail`}>
+                    <Link className="nav-link" to={`/detail`}>
                         <p>Approdondisci</p>
                     </Link>
                     <div className="logInSession">
-                        <Link to={`/Login`}><p>Accedi</p></Link>
+                        <Link className="nav-link" to={`/Login`}><p>Accedi</p></Link>
                          <p style={{marginLeft : "7px" , marginRight : "7px"}}>/</p>
-                        <Link to={`/register`}><p>Registrati</p></Link>
+                        <Link className="nav-link" to={`/register`}><p>Registrati</p></Link>
                     </div>
                    
                 </div>
