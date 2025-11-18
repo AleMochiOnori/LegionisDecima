@@ -2,7 +2,7 @@
 
 :root {
   --rosso-legionis: #c00000;
-  --nero-legionis: #000;
+  --nero-legionis: #333131;
   --bianco-legionis: #fff;
   --font-detail: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
@@ -51,7 +51,14 @@
   font-size: 2.5rem;
 }
 
-
+.SelezionaDisciplina {
+  margin-top: 2rem;
+  margin-bottom: -.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--nero-legionis);
+  font-family: var(--font-detail);
+}
 
 
 .immagineThai {
@@ -182,8 +189,62 @@
 .red-button:active { transform: translateY(-1px); }
 
 
+.ArticoliDetail{
+ height: 400px;
+}
 
-/* ---- Responsive ---- */
+.ArticoliTitleDetail{
+  font-size: 3.5rem;
+  color : var(--nero-legionis)
+}
+
+
+/* ---- Articles list — styling specifico richiesto */
+.articles-list-detail{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+  min-height: 300px;
+}
+
+.articles-list-detail a{
+  text-decoration: none;
+  color: inherit;
+  display: block; /* make the whole card clickable */
+}
+
+.article-card-detail{
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 22px rgba(2,6,23,0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  color: #000; /* forza testo nero */
+    min-height: 100px;
+}
+
+.article-card-detail h3{
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.article-card-detail p{
+  margin: 0;
+  color: #111;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.article-card-detail:hover{
+  transform: translateY(-6px);
+  -webkit-box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1); 
+  box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 1200px) {
   .Allenamenti video,
   .Allenamenti .trainingVideo {
@@ -227,6 +288,10 @@
 
   .Allenamenti video, .Allenamenti .trainingVideo { height: 260px; margin-bottom: 4rem; }
   .red-button { padding: 0.6rem 1rem; font-size: 0.98rem; }
+
+  .articles-list-detail{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {

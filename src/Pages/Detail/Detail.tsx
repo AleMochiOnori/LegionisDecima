@@ -24,7 +24,7 @@ const Detail = () => {
             <p className="LinkToThailand">Leggi il racconto completo</p>
           </Link>
         </div>
-
+        <h2 className="SelezionaDisciplina">Seleziona una disciplina per approfondire</h2>
         <div className="Riflessioni">
           <Link to="/AtetlicTraining">
             <div className="AtleticTraining section-card">
@@ -48,15 +48,19 @@ const Detail = () => {
             </div>
           </Link>
         </div>
-
-        <div className="Allenamenti">
-          <p className="introAllenamenti">INTRO ALLENAMENTI</p>
-          <video
-            className="trainingVideo"
-            src="/videos/training.mp4"
-            controls
-            aria-label="Video allenamento Legionis"
-          ></video>
+        <div className="ArticoliDetail">
+          <h2 className="ArticoliTitleDetail">Articoli Recenti</h2>
+          <div className="articles-list-detail">
+            <Link to="/articoli/allenamento-funzionale-per-le-arti-marziali">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.2rem" , marginTop : "10px" , color :"#333131"}}>Allenamento Funzionale per le Arti Marziali</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Scopri come migliorare le tue performance con esercizi
+                  mirati e strategie di allenamento efficaci.
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </>

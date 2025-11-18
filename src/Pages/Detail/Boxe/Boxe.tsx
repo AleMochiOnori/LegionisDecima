@@ -1,6 +1,8 @@
 import "./Boxe.css";
 import boxingClass from "../../../assets/boxingClass.jpeg";
 import pugilatoHero from "../../../assets/pugilatoDetail.jpeg";
+import CourseCard from '../../../Components/CourseCard/CourseCard';
+
 const Boxe = () => {
   return (<>
     <img className="mainBoxingImage" src={boxingClass} alt="" />
@@ -54,47 +56,24 @@ const Boxe = () => {
         </div>
       </section>
       <section className="sections">
-        <article className="course">
-          <h3>Pugilato Olimpico</h3>
-          <p className="decriptionBoxeDetail">
-            Il percorso agonistico mira a sviluppare le qualità tecniche e
-            tattiche necessarie per la competizione: lavoro specifico con coach
-            certificati, sessioni di sparring e preparazione atletica mirata. I
-            nostri allenatori hanno esperienza in palestre e nei circuiti
-            federali.
-          </p>
-          <p className="highlight">
-            Ideale per atleti che vogliono partecipare a competizioni e
-            migliorare la propria performance.
-          </p>
-        </article>
-        <article className="course">
-          <h3>Gym Boxe</h3>
-          <p>
-            La Gym Boxe è pensata per chi cerca un allenamento completo:
-            combinazione di tecniche di pugilato, interval training e lavoro al
-            sacco per migliorare tono muscolare e resistenza cardiovascolare, sparring leggero e controllato,in
-            un ambiente inclusivo e motivante.
-          </p>
-          <p className="highlight">
-            Perfetto per chi vuole tonificarsi, imparare la tecnica e divertirsi
-            allenandosi.
-          </p>
-        </article>
-        <article className="course">
-          <h3>Boxe al femminile</h3>
-          <p>
-            La Gym Box al femminile, guidata da Caterina Lanza, offre un
-            allenamento dinamico e coinvolgente: tecniche di pugilato, esercizi
-            funzionali e lavoro al sacco per migliorare forza, coordinazione e
-            fiducia in sé, in un ambiente accogliente e motivante pensato per
-            ogni livello.
-          </p>
-          <p className="highlight">
-            Perfetto per chi vuole tonificarsi, imparare la tecnica e divertirsi
-            allenandosi.
-          </p>
-        </article>
+        <CourseCard
+          title="Pugilato Olimpico"
+          description={`Il percorso agonistico mira a sviluppare le qualità tecniche e tattiche necessarie per la competizione: lavoro specifico con coach certificati, sessioni di sparring e preparazione atletica mirata. I nostri allenatori hanno esperienza in palestre e nei circuiti federali.`}
+          highlight={`Ideale per atleti che vogliono partecipare a competizioni e migliorare la propria performance.`}
+          badge={`Agonistico`}
+        />
+        <CourseCard
+          title="Gym Boxe"
+          description={`La Gym Boxe è pensata per chi cerca un allenamento completo: combinazione di tecniche di pugilato, interval training e lavoro al sacco per migliorare tono muscolare e resistenza cardiovascolare, sparring leggero e controllato, in un ambiente inclusivo e motivante.`}
+          highlight={`Perfetto per chi vuole tonificarsi, imparare la tecnica e divertirsi allenandosi.`}
+          badge={`Fitness`}
+        />
+        <CourseCard
+          title="Boxe al femminile"
+          description={`La Gym Box al femminile, guidata da Caterina Lanza, offre un allenamento dinamico e coinvolgente: tecniche di pugilato, esercizi funzionali e lavoro al sacco per migliorare forza, coordinazione e fiducia in sé, in un ambiente accogliente e motivante pensato per ogni livello.`}
+          highlight={`Perfetto per le donne che vogliono tenersi in forma, imparare la boxe e acquisire sicurezza con elementi di difesa personale.`}
+          badge={`Donne`}
+        />
       </section>
     </div>
   </>
