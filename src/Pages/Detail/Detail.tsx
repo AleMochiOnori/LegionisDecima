@@ -26,7 +26,7 @@ const Detail = () => {
         </div>
         <h2 className="SelezionaDisciplina">Seleziona una disciplina per approfondire</h2>
         <div className="Riflessioni">
-          <Link to="/AtetlicTraining">
+          <Link to="/atleticTraining">
             <div className="AtleticTraining section-card">
               <h2>Allenamento Atletico</h2>
               <img className="svg" src={atleticTrainingImg} alt="" />

@@ -14,7 +14,7 @@ import Rating from './Pages/Ratings/Rating'
 import Detail from './Pages/Detail/Detail'
 import ThailandTrip from './Pages/Detail/ThailandTrip/ThailandTrip'
 import KickBoxing from './Pages/Detail/Kick/KickBoxing'
-import AtleticTraining from './Pages/Detail/Atletic Training/AtleticTraining'
+import AtleticTraining from './Pages/Detail/Atletic/AtleticTraining'
 import Boxe from './Pages/Detail/Boxe/Boxe'
 import MaryArticle from "./Pages/Detail/Articles/MaryArticle"
 
@@ -36,7 +36,7 @@ function App() {
           <Route path="/viaggio-thailandia" element={<ThailandTrip />} />
           <Route path="/kick-muay-thai" element={<KickBoxing />} />
           <Route path="/boxe" element={<Boxe />} />
-          <Route path="/AtetlicTraining" element={<AtleticTraining />} />
+          <Route path="/atleticTraining" element={<AtleticTraining />} />
           <Route path="/articoli/allenamento-funzionale-per-le-arti-marziali"  element={<MaryArticle />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
