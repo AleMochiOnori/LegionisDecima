@@ -165,6 +165,10 @@
 }
 
 @media (max-width: 600px) {
+  .VideoContainer {
+    flex-direction: column;
+    gap: 4rem;
+  }
   .hero-content {
     text-align: center;
   }
