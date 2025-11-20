@@ -28,7 +28,7 @@
   display: block;
 }
 
-.atletic-hero{
+.atletic-hero {
   margin-top: 4rem;
   display: flex;
   gap: 2rem;
@@ -36,27 +36,151 @@
   margin-bottom: 2rem;
 }
 
-.hero-content{
+.hero-content {
   text-align: left;
   flex: 1 1 480px;
   min-width: 300px;
 }
 
-.hero-title{ font-size: 2.8rem; font-weight:700; margin: 0 0 0.6rem 0; }
-.hero-subtitle{ font-size: 1.8rem; color: var(--muted); margin-bottom: 1rem; font-weight:600; }
-.hero-lead{ font-size: 1.5rem; line-height:1.6; margin-bottom:1.25rem; color:#374151; }
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+}
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.hero-lead {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
 
-.atletic-logo-space{ width: 140px; height:140px; border-radius:50%; background:#f3f4f6; flex:0 0 140px; }
+.atletic-logo-space {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  flex: 0 0 140px;
+}
 
-.hero-images{ gap:0.6rem; flex:1 1 420px; min-width:260px; }
-.hero-images .large{ height: clamp(12rem, 70vh, 42rem); transition: height 240ms ease; object-position:50% 8%; overflow:hidden; border-radius:var(--radius); background:#f3f4f6; flex:1 1 auto; }
-.hero-images img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero-images {
+  gap: 0.6rem;
+  flex: 1 1 420px;
+  min-width: 260px;
+}
+.hero-images .large {
+  height: clamp(12rem, 70vh, 42rem);
+  transition: height 240ms ease;
+  object-position: 50% 8%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #f3f4f6;
+  flex: 1 1 auto;
+}
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-.sections{ display:flex; gap:1.5rem; margin-top:2rem; align-items:stretch; }
-.course{ background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,250,251,0.98)); border-radius:14px; padding:1.6rem; box-shadow:0 10px 30px rgba(2,6,23,0.06); border:1px solid rgba(15,23,42,0.05); flex:1 1 calc(50% - 0.75rem); min-width:320px; display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.28s ease, box-shadow 0.28s ease; }
+.sections {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+.course {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(249, 250, 251, 0.98)
+  );
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  flex: 1 1 calc(50% - 0.75rem);
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
 
-.course:hover{ transform:translateY(-6px); box-shadow:1px 3px 50px 18px rgba(0,0,0,0.1); }
+.course:hover {
+  transform: translateY(-6px);
+  box-shadow: 1px 3px 50px 18px rgba(0, 0, 0, 0.1);
+}
 
-@media (max-width: 1069px){ .atletic-hero{ flex-direction:column; } .hero-images .large{ height:200px; } .sections{ flex-direction:column; } .course{ flex:1 1 100%; min-width:0; } }
 
-@media (max-width: 600px){ .hero-content{ text-align:center; } .atletic-container{ padding:1rem; } .hero-title{ font-size:2.2rem; } .hero-images .large{ height:160px; } .course p{ font-size:1.2rem; } .course h3{ font-size:1.5rem; } }
+.VideosAtletic{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 20rem;
+}
+
+
+.VideosTitleAtletic{
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+
+.VideoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.video-iframe {
+  width: 360px;
+  height: 640px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1069px) {
+  .atletic-hero {
+    flex-direction: column;
+  }
+  .hero-images .large {
+    height: 200px;
+  }
+  .sections {
+    flex-direction: column;
+  }
+  .course {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    text-align: center;
+  }
+  .atletic-container {
+    padding: 1rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-images .large {
+    height: 160px;
+  }
+  .course p {
+    font-size: 1.2rem;
+  }
+  .course h3 {
+    font-size: 1.5rem;
+  }
+}

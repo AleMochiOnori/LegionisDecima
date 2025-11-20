@@ -25,6 +25,7 @@
   color: var(--nero-legionis);
   margin-top: -1.6rem;
   transition: transform 0.25s ease;
+  margin-bottom: -15rem;
 }
 
 /* ---- Sezioni principali ---- */
@@ -195,7 +196,7 @@
 
 .ArticoliTitleDetail{
   font-size: 3.5rem;
-  color : var(--nero-legionis)
+  color : var(--rosso-legionis)
 }
 
 
@@ -229,7 +230,6 @@
   margin: 0 0 0.5rem 0;
   font-size: 1.15rem;
   font-weight: 800;
-  color: #000;
 }
 
 .article-card-detail p{

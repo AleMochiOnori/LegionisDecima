@@ -129,6 +129,39 @@
 .course p { color: #374151; line-height: 1.8; margin: 0.8rem 0 1rem 0; font-size: 1.3rem; }
 .course .highlight { color: var(--accent); font-weight: 700; font-size: 1.2rem; }
 
+.Associated{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5.6rem;
+  margin-top: 20.5rem; /* push it away from previous content */
+  padding: 1rem 0;
+  width: 100%;
+  clear: both; /* ensure it does not float under other elements */
+  z-index: 2;
+}
+
+.Associated h1{
+
+  margin: 0;
+}
+
+
+.Associated img{
+  width: 300px;
+  transition: scale 0.3s ease;
+}
+
+
+
+.Associated img:hover{
+ scale: 1.1;
+
+}
+
+
+
 @media (max-width: 1069px) {
   .kickboxing-hero { flex-direction: column; }
   .hero-images .large { height: 200px; }

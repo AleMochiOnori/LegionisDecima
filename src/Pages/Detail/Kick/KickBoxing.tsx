@@ -2,6 +2,8 @@ import "./KickBoxing.css";
 import CourseCard from "../../../Components/CourseCard/CourseCard";
 import kickboxingClass from "../../../assets/KickBoxingDetail.jpeg";
 import me from "../../../assets/kick.jpeg";
+import kombatGroup from "../../../assets/kombat-group-logo.png";
+import { Link } from "react-router-dom";
 const KickBoxing = () => {
   return (
     <>
@@ -58,7 +60,6 @@ const KickBoxing = () => {
             </div>
           </div>
         </section>
-
         <section className="sections">
           <CourseCard
             title="Kick / MuayThai Base"
@@ -81,6 +82,12 @@ const KickBoxing = () => {
             badge={`Avanzato`}
           />
         </section>
+        <div className="Associated">
+          <h1>Associato con Kombat Group</h1>
+          <Link target="_blank" className="kombatGroup" to ="https://www.kombatgroup.com/it/">
+            <img src={kombatGroup} alt="" />
+          </Link>
+        </div>
       </div>
     </>
   );

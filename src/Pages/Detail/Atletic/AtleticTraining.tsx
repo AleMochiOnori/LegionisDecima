@@ -1,7 +1,7 @@
 import "./AtleticTraining.css";
 import atleticMain from "../../../assets/main.jpeg";
 import atleticHero from "../../../assets/pugilatoDetail.jpeg";
-import CourseCard from '../../../Components/CourseCard/CourseCard';
+import CourseCard from "../../../Components/CourseCard/CourseCard";
 
 const AtleticTraining = () => {
   return (
@@ -11,28 +11,34 @@ const AtleticTraining = () => {
         <section className="atletic-hero">
           <div className="hero-content">
             <h1 className="hero-title">Allenamento Atletico</h1>
-            <p className="hero-subtitle">Forza, resistenza e preparazione specifica.</p>
-            <p className="hero-lead">
-              Programmi di allenamento atletico pensati per atleti e praticanti di
-              sport da combattimento: sviluppo della forza esplosiva, resistenza
-              anaerobica e capacità di recupero. Lavoriamo su esercizi di
-              potenziamento, circuiti metabolici, tecnica di movimento e
-              prevenzione infortuni, integrando sessioni con coach specializzati
-              e piani personalizzati.
+            <p className="hero-subtitle">
+              Forza, resistenza e preparazione specifica.
             </p>
-
-            <div style={{display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1rem'}}>
-              <div className="atletic-logo-space"></div>
-              <div>
-                <div style={{fontWeight:700, fontSize: '2rem'}}>Orari & Livelli</div>
-                <div style={{color: '#6b7280', fontSize: '1.2rem'}}>Programmi per principianti, avanzati e atleti da competizione. Sessioni individuali e gruppi tecnici disponibili.</div>
-              </div>
-            </div>
+            <p className="hero-lead">
+              Programmi di preparazione atletica avanzata, studiati
+              appositamente per atleti e praticanti di sport da combattimento,
+              con l’obiettivo di migliorare le prestazioni in gara e l’efficacia
+              durante gli allenamenti. Il percorso include lo sviluppo della
+              forza esplosiva, della resistenza anaerobica e della velocità di
+              recupero, elementi fondamentali per chi pratica discipline come
+              Muay Thai, MMA, Boxe, Kickboxing e arti marziali in generale.
+              Attraverso esercizi mirati di potenziamento muscolare, lavori
+              metabolici ad alta intensità (HIIT), sessioni tecniche dedicate al
+              miglioramento della biomeccanica dei movimenti e protocolli di
+              prevenzione infortuni, portiamo l’atleta a un livello superiore di
+              performance. Ogni programma è personalizzato in base al livello,
+              agli obiettivi e al calendario agonistico, con monitoraggi
+              periodici e adattamenti progressivi.
+            </p>
           </div>
 
           <div className="hero-images">
             <div>
-              <img className="large" src={atleticHero} alt="Allenamento Atletico" />
+              <img
+                className="large"
+                src={atleticHero}
+                alt="Allenamento Atletico"
+              />
             </div>
           </div>
         </section>
@@ -57,8 +63,21 @@ const AtleticTraining = () => {
           />
         </section>
         <div className="VideosAtletic">
-            <h2 className="VideosTitleAtletic">Video di Esempio</h2>
-            
+          <h2 className="VideosTitleAtletic">Video allenamenti</h2>
+          <div className="VideoContainer">
+            <iframe
+              className="video-iframe"
+              src="https://www.youtube.com/embed/L7FxaQrNClQ"
+            ></iframe>
+            <iframe
+              width="360"
+              height="640"
+              src="https://www.youtube.com/embed/Hcrjr5-ii9E"
+              title="YouTube Shorts Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              className="video-iframe"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>

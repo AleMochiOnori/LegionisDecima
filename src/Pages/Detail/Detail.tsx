@@ -53,7 +53,7 @@ const Detail = () => {
           <div className="articles-list-detail">
             <Link to="/articoli/allenamento-funzionale-per-le-arti-marziali">
               <div className="article-card-detail">
-                <h3 style={{fontSize: "1.2rem" , marginTop : "10px" , color :"#333131"}}>Allenamento Funzionale per le Arti Marziali</h3>
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Allenamento Funzionale per le Arti Marziali</h3>
                 <p style={{fontSize: "1.1rem"}}>
                   Scopri come migliorare le tue performance con esercizi
                   mirati e strategie di allenamento efficaci.
