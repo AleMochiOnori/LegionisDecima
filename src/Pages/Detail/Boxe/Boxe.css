@@ -230,6 +230,35 @@
   color: #111827;
 }
 
+.VideosBoxe{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 20rem;
+}
+
+
+.VideosTitleBoxe{
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+
+.VideoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.video-iframe {
+  width: 360px;
+  height: 640px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive */
 @media (max-width: 1069px) {
 

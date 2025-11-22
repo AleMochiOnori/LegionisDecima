@@ -82,11 +82,12 @@
 .logoTsc {
     width: 300px;
     margin-top: 1.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .logoTsc:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
+    
 }   
 
 .TorrinoSportingCenterInfo {
