@@ -1,6 +1,6 @@
 import "./AtleticTraining.css";
-import atleticMain from "../../../assets/main.jpeg";
-import atleticHero from "../../../assets/pugilatoDetail.jpeg";
+import atleticMain from "../../../assets/atlteticBanner.jpg";
+import atleticHero from "../../../assets/AtleticDetail.jpg";
 import CourseCard from "../../../Components/CourseCard/CourseCard";
 
 const AtleticTraining = () => {
