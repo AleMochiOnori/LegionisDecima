@@ -81,6 +81,7 @@ const AboutUs = () => {
                                     title="Giuseppe Pannella"
                                     subtitle='Functional Training'
                                     text="Giuseppe è un allenatore di preparazione funzionale specializzato per gli sport da combattimento. Ha una profonda conoscenza del corpo umano: sa come potenziare forza, resistenza, velocità, mobilità in modo che ogni atleta possa muoversi al meglio sul ring. "
+                                    imageClassName='giuseppe-image'
                                 />
                                 <CombatCard
                                     image={Leandro}

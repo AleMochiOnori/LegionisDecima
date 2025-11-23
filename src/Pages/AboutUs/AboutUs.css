@@ -82,7 +82,15 @@
 
 .matteo-image{
     /* sposta l'immagine verso il basso e scala in modo controllato */
-    transform: translateY(-20%) translateX(-3%) scale(1.5) !important;
+    transform: translateY(-20%) translateX(-3%) scale(1.7) !important;
+    object-fit: cover !important;
+    object-position: 50% 60% !important; /* sposta il focus più in basso */
+    transition: transform 0.35s ease, object-position 0.35s ease;
+}
+
+.giuseppe-image{
+    /* sposta l'immagine verso il basso e scala in modo controllato */
+    transform: translateY(70%) translateX(80%) scale(2.8) !important;
     object-fit: cover !important;
     object-position: 50% 60% !important; /* sposta il focus più in basso */
     transition: transform 0.35s ease, object-position 0.35s ease;
