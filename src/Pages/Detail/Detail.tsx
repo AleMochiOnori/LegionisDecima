@@ -51,12 +51,21 @@ const Detail = () => {
         <div className="ArticoliDetail">
           <h2 className="ArticoliTitleDetail">Articoli Recenti</h2>
           <div className="articles-list-detail">
-            <Link to="/articoli/allenamento-funzionale-per-le-arti-marziali">
+            <Link to="/articoli/alimentazione-per-le-arti-marziali">
               <div className="article-card-detail">
-                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Allenamento Funzionale per le Arti Marziali</h3>
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Alimentazione nelle Arti Marziali</h3>
                 <p style={{fontSize: "1.1rem"}}>
-                  Scopri come migliorare le tue performance con esercizi
-                  mirati e strategie di allenamento efficaci.
+                  Scopri come migliorare le tue performance con un'alimentazione
+                  mirata e strategie di allenamento efficaci.
+                </p>
+              </div>
+            </Link>
+            <Link to="/articoli/allenamento-funzionale">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Allenamento Funzionale nelle Arti Marziali</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Scopri i benefici dell'allenamento funzionale per migliorare
+                  forza, resistenza e agilità nelle arti marziali.
                 </p>
               </div>
             </Link>

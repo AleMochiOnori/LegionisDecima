@@ -17,6 +17,7 @@ import KickBoxing from './Pages/Detail/Kick/KickBoxing'
 import AtleticTraining from './Pages/Detail/Atletic/AtleticTraining'
 import Boxe from './Pages/Detail/Boxe/Boxe'
 import MaryArticle from "./Pages/Detail/Articles/MaryArticle"
+import GiuseppeArticle from './Pages/Detail/Articles/GiuseppeArticle'
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
           <Route path="/kick-muay-thai" element={<KickBoxing />} />
           <Route path="/boxe" element={<Boxe />} />
           <Route path="/atleticTraining" element={<AtleticTraining />} />
-          <Route path="/articoli/allenamento-funzionale-per-le-arti-marziali"  element={<MaryArticle />}/>
+          <Route path="/articoli/alimentazione-per-le-arti-marziali"  element={<MaryArticle />}/>
+          <Route path="/articoli/allenamento-funzionale" element={<GiuseppeArticle />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

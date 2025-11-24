@@ -202,9 +202,9 @@
 
 /* ---- Articles list — styling specifico richiesto */
 .articles-list-detail{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+ display: flex;
+ flex-direction: column;
+  gap: 3rem;
   margin-top: 0.75rem;
   min-height: 300px;
 }
