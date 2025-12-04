@@ -88,6 +88,23 @@ const KickBoxing = () => {
             <img src={kombatGroup} alt="" />
           </Link>
         </div>
+         <div className="VideosThai">
+        <h2 className="VideosTitleThai">Video allenamenti</h2>
+        <div className="VideoContainer">
+          <iframe
+            className="video-iframe"
+            src="https://www.youtube.com/embed/2u6s_SwNHeM"
+          ></iframe>
+          <iframe
+            width="360"
+            height="640"
+            src="https://www.youtube.com/embed/ySjeyFwO-jA"
+            title="YouTube Shorts Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            className="video-iframe"
+          ></iframe>
+        </div>
+      </div>
       </div>
     </>
   );

@@ -69,6 +69,15 @@ const Detail = () => {
                 </p>
               </div>
             </Link>
+             <Link to="/articoli/gym-boxe-per-donne">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Gym Boxe al femminile</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Scopri i benefici della Gym Boxe per le donne: un allenamento
+                  completo che unisce fitness, autodifesa e benessere mentale.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

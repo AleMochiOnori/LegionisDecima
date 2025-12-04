@@ -160,7 +160,21 @@
 
 }
 
+.VideosThai {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
 
+.VideosTitleThai {  
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #dc2626;
+}
 
 @media (max-width: 1069px) {
   .kickboxing-hero { flex-direction: column; }

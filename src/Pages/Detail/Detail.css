@@ -25,7 +25,7 @@
   color: var(--nero-legionis);
   margin-top: -1.6rem;
   transition: transform 0.25s ease;
-  margin-bottom: -15rem;
+  margin-bottom: -10rem;
 }
 
 /* ---- Sezioni principali ---- */
@@ -190,9 +190,6 @@
 .red-button:active { transform: translateY(-1px); }
 
 
-.ArticoliDetail{
- height: 400px;
-}
 
 .ArticoliTitleDetail{
   font-size: 3.5rem;
