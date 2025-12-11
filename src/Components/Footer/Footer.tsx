@@ -21,6 +21,7 @@ const Footer = () => {
           <p className="textSize">📞 Torrino Sporting Center: 065295884</p>
           <p className="textSize">📞 Maestro Alessio Marabucci: +39 328 925 3150</p>
           <p className="textSize">📞 Maestro Matteo Chiavolini: +39 3922468852</p>
+          <p className="textSize">📞 Maestro Giacomo Ratti: +39 324 234 234</p>
         </div>
         <div className="footer-section">
           <h3 className="textSize">Link Utili</h3>
