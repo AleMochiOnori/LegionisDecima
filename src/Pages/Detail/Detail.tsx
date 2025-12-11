@@ -78,6 +78,15 @@ const Detail = () => {
                 </p>
               </div>
             </Link>
+            <Link to="/articoli/sport-da-combattimento-per-giovani">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Sport da Combattimento per i Giovani</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Scopri l'importanza degli sport da combattimento per lo sviluppo
+                  psicofisico dei giovani: disciplina, autostima e valori.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
