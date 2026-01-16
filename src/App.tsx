@@ -20,6 +20,7 @@ import MaryArticle from "./Pages/Detail/Articles/MaryArticle"
 import GiuseppeArticle from './Pages/Detail/Articles/GiuseppeArticle'
 import CaterinaArticle from './Pages/Detail/Articles/CaterinaArticle'
 import FrancescoArticle from './Pages/Detail/Articles/FrancescoArticle'
+import GiacomoArticle from './Pages/Detail/Articles/GiacomoArticle'
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/articoli/allenamento-funzionale" element={<GiuseppeArticle />}/>
           <Route path="/articoli/gym-boxe-per-donne" element={<CaterinaArticle />}/>
           <Route path="/articoli/sport-da-combattimento-per-giovani" element={<FrancescoArticle />}/>
+          <Route path="/articoli/riflessi-condizionati" element={<GiacomoArticle />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

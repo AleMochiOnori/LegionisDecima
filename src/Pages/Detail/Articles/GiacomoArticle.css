@@ -1,0 +1,183 @@
+.giacomo-wrapper {
+  font-family: "Inter", sans-serif;
+  color: #0f172a; /* dark slate */
+  max-width: 1700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem;
+  background: transparent;
+  font-size: 1.6rem; /* base text size */
+  margin-bottom: -21rem;
+}
+
+.title {
+  font-size: 2.6rem; /* slightly larger title */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e63946; /* title red */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.byline {
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.intro {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-weight: bolder;
+  color: #333;
+}
+
+.giacomo-wrapper p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: #e63946;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.giacomo-wrapper .reaction-list,
+.giacomo-wrapper .speed-list {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.giacomo-wrapper .reaction-list li,
+.giacomo-wrapper .speed-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.giacomo-wrapper strong {
+  color: #e63946;
+  font-weight: 600;
+}
+
+.giacomo-wrapper .training-method {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #e63946;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: #fff;
+}
+
+.giacomo-wrapper .training-method h3 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #e63946;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.giacomo-wrapper .training-method h3:first-child {
+  margin-top: 0;
+}
+
+.giacomo-wrapper .training-method p {
+  margin-bottom: 6px;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.6rem;
+  padding-left: 0;
+  border-left: none;
+}
+
+.giacomo-wrapper .quote {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+  margin: 2rem 0 0.5rem 0;
+  padding: 1.5rem;
+  border-left: 5px solid #e63946;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: #fff;
+  font-weight: 600;
+}
+
+.giacomo-wrapper .quote-author {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: 40px;
+  color: #e63946;
+}
+
+.article-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* smaller screens: scale down slightly */
+@media (max-width: 600px) {
+  .giacomo-wrapper {
+    padding: 2rem;
+    font-size: 1.05rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .giacomo-wrapper .training-method h3 {
+    font-size: 1.2rem;
+  }
+  
+  .giacomo-wrapper p,
+  .giacomo-wrapper .reaction-list li,
+  .giacomo-wrapper .speed-list li {
+    font-size: 1.2rem;
+  }
+  
+  .intro {
+    font-size: 1.4rem;
+  }
+
+  .giacomo-wrapper .quote {
+    font-size: 1.3rem;
+  }
+
+  .giacomo-wrapper .reaction-list,
+  .giacomo-wrapper .speed-list {
+    padding-left: 1.2rem;
+  }
+}
+

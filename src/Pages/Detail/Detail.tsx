@@ -87,6 +87,15 @@ const Detail = () => {
                 </p>
               </div>
             </Link>
+            <Link to="/articoli/riflessi-condizionati">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Riflessi Condizionati negli Sport da Combattimento</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Scopri come allenare i riflessi condizionati per migliorare velocità
+                  di reazione e automatismi nel combattimento.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
