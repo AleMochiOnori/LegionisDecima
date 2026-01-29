@@ -1,6 +1,12 @@
 import "./Courses.css";
 
-type Day = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday";
+type Day =
+  | "monday"
+  | "tuesday"
+  | "wednesday"
+  | "thursday"
+  | "friday"
+  | "saturday";
 
 interface Slot {
   range: string; // es. "12:00 - 13:00"
@@ -12,13 +18,14 @@ interface CourseSchedule {
   days: Record<Day, Slot[]>;
 }
 
-
 const COURSE_COLORS: Record<string, string> = {
   "muay thai / kickboxing": "#e74c3c",
   "gym boxe": "#3498db",
   "avvio combat": "#6B21A8",
   "athletic training": "#27ae60",
-  "gym boxe femminile" : "#800020"
+  "gym boxe femminile": "#800020",
+  "muay thai young": "#FFA500",
+  "open class": "#444343",
 };
 
 const CoursesSchedule = () => {
@@ -46,10 +53,7 @@ const CoursesSchedule = () => {
           { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
-        saturday : [
-            { range : "11:00 - 12:30" , coach : "Giacomo Ratti"},
-
-        ]
+        saturday: []
       },
     },
     {
@@ -58,32 +62,28 @@ const CoursesSchedule = () => {
         monday: [
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
-          
         ],
-        tuesday: [ 
-            { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-            { range : "19:00 - 20:00", coach : "Alessandro Mastrelli"}
-
+        tuesday: [
+          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+          { range: "18:00 - 19:00", coach: "Alessandro Mastrelli" },
         ],
         wednesday: [
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
         ],
         thursday: [
-            { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-            { range : "19:00 - 20:00" , coach: "Alessandro Mastrelli"}
+          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+          { range: "18:00 - 19:00", coach: "Alessandro Mastrelli" },
         ],
 
         friday: [
           { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
           { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
         ],
-        saturday : [
-          { range : "11:00 - 12:30" , coach : "Giacomo Ratti"}
-        ]
+        saturday: [],
       },
     },
-    
+
     {
       course: "Avvio Combat",
       days: {
@@ -92,34 +92,51 @@ const CoursesSchedule = () => {
         wednesday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
         thursday: [],
         friday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
-        saturday : []
+        saturday: [],
       },
-
     },
     {
       course: "Gym boxe femminile",
       days: {
         monday: [],
-        tuesday:[{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
+        tuesday: [{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
         wednesday: [],
         thursday: [{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
         friday: [],
-        saturday : []
+        saturday: [],
       },
-
     },
     {
       course: "Athletic training",
       days: {
-        monday: [{ range : "18:00 - 19:00" , coach : "Giuseppe Pannella"}],
+        monday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
         tuesday: [],
         wednesday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
         thursday: [],
         friday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
-        saturday : [
-        ]
+        saturday: [],
       },
-
+    },
+    {
+      course: "Muay Thai Young",
+      days: {
+        monday: [],
+        tuesday: [{ range: "17:00 - 18:00", coach: "Leandro Cosentino" }],
+        wednesday: [],
+        thursday: [{ range: "17:00 - 18:00", coach: "Leandro Cosentino" }],
+        friday: [],
+        saturday: [],
+      },
+    },{
+      course: "Open class",
+      days: {
+        monday: [],
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: [],
+        saturday: [{ range: "11:00 - 12:30", coach: "Giacomo Ratti" }],
+      },
     },
   ];
 
@@ -129,7 +146,7 @@ const CoursesSchedule = () => {
     { key: "wednesday", label: "Mercoledì" },
     { key: "thursday", label: "Giovedì" },
     { key: "friday", label: "Venerdì" },
-    { key : "saturday" , label : "Sabato"}
+    { key: "saturday", label: "Sabato" },
   ];
 
   const getCourseColor = (courseName: string) => {
@@ -139,8 +156,6 @@ const CoursesSchedule = () => {
 
   return (
     <div className="schedule-container">
-      <h2 className="schedule-title">Orari dei Corsi</h2>
-
       <table className="schedule-table">
         <thead>
           <tr>
@@ -170,8 +185,7 @@ const CoursesSchedule = () => {
                               className="course-pill"
                               style={{
                                 backgroundColor: bg,
-                                color:  "black" ,
-                                
+                                color: "black",
                               }}
                             >
                               <span className="pill-time">{slot.range}</span>
@@ -194,11 +208,11 @@ const CoursesSchedule = () => {
       <div className="legend">
         {Object.entries(COURSE_COLORS).map(([name, color]) => (
           <div key={name} className="legend-item">
-            <span
-              className="legend-swatch"
-              style={{ backgroundColor: color }}
-            >
-              {name.split(" ").map((w) => w[0].toUpperCase()).join("")}
+            <span className="legend-swatch" style={{ backgroundColor: color }}>
+              {name
+                .split(" ")
+                .map((w) => w[0].toUpperCase())
+                .join("")}
             </span>
             <span className="legend-label">{name}</span>
           </div>

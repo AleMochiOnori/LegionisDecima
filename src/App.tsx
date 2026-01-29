@@ -21,6 +21,7 @@ import GiuseppeArticle from './Pages/Detail/Articles/GiuseppeArticle'
 import CaterinaArticle from './Pages/Detail/Articles/CaterinaArticle'
 import FrancescoArticle from './Pages/Detail/Articles/FrancescoArticle'
 import GiacomoArticle from './Pages/Detail/Articles/GiacomoArticle'
+import PassaggiDiGrado from './Pages/Detail/Articles/PassaggiDiGrado'
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="/articoli/gym-boxe-per-donne" element={<CaterinaArticle />}/>
           <Route path="/articoli/sport-da-combattimento-per-giovani" element={<FrancescoArticle />}/>
           <Route path="/articoli/riflessi-condizionati" element={<GiacomoArticle />}/>
+          <Route path="/articoli/esami-di-grado" element={<PassaggiDiGrado />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

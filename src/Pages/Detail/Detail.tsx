@@ -96,6 +96,15 @@ const Detail = () => {
                 </p>
               </div>
             </Link>
+            <Link to="/articoli/esami-di-grado">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Esami di grado 13 dicembre 2025</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Scopri come si sono svolti gli esami di grado per Japanese Kickboxing
+                  e Muay Thai con circa 30 atleti impegnati in un allenamento intenso.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

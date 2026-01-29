@@ -56,6 +56,11 @@
     gap: 2rem;
     padding: 1rem;
     flex: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: pan-y;
 }
 
 /* Animazioni slide avanzate */

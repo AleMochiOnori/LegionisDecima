@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import CombatCard from "../../Components/Card/CombatCard";
 import "./AboutUs.css"
 import Alessio from "../../assets/Alessio.jpg"
@@ -15,6 +15,10 @@ import Cerqua from "../../assets/Cerqua.jpg"
 const AboutUs = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [direction, setDirection] = useState<'left' | 'right'>('right');
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [currentX, setCurrentX] = useState(0);
+    const sliderSectionRef = useRef<HTMLDivElement>(null);
     
     const instructors = [
         {
@@ -97,6 +101,51 @@ const AboutUs = () => {
             setCurrentPage(currentPage + 1);
         }
     };
+
+    const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+        const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+        setStartX(clientX);
+        setCurrentX(clientX);
+        setIsDragging(false); // Reset per iniziare
+    };
+
+    const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+        if (startX === 0) return;
+        const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+        setCurrentX(clientX);
+        
+        // Se si è mosso abbastanza, consideralo come dragging
+        if (Math.abs(clientX - startX) > 5) {
+            setIsDragging(true);
+        }
+    };
+
+    const handleDragEnd = () => {
+        if (startX === 0) return;
+        
+        const diffX = startX - currentX;
+        const threshold = 50; // Soglia minima per considerare uno swipe
+        
+        if (isDragging && Math.abs(diffX) > threshold) {
+            if (diffX > 0 && currentPage < totalPages - 1) {
+                // Swipe verso sinistra - mostra pagina successiva
+                setDirection('right');
+                setCurrentPage(currentPage + 1);
+            } else if (diffX < 0 && currentPage > 0) {
+                // Swipe verso destra - mostra pagina precedente
+                setDirection('left');
+                setCurrentPage(currentPage - 1);
+            }
+        }
+        
+        setIsDragging(false);
+        setStartX(0);
+        setCurrentX(0);
+    };
+
+    const scrollToTop = () => {
+        sliderSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
     
     const startIndex = currentPage * cardsPerPage;
     const endIndex = startIndex + cardsPerPage;
@@ -105,7 +154,7 @@ const AboutUs = () => {
     return (
         <>
             <div className="ContainerAbout">
-                <div className="slider-section">
+                <div className="slider-section" ref={sliderSectionRef}>
                     <h2 style={{marginBottom : "5rem"}} className="slider-title">I Nostri Istruttori</h2>
                     
                     <div className="slider-container">
@@ -115,7 +164,18 @@ const AboutUs = () => {
                             </svg>
                         </button>
                         
-                        <div className={`cards-grid slide-${direction}`} key={currentPage}>
+                        <div 
+                            className={`cards-grid slide-${direction}`} 
+                            key={currentPage}
+                            onMouseDown={handleDragStart}
+                            onMouseMove={handleDragMove}
+                            onMouseUp={handleDragEnd}
+                            onMouseLeave={handleDragEnd}
+                            onTouchStart={handleDragStart}
+                            onTouchMove={handleDragMove}
+                            onTouchEnd={handleDragEnd}
+                            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+                        >
                             {currentInstructors.map((instructor, index) => (
                                 <CombatCard 
                                     key={startIndex + index} 
@@ -147,6 +207,7 @@ const AboutUs = () => {
                                 onClick={() => {
                                     setDirection(index > currentPage ? 'right' : 'left');
                                     setCurrentPage(index);
+                                    scrollToTop();
                                 }}
                                 aria-label={`Vai alla pagina ${index + 1}`}
                             />
