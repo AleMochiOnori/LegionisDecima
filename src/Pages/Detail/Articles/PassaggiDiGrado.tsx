@@ -1,6 +1,6 @@
 import "./PassaggiDiGrado.css";
 import image1 from "../../../assets/Articolo PassaggiDiGrado/image1.jpeg";
-import image2 from "../../../assets/Articolo PassaggiDiGrado/image2.jpg";
+import image2 from "../../../assets/Articolo PassaggiDiGrado/image2.png";
 import image3 from "../../../assets/Articolo PassaggiDiGrado/image3.jpg";
 import image4 from "../../../assets/Articolo PassaggiDiGrado/image4.jpg";
 import image5 from "../../../assets/Articolo PassaggiDiGrado/image5.jpg";
