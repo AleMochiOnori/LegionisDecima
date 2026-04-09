@@ -1,10 +1,17 @@
 import "./Header.css"
 import { Link } from "react-router-dom";
 import logoCombat from "../../assets/Logo_Combat.jpg"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hamburger from 'hamburger-react'
+
 const Header = () => {
     const [isOpen, setOpen] = useState(false)
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
     return (
         <>
             <div className="Header-Container">
@@ -45,7 +52,7 @@ const Header = () => {
                    
                 </div>
                     <div className="hamburger-menu">
-                        <Hamburger toggled={isOpen} toggle={setOpen} />
+                        {isMounted ? <Hamburger toggled={isOpen} toggle={setOpen} /> : <div style={{width: '40px', height: '40px'}} />}
                         
                     </div>
             </div>

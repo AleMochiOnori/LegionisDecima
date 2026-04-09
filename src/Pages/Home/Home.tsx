@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                 <a href="https://www.torrinosportingcenter.it/"><img className="logoTsc" src={tsc} alt="" /></a>
                 
             </div>
-            <div style={{marginTop : "10rem"}} className="Section2Boxe marging">
+            <div className="Section2Boxe marging">
                 <HeroText 
                     image={BoxeImage}
                     title="Pugilato"

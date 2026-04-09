@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Header from "./Components/Header/Header"
 import Home from './Pages/Home/Home'
@@ -25,9 +26,15 @@ import PassaggiDiGrado from './Pages/Detail/Articles/PassaggiDiGrado'
 
 
 function App() {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   return (
     <>
-      <ScrollToTop />
+      {isMounted && <ScrollToTop />}
       <Header />
       <div className='main-scaled'>
         <Routes>

@@ -26,6 +26,7 @@ const COURSE_COLORS: Record<string, string> = {
   "gym boxe femminile": "#800020",
   "muay thai young": "#FFA500",
   "open class": "#444343",
+  "kyokushin budokai": "#8B4513",
 };
 
 const CoursesSchedule = () => {
@@ -127,7 +128,8 @@ const CoursesSchedule = () => {
         friday: [],
         saturday: [],
       },
-    },{
+    },
+    {
       course: "Open class",
       days: {
         monday: [],
@@ -136,6 +138,17 @@ const CoursesSchedule = () => {
         thursday: [],
         friday: [],
         saturday: [{ range: "11:00 - 12:30", coach: "Giacomo Ratti" }],
+      },
+    },
+     {
+      course: "Kyokushin budokai",
+      days: {
+        monday: [],
+        tuesday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+        wednesday: [],
+        thursday: [],
+        friday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+        saturday: [],
       },
     },
   ];
