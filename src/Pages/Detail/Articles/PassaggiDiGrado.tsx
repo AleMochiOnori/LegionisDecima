@@ -1,13 +1,13 @@
 import "./PassaggiDiGrado.css";
 import image1 from "../../../assets/Articolo PassaggiDiGrado/image1.jpeg";
 import image2 from "../../../assets/Articolo PassaggiDiGrado/image2.png";
-import image3 from "../../../assets/Articolo PassaggiDiGrado/image3.JPG";
-import image4 from "../../../assets/Articolo PassaggiDiGrado/image4.JPG";
-import image5 from "../../../assets/Articolo PassaggiDiGrado/image5.JPG";
-import image6 from "../../../assets/Articolo PassaggiDiGrado/image6.JPG";
-import image7 from "../../../assets/Articolo PassaggiDiGrado/image7.JPG";
-import image8 from "../../../assets/Articolo PassaggiDiGrado/image8.JPG";
-import image9 from "../../../assets/Articolo PassaggiDiGrado/image9.JPG";
+import image3 from "../../../assets/Articolo PassaggiDiGrado/image3.jpg";
+import image4 from "../../../assets/Articolo PassaggiDiGrado/image4.jpg";
+import image5 from "../../../assets/Articolo PassaggiDiGrado/image5.jpg";
+import image6 from "../../../assets/Articolo PassaggiDiGrado/image6.jpg";
+import image7 from "../../../assets/Articolo PassaggiDiGrado/image7.jpg";
+import image8 from "../../../assets/Articolo PassaggiDiGrado/image8.jpg";
+import image9 from "../../../assets/Articolo PassaggiDiGrado/image9.jpg";
 import image10 from "../../../assets/Articolo PassaggiDiGrado/image10.jpeg";
 
 const PassaggiDiGrado = () => {
