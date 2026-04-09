@@ -54,10 +54,19 @@ async function createServer() {
     }
   })
 
-  const port = process.env.PORT || 5173
-  app.listen(port, () => {
-    console.log(`Server listening on http://localhost:${port}`)
+  return app
+}
+
+// Avvia server localmente
+if (!process.env.VERCEL) {
+  createServer().then(app => {
+    const port = process.env.PORT || 5173
+    app.listen(port, () => {
+      console.log(`Server listening on http://localhost:${port}`)
+    })
   })
 }
 
-createServer()
+// Export per Vercel (serverless)
+const handler = await createServer()
+export default handler
