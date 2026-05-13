@@ -47,6 +47,13 @@ const Detail = () => {
               <p>Disciplina, tecnica e spirito da combattente.</p>
             </div>
           </Link>
+          <Link to={"/kyokushin"}>
+            <div className="KyokushinBudokai section-card">
+              <h2>Kyokushin Budokai</h2>
+              <img className="svg" src={kickMuayImg} alt="" />
+              <p>Condizionamento ai colpi, combattimento in piedi e a terra.</p>
+            </div>
+          </Link>
         </div>
         <div className="ArticoliDetail">
           <h2 className="ArticoliTitleDetail">Articoli Recenti</h2>

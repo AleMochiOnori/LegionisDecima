@@ -6,6 +6,7 @@ import Thai from "../../assets/thai.jpg"
 import Kick from "../../assets/kick.jpeg"
 import Main from "./../../assets/ChatGPT Image 13 ott 2025, 14_46_50.png"
 import tsc from "../../assets/tsc-logo_ok2.png"
+import Kyoukushin from "../../assets/Kyokushin.jpeg"
 
 const Home: React.FC = () => {
     return (
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
                 
             </div>
             <div className="Section2Boxe marging">
-                <HeroText 
+                <HeroText
                     image={BoxeImage}
                     title="Pugilato"
                     text="Il pugilato è molto più di uno sport: è una disciplina di forza, controllo e rispetto. Nella sua essenza, rappresenta il confronto diretto tra due persone, ma anche la lotta interiore contro i propri limiti. Ogni colpo, ogni schivata, ogni respiro racconta la ricerca dell’equilibrio tra potenza e lucidità.
@@ -35,7 +36,7 @@ const Home: React.FC = () => {
                 />
             </div>
             <div className="Section3 marging">
-                <HeroText 
+                <HeroText
                     image={Thai}
                     title="Muay Thai"
                     text="La Muay Thai è l’arte dei quattro arti: pugni, gomiti, ginocchia e calci si fondono in un linguaggio di potenza e rispetto. Non è solo combattimento, ma una via di autodisciplina, equilibrio e forza interiore, dove ogni colpo racconta la storia di chi non smette mai di migliorarsi."
@@ -43,11 +44,19 @@ const Home: React.FC = () => {
                 />
             </div>
             <div className="Section4 marging">
-                <HeroText 
+                <HeroText
                     image={Kick}
                     title="Kick Boxing - K1"
                     text="La kickboxing K1 è potenza, ritmo e precisione. Unisce la tecnica dei calci e dei pugni in uno stile esplosivo, dove velocità e strategia contano quanto la forza. Ogni round è una danza controllata tra attacco e difesa, simbolo di determinazione e spirito competitivo."
                     reverse={false}
+                />
+            </div>
+            <div className="Section5 marging">
+                <HeroText
+                    image={Kyoukushin}
+                    title="Kyokushin Budokai"
+                    text="Il Kyokushin Budokai è una forma di karate che enfatizza il condizionamento e la resistenza. Ogni allenamento è un viaggio verso la perfezione tecnica e la crescita personale, dove il rispetto e l'autocontrollo sono fondamentali."
+                    reverse={true}
                 />
             </div>
             

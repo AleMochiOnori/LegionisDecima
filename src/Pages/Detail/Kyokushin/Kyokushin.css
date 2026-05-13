@@ -1,0 +1,192 @@
+/* Kyokushin page — mirrored from KickBoxing styles but namespaced */
+:root {
+  --container-max: 2145px;
+  --accent: #dc2626;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --radius: 14px;
+}
+
+.kyokushin-container {
+  width: 80%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  color: #111827;
+  margin-top: -2.5rem;
+}
+
+.mainKyokushinImage {
+  width: 100%;
+  object-fit: cover;
+  object-position: 20% 33%;
+  height: clamp(40rem, 80vh, 35rem);
+
+  margin-bottom: 10rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.kyokushin-hero {
+  margin-top: 4rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  text-align: left;
+  flex: 1 1 480px;
+  min-width: 300px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-lead {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+.kyokushin-logo-space {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-image: url("../../../assets/kyokushin-budokai-all-round-fighting-logo-em.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 0 0 140px;
+  min-width: 140px;
+  min-height: 140px;
+  transform: none !important;
+}
+
+.hero-images {
+  gap: 0.6rem;
+  flex: 1 1 420px;
+  min-width: 260px;
+}
+
+.hero-images .large {
+  height: clamp(12rem, 70vh, 42rem);
+  transition: height 240ms ease;
+  object-position: 50% 8%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #f3f4f6;
+  flex: 1 1 auto;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sections {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.course {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,250,251,0.98));
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  border: 1px solid rgba(15,23,42,0.05);
+  flex: 1 1 calc(50% - 0.75rem);
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.course:hover { transform: translateY(-6px); box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);} 
+
+.course h3 { margin: 0; font-size: 2rem; font-weight: 800; color: #0f172a; }
+.course p { color: #374151; line-height: 1.8; margin: 0.8rem 0 1rem 0; font-size: 1.3rem; }
+.course .highlight { color: var(--accent); font-weight: 700; font-size: 1.2rem; }
+
+.Associated{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5.6rem;
+  margin-top: 20.5rem; /* push it away from previous content */
+  padding: 1rem 0;
+  width: 100%;
+  clear: both; /* ensure it does not float under other elements */
+  z-index: 2;
+}
+
+.Associated h1{
+
+  margin: 0;
+}
+
+
+.Associated img{
+  width: 300px;
+  transition: scale 0.3s ease;
+}
+
+
+
+.Associated img:hover{
+ scale: 1.1;
+
+}
+
+.VideosThai {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.VideosTitleThai {  
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+@media (max-width: 1069px) {
+  .kyokushin-hero { flex-direction: column; }
+  .hero-images .large { height: 200px; }
+  .sections { flex-direction: column; }
+  .course { flex: 1 1 100%; min-width: 0; }
+}
+
+@media (max-width: 600px) {
+  .hero-content { text-align: center; }
+  .kyokushin-container { padding: 1rem; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-images .large { height: 160px; }
+  .course p { font-size: 1.2rem; }
+  .course h3 { font-size: 1.5rem; }
+}

@@ -23,6 +23,7 @@ import CaterinaArticle from './Pages/Detail/Articles/CaterinaArticle'
 import FrancescoArticle from './Pages/Detail/Articles/FrancescoArticle'
 import GiacomoArticle from './Pages/Detail/Articles/GiacomoArticle'
 import PassaggiDiGrado from './Pages/Detail/Articles/PassaggiDiGrado'
+import Kyokushin from './Pages/Detail/Kyokushin/Kyokushin'
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/kick-muay-thai" element={<KickBoxing />} />
           <Route path="/boxe" element={<Boxe />} />
           <Route path="/atleticTraining" element={<AtleticTraining />} />
+          <Route path="/kyokushin" element={<Kyokushin />} />
           <Route path="/articoli/alimentazione-per-le-arti-marziali"  element={<MaryArticle />}/>
           <Route path="/articoli/allenamento-funzionale" element={<GiuseppeArticle />}/>
           <Route path="/articoli/gym-boxe-per-donne" element={<CaterinaArticle />}/>

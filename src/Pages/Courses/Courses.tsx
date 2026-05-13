@@ -39,8 +39,6 @@ const CoursesSchedule = () => {
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
         tuesday: [
-          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "20:00 - 21:00", coach: "Giacomo Ratti" },
         ],
         wednesday: [
           { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
@@ -100,9 +98,9 @@ const CoursesSchedule = () => {
       course: "Gym boxe femminile",
       days: {
         monday: [],
-        tuesday: [{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
+        tuesday: [{ range: "19:00 - 20:00", coach: "Caterina Lanza" }],
         wednesday: [],
-        thursday: [{ range: "17:30 - 19:00", coach: "Caterina Lanza" }],
+        thursday: [{ range: "19:00 - 20:00", coach: "Caterina Lanza" }],
         friday: [],
         saturday: [],
       },
