@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+/* ── Layout wrapper ── */
+.japan-wrapper {
+  font-family: "Poppins", "Inter", sans-serif;
+  color: #1a1a2e;
+  max-width: 1400px;
+  margin: 3rem auto;
+  margin-bottom: -21rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 5rem 7rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+}
+
+/* ── Title & byline ── */
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: #e63946;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.byline {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #888;
+  margin-top: -0.5rem;
+}
+
+/* ── Intro paragraph ── */
+.intro {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: #222;
+  border-left: 4px solid #e63946;
+  padding-left: 1.6rem;
+}
+
+/* ── Body text ── */
+.japan-wrapper p {
+  margin-bottom: 0;
+  line-height: 1.85;
+  color: #333;
+  font-size: 1.55rem;
+}
+
+.japan-wrapper strong {
+  color: #e63946;
+  font-weight: 700;
+}
+
+.japan-wrapper em {
+  color: #555;
+}
+
+/* ── Section subtitles ── */
+.subtitle {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #e63946 0%, #c1121f 100%);
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  margin: 1rem 0 0.5rem;
+}
+
+/* ── Quote / highlight box ── */
+.japan-highlight {
+  padding: 1.8rem 2rem;
+  border-left: 5px solid #e63946;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+  box-shadow: 0 2px 16px rgba(230, 57, 70, 0.1);
+}
+
+.japan-highlight p {
+  margin-bottom: 0;
+  font-size: 1.55rem;
+  line-height: 1.8;
+  color: #444;
+  font-style: italic;
+}
+
+/* ── Images ── */
+.japan-img {
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  margin: 0.4rem auto;
+  image-orientation: from-image;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.japan-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.22);
+}
+
+.japan-img--portrait {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.4rem auto;
+  image-orientation: from-image;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.japan-img--portrait:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Two-image side-by-side grid ── */
+.japan-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.japan-img-grid .japan-img {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* ── Closing ── */
+.japan-closing {
+  text-align: right;
+  font-size: 1.7rem !important;
+  font-style: italic;
+  color: #555 !important;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .japan-wrapper {
+    padding: 2.5rem 1.5rem;
+    gap: 1.8rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .japan-img,
+  .japan-img--portrait {
+    max-width: 100%;
+  }
+
+  .japan-img-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

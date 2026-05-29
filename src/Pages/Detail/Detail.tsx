@@ -112,6 +112,15 @@ const Detail = () => {
                 </p>
               </div>
             </Link>
+            <Link to="/articoli/japan-tour-2026">
+              <div className="article-card-detail">
+                <h3 style={{fontSize: "1.4rem" , marginTop : "10px"}}>Japan Tour 2026</h3>
+                <p style={{fontSize: "1.1rem"}}>
+                  Alla ricerca delle origini del Karate full-contact: un viaggio indimenticabile
+                  tra i Dojo storici di Tokyo, i grandi campioni e il pellegrinaggio al Santuario Mitsumine.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

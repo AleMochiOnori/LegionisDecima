@@ -23,6 +23,7 @@ import CaterinaArticle from './Pages/Detail/Articles/CaterinaArticle'
 import FrancescoArticle from './Pages/Detail/Articles/FrancescoArticle'
 import GiacomoArticle from './Pages/Detail/Articles/GiacomoArticle'
 import PassaggiDiGrado from './Pages/Detail/Articles/PassaggiDiGrado'
+import JapanTour from './Pages/Detail/Articles/JapanTour'
 import Kyokushin from './Pages/Detail/Kyokushin/Kyokushin'
 
 
@@ -57,6 +58,7 @@ function App() {
           <Route path="/articoli/sport-da-combattimento-per-giovani" element={<FrancescoArticle />}/>
           <Route path="/articoli/riflessi-condizionati" element={<GiacomoArticle />}/>
           <Route path="/articoli/esami-di-grado" element={<PassaggiDiGrado />}/>
+          <Route path="/articoli/japan-tour-2026" element={<JapanTour />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
