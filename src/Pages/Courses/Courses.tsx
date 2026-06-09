@@ -39,6 +39,7 @@ const CoursesSchedule = () => {
           { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
         ],
         tuesday: [
+          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
         ],
         wednesday: [
           { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
