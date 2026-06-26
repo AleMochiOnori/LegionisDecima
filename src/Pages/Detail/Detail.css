@@ -242,6 +242,77 @@
   box-shadow: 1px 3px 50px 18px rgba(0,0,0,0.1);
 }
 
+/* ===== Diego Promo Card ===== */
+.DiegoPromoSection {
+  width: 100%;
+}
+
+.diego-promo-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  gap: 3rem;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+  border: 1px solid rgba(192,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.diego-promo-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(192,0,0,0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.diego-promo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.diego-promo-tag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+
+.diego-promo-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.diego-promo-desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.diego-promo-desc strong {
+  color: #ff6b6b;
+}
+
+@media (max-width: 700px) {
+  .diego-promo-card {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
 @media (max-width: 1200px) {
   .Allenamenti video,
   .Allenamenti .trainingVideo {

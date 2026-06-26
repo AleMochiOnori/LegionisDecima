@@ -55,6 +55,21 @@ const Detail = () => {
             </div>
           </Link>
         </div>
+        <div className="DiegoPromoSection">
+          <div className="diego-promo-card">
+            <div className="diego-promo-text">
+              <p className="diego-promo-tag">🤝 Partner ufficiale TSC</p>
+              <h3 className="diego-promo-title">Studio Russo – Osteopatia & Fisioterapia</h3>
+              <p className="diego-promo-desc">
+                Osteopatia · Fisioterapia · Kinesiologia · Rieducazione Posturale.<br />
+                <strong>Sconto del 15%</strong> per tutti gli iscritti al Team Sport & Combat.
+              </p>
+              <Link to="/osteopata-diego-russo" className="red-button">
+                <p className="LinkToThailand">Scopri lo Studio Russo</p>
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className="ArticoliDetail">
           <h2 className="ArticoliTitleDetail">Articoli Recenti</h2>
           <div className="articles-list-detail">

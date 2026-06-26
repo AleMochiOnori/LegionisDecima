@@ -25,6 +25,7 @@ import GiacomoArticle from './Pages/Detail/Articles/GiacomoArticle'
 import PassaggiDiGrado from './Pages/Detail/Articles/PassaggiDiGrado'
 import JapanTour from './Pages/Detail/Articles/JapanTour'
 import Kyokushin from './Pages/Detail/Kyokushin/Kyokushin'
+import DiegoOsteopata from './Pages/Detail/DiegoOsteopata/DiegoOsteopata'
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
           <Route path="/articoli/riflessi-condizionati" element={<GiacomoArticle />}/>
           <Route path="/articoli/esami-di-grado" element={<PassaggiDiGrado />}/>
           <Route path="/articoli/japan-tour-2026" element={<JapanTour />}/>
+          <Route path="/osteopata-diego-russo" element={<DiegoOsteopata />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

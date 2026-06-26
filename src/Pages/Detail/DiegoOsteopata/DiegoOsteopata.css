@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --rosso: #c00000;
+  --rosso-hover: #a00000;
+  --nero: #1a1a1a;
+  --grigio-testo: #444;
+  --bianco: #ffffff;
+  --teal: #0097a7;
+  --teal-light: #e0f7fa;
+  --bg-light: #f9f9f9;
+  --font: 'Poppins', system-ui, sans-serif;
+}
+
+/* ===== HERO ===== */
+.diego-page {
+  font-family: var(--font);
+  color: var(--nero);
+  background: #fff;
+  padding-bottom: 4rem;
+}
+
+.diego-hero {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  background: url("../../../assets/locandinaDiego.jpeg") center 20% / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.diego-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.72) 0%, rgba(192, 0, 0, 0.55) 100%);
+  z-index: 1;
+}
+
+.diego-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diego-hero-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.diego-hero-title {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 800;
+  color: var(--bianco);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.diego-hero-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.diego-cta-btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: linear-gradient(90deg, #c11 0%, #a10000 100%);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diego-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+}
+
+/* ===== PROMO BANNER ===== */
+.diego-promo-banner {
+  background: linear-gradient(90deg, var(--teal) 0%, #00bcd4 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 500;
+  text-align: center;
+}
+
+.diego-promo-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ===== CONTAINER ===== */
+.diego-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* ===== SECTION TITLE ===== */
+.diego-section-title {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--rosso);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.diego-section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--rosso);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.diego-section-title.centered {
+  text-align: center;
+}
+
+.diego-section-title.centered::after {
+  margin: 0.5rem auto 0;
+}
+
+/* ===== INTRO SECTION ===== */
+.diego-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.diego-intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.diego-intro-text p {
+  font-size: 1.45rem;
+  line-height: 1.9;
+  color: var(--grigio-testo);
+}
+
+.diego-intro-text strong {
+  color: var(--rosso);
+}
+
+.diego-locandina-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.diego-locandina {
+  max-width: 440px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease;
+}
+
+.diego-locandina:hover {
+  transform: scale(1.02);
+}
+
+/* ===== SERVICES GRID ===== */
+.diego-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.diego-service-card {
+  background: var(--bianco);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 16px;
+  padding: 2rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.diego-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.12);
+  border-color: var(--rosso);
+}
+
+.diego-service-icon {
+  font-size: 2.6rem;
+}
+
+.diego-service-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--rosso);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.diego-service-desc {
+  font-size: 1.25rem;
+  color: var(--grigio-testo);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== TEAM GRID ===== */
+.diego-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.diego-team-card {
+  background: var(--bg-light);
+  border-radius: 16px;
+  padding: 2.4rem 1.6rem;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.diego-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.diego-team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rosso) 0%, #ff6b6b 100%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+  box-shadow: 0 6px 16px rgba(192,0,0,0.3);
+}
+
+.diego-team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--nero);
+  margin: 0;
+}
+
+.diego-team-role {
+  font-size: 1.2rem;
+  color: var(--teal);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ===== CONTACTS ===== */
+.diego-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+}
+
+.diego-contact-card {
+  background: var(--bianco);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 14px;
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.diego-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+  border-color: var(--teal);
+}
+
+.diego-contact-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.diego-contact-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999;
+  margin: 0 0 0.2rem;
+}
+
+.diego-contact-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--nero);
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .diego-intro-section {
+    grid-template-columns: 1fr;
+  }
+
+  .diego-locandina {
+    max-width: 280px;
+  }
+
+  .diego-container {
+    padding: 3rem 1.5rem;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .diego-hero {
+    min-height: 360px;
+  }
+
+  .diego-container {
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  .diego-promo-banner {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem;
+  }
+}
