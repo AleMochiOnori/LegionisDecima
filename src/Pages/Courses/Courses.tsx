@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Courses.css";
 
 type Day =
@@ -9,8 +10,8 @@ type Day =
   | "saturday";
 
 interface Slot {
-  range: string; // es. "12:00 - 13:00"
-  coach?: string; // puoi inserire qui il maestro
+  range: string;
+  coach?: string;
 }
 
 interface CourseSchedule {
@@ -20,137 +21,215 @@ interface CourseSchedule {
 
 const COURSE_COLORS: Record<string, string> = {
   "muay thai / kickboxing": "#e74c3c",
-  "gym boxe": "#3498db",
+  "gym boxe / pre-pugilistica": "#3498db",
   "avvio combat": "#6B21A8",
   "athletic training": "#27ae60",
   "gym boxe femminile": "#800020",
-  "muay thai young": "#FFA500",
+  "muay thai teenagers": "#FFA500",
   "open class": "#444343",
   "kyokushin budokai": "#8B4513",
+  "pugilato / pre-pugilistica": "#1d4ed8",
 };
 
+const winterSchedule: CourseSchedule[] = [
+  {
+    course: "Muay Thai / KickBoxing",
+    days: {
+      monday: [
+        { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+        { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
+      ],
+      tuesday: [{ range: "12:00 - 13:00", coach: "Giacomo Ratti" }],
+      wednesday: [
+        { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+        { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
+      ],
+      thursday: [{ range: "12:00 - 13:00", coach: "Giacomo Ratti" }],
+      friday: [
+        { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
+        { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
+      ],
+      saturday: [{ range: "11:00 - 12:00", coach: "Giacomo Ratti" }],
+    },
+  },
+  {
+    course: "Gym Boxe / Pre-pugilistica",
+    days: {
+      monday: [
+        { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
+        { range: "18:00 - 19:00", coach: "Matteo Chiavolini" },
+      ],
+      tuesday: [{ range: "13:00 - 14:00", coach: "Giacomo Ratti" }],
+      wednesday: [
+        { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
+        { range: "18:00 - 19:00", coach: "Matteo Chiavolini" },
+      ],
+      thursday: [{ range: "13:00 - 14:00", coach: "Giacomo Ratti" }],
+      friday: [
+        { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
+        { range: "18:00 - 19:00", coach: "Matteo Chiavolini" },
+      ],
+      saturday: [],
+    },
+  },
+  {
+    course: "Avvio Combat",
+    days: {
+      monday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
+      tuesday: [],
+      wednesday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
+      thursday: [],
+      friday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
+      saturday: [],
+    },
+  },
+  {
+    course: "Muay Thai Teenagers",
+    days: {
+      monday: [],
+      tuesday: [{ range: "17:00 - 18:00", coach: "Leandro Cosentino" }],
+      wednesday: [],
+      thursday: [{ range: "17:00 - 18:00", coach: "Leandro Cosentino" }],
+      friday: [],
+      saturday: [],
+    },
+  },
+  {
+    course: "Gym Boxe Femminile",
+    days: {
+      monday: [],
+      tuesday: [{ range: "18:00 - 19:00", coach: "Caterina Lanza" }],
+      wednesday: [],
+      thursday: [{ range: "18:00 - 19:00", coach: "Caterina Lanza" }],
+      friday: [],
+      saturday: [],
+    },
+  },
+  {
+    course: "Pugilato / Pre-pugilistica",
+    days: {
+      monday: [{ range: "19:00 - 20:00", coach: "Matteo Chiavolini" }],
+      tuesday: [],
+      wednesday: [{ range: "19:00 - 20:00", coach: "Matteo Chiavolini" }],
+      thursday: [],
+      friday: [{ range: "19:00 - 20:00", coach: "Matteo Chiavolini" }],
+      saturday: [],
+    },
+  },
+  {
+    course: "Athletic Training",
+    days: {
+      monday: [],
+      tuesday: [{ range: "19:00 - 20:00", coach: "Giuseppe Panella" }],
+      wednesday: [],
+      thursday: [{ range: "19:00 - 20:00", coach: "Giuseppe Panella" }],
+      friday: [],
+      saturday: [],
+    },
+  },
+  {
+    course: "Kyokushin Budokai",
+    days: {
+      monday: [],
+      tuesday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+      wednesday: [],
+      thursday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+      friday: [],
+      saturday: [{ range: "12:00 - 13:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+    },
+  },
+];
+
+const summerSchedule: CourseSchedule[] = [
+  {
+    course: "Muay Thai / KickBoxing",
+    days: {
+      monday: [
+        { range: "11:00 - 12:00", coach: "Giacomo Ratti" },
+        { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
+      ],
+      tuesday: [{ range: "10:00 - 11:00", coach: "Giacomo Ratti" }],
+      wednesday: [
+        { range: "11:00 - 12:00", coach: "Giacomo Ratti" },
+        { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
+      ],
+      thursday: [{ range: "10:00 - 11:00", coach: "Giacomo Ratti" }],
+      friday: [
+        { range: "11:00 - 12:00", coach: "Giacomo Ratti" },
+        { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
+      ],
+      saturday: [],
+    },
+  },
+  {
+    course: "Gym Boxe / Pre-pugilistica",
+    days: {
+      monday: [
+        { range: "10:00 - 11:00", coach: "Giacomo Ratti" },
+        { range: "18:00 - 19:00", coach: "Matteo Chiavolini" },
+      ],
+      tuesday: [{ range: "11:00 - 12:00", coach: "Giacomo Ratti" }],
+      wednesday: [
+        { range: "10:00 - 11:00", coach: "Giacomo Ratti" },
+        { range: "18:00 - 19:00", coach: "Matteo Chiavolini" },
+      ],
+      thursday: [{ range: "11:00 - 12:00", coach: "Giacomo Ratti" }],
+      friday: [
+        { range: "10:00 - 11:00", coach: "Giacomo Ratti" },
+        { range: "18:00 - 19:00", coach: "Matteo Chiavolini" },
+      ],
+      saturday: [],
+    },
+  },
+  {
+    course: "Pugilato / Pre-pugilistica",
+    days: {
+      monday: [{ range: "19:00 - 20:00", coach: "Matteo Chiavolini" }],
+      tuesday: [],
+      wednesday: [{ range: "19:00 - 20:00", coach: "Matteo Chiavolini" }],
+      thursday: [],
+      friday: [{ range: "19:00 - 20:00", coach: "Matteo Chiavolini" }],
+      saturday: [],
+    },
+  },
+  {
+    course: "Athletic Training",
+    days: {
+      monday: [],
+      tuesday: [{ range: "19:00 - 20:00", coach: "Giuseppe Panella" }],
+      wednesday: [],
+      thursday: [{ range: "19:00 - 20:00", coach: "Giuseppe Panella" }],
+      friday: [],
+      saturday: [],
+    },
+  },
+  {
+    course: "Kyokushin Budokai",
+    days: {
+      monday: [],
+      tuesday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+      wednesday: [],
+      thursday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
+      friday: [],
+      saturday: [],
+    },
+  },
+  {
+    course: "Open Class",
+    days: {
+      monday: [],
+      tuesday: [],
+      wednesday: [],
+      thursday: [],
+      friday: [],
+      saturday: [{ range: "10:00 - 11:30", coach: "Giacomo Ratti" }],
+    },
+  },
+];
+
 const CoursesSchedule = () => {
-  const schedule: CourseSchedule[] = [
-    {
-      course: "Muay Thai / KickBoxing",
-      days: {
-        monday: [
-          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-          { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
-        ],
-        tuesday: [
-          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-        ],
-        wednesday: [
-          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-          { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
-        ],
-        thursday: [
-          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "20:00 - 21:00", coach: "Giacomo Ratti" },
-        ],
-        friday: [
-          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-          { range: "20:00 - 21:00", coach: "Alessio Marabucci" },
-        ],
-        saturday: []
-      },
-    },
-    {
-      course: "Gym Boxe",
-      days: {
-        monday: [
-          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
-        ],
-        tuesday: [
-          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-          { range: "18:00 - 19:00", coach: "Alessandro Mastrelli" },
-        ],
-        wednesday: [
-          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
-        ],
-        thursday: [
-          { range: "13:00 - 14:00", coach: "Giacomo Ratti" },
-          { range: "18:00 - 19:00", coach: "Alessandro Mastrelli" },
-        ],
-
-        friday: [
-          { range: "12:00 - 13:00", coach: "Giacomo Ratti" },
-          { range: "19:00 - 20:00", coach: "Matteo Chiavolini" },
-        ],
-        saturday: [],
-      },
-    },
-
-    {
-      course: "Avvio Combat",
-      days: {
-        monday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
-        tuesday: [],
-        wednesday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
-        thursday: [],
-        friday: [{ range: "17:00 - 18:00", coach: "Francesco Cerqua" }],
-        saturday: [],
-      },
-    },
-    {
-      course: "Gym boxe femminile",
-      days: {
-        monday: [],
-        tuesday: [{ range: "19:00 - 20:00", coach: "Caterina Lanza" }],
-        wednesday: [],
-        thursday: [{ range: "19:00 - 20:00", coach: "Caterina Lanza" }],
-        friday: [],
-        saturday: [],
-      },
-    },
-    {
-      course: "Athletic training",
-      days: {
-        monday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
-        tuesday: [],
-        wednesday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
-        thursday: [],
-        friday: [{ range: "18:00 - 19:00", coach: "Giuseppe Pannella" }],
-        saturday: [],
-      },
-    },
-    {
-      course: "Muay Thai Young",
-      days: {
-        monday: [],
-        tuesday: [{ range: "17:00 - 18:00", coach: "Leandro Cosentino" }],
-        wednesday: [],
-        thursday: [{ range: "17:00 - 18:00", coach: "Leandro Cosentino" }],
-        friday: [],
-        saturday: [],
-      },
-    },
-    {
-      course: "Open class",
-      days: {
-        monday: [],
-        tuesday: [],
-        wednesday: [],
-        thursday: [],
-        friday: [],
-        saturday: [{ range: "11:00 - 12:30", coach: "Giacomo Ratti" }],
-      },
-    },
-     {
-      course: "Kyokushin budokai",
-      days: {
-        monday: [],
-        tuesday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
-        wednesday: [],
-        thursday: [],
-        friday: [{ range: "20:00 - 21:00", coach: "Alessio Marabucci / Giacomo Ratti" }],
-        saturday: [],
-      },
-    },
-  ];
+  const [isSummer, setIsSummer] = useState(false);
+  const schedule = isSummer ? summerSchedule : winterSchedule;
 
   const days: { key: Day; label: string }[] = [
     { key: "monday", label: "Lunedì" },
@@ -168,6 +247,29 @@ const CoursesSchedule = () => {
 
   return (
     <div className="schedule-container">
+      <div className="schedule-toggle">
+        <button
+          className={`toggle-btn${!isSummer ? " toggle-btn--active" : ""}`}
+          onClick={() => setIsSummer(false)}
+        >
+          1 Settembre – 15 Giugno
+        </button>
+        <button
+          className={`toggle-btn${isSummer ? " toggle-btn--active" : ""}`}
+          onClick={() => setIsSummer(true)}
+        >
+          16 Giugno – 31 Luglio
+        </button>
+      </div>
+
+      {isSummer && (
+        <p className="schedule-note">
+          NB: l'orario estivo dal 16 al 31 luglio è suscettibile di variazione.
+          Alcuni corsi dell'orario invernale potrebbero essere mantenuti qualora
+          si raggiungesse un numero sufficiente di adesioni.
+        </p>
+      )}
+
       <table className="schedule-table">
         <thead>
           <tr>
@@ -218,20 +320,29 @@ const CoursesSchedule = () => {
       </table>
 
       <div className="legend">
-        {Object.entries(COURSE_COLORS).map(([name, color]) => (
-          <div key={name} className="legend-item">
-            <span className="legend-swatch" style={{ backgroundColor: color }}>
-              {name
-                .split(" ")
-                .map((w) => w[0].toUpperCase())
-                .join("")}
-            </span>
-            <span className="legend-label">{name}</span>
-          </div>
-        ))}
+        {Object.entries(COURSE_COLORS)
+          .filter(([name]) =>
+            schedule.some((c) => c.course.toLowerCase() === name)
+          )
+          .map(([name, color]) => (
+            <div key={name} className="legend-item">
+              <span
+                className="legend-swatch"
+                style={{ backgroundColor: color }}
+              >
+                {name
+                  .split(" ")
+                  .filter((w) => w !== "/" && w !== "-")
+                  .map((w) => w[0]?.toUpperCase() ?? "")
+                  .join("")}
+              </span>
+              <span className="legend-label">{name}</span>
+            </div>
+          ))}
       </div>
     </div>
   );
 };
 
 export default CoursesSchedule;
+

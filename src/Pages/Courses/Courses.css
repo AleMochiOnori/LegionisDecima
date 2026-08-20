@@ -10,6 +10,50 @@
   overflow-x: auto;
 }
 
+.schedule-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid #111827;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #374151;
+  color: white;
+}
+
+.toggle-btn--active {
+  background-color: #111827;
+  color: white;
+}
+
+.schedule-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+
 
 .schedule-title {
   font-size: 1.9rem;
