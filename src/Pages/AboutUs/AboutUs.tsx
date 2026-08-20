@@ -72,12 +72,6 @@ const AboutUs = () => {
             text: "Francesco Cerqua è un giovane e appassionato insegnante di boxe. Con un approccio dinamico e motivante, Francesco trasmette tecnica, disciplina e fiducia, creando un ambiente ideale per imparare divertendosi."
         },
         {
-            image: Mastrelli2,
-            title: "Alessandro Mastrelli",
-            subtitle: 'Gym boxe',
-            text: "Alessandro è un tecnico della boxe, grazie a lui imparerai le tecniche della nobile arte."
-        },
-        {
             image: Mary,
             title: "Maria Chiara Capizzi",
             subtitle: 'Gym boxe / Private Lesson',
