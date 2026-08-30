@@ -13,6 +13,15 @@ const Recensioni: React.FC = () => {
   const [textModificato, settextModificato] = useState("");
   const [ratingModificato, setRatingModificato] = useState(5);
   const [refresh, setRefresh] = useState(false);
+  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+
+  const toggleExpand = (id: string) => {
+    setExpandedCards(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
 
   // 🔹 Carica recensioni dal backend
   useEffect(() => {
@@ -155,7 +164,12 @@ const Recensioni: React.FC = () => {
                 <div key={r._id} className="recensione-card">
                   <h3 className="colorText">{r.userId?.username || "Anonimo"}</h3>
                   <Stelle rating={r.rating || 0} />
-                  <p className="colorText">{r.text}</p>
+                  <p className={`colorText testo-recensione-card${expandedCards.has(r._id!) ? ' expanded' : ''}`}>{r.text}</p>
+                  {r.text.length > 120 && (
+                    <button className="continua-leggere" onClick={() => toggleExpand(r._id!)}>
+                      {expandedCards.has(r._id!) ? 'Mostra meno' : 'Continua a leggere'}
+                    </button>
+                  )}
                   <small className="colorText">{new Date(r.data).toLocaleDateString()}</small>
                   <div className="ModElimContainer">
                     <button className="Modifca" onClick={() => handleModifica(r._id)}>Modifica</button>
