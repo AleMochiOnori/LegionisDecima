@@ -2,6 +2,8 @@ import "./Kyokushin.css";
 import CourseCard from "../../../Components/CourseCard/CourseCard";
 import me from "../../../assets/Kyokushin.jpeg";
 import kyokushinClass from "../../../assets/KyokushinDetail.jpeg";
+import kyokushinLogo from "../../../assets/image.png";
+import { Link } from "react-router-dom";
 const Kyokushin = () => {
   return (
     <>
@@ -74,6 +76,12 @@ const Kyokushin = () => {
             badge={`Avanzato`}
           />
         </section>
+        <div className="Associated">
+          <h1>Associato con Kyokushin Budokai Shin Kakutogi</h1>
+          <Link target="_blank" className="kyokushinBudokaiLogo" to="https://kbk-skg.com/">
+            <img src={kyokushinLogo} alt="Kyokushin Budokai" />
+          </Link>
+        </div>
         {/* <div className="VideosThai">
           <h2 className="VideosTitleThai">Video allenamenti</h2>
           <div className="VideoContainer">
