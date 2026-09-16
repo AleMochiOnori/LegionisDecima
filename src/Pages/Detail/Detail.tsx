@@ -4,57 +4,63 @@ import MainImage from "../../assets/ThaiImageMain.jpeg";
 import atleticTrainingImg from "../../assets/SVG/weightlifting-svgrepo-com.png";
 import boxeImg from "../../assets/SVG/boxing-fight-punch-boxer-svgrepo-com.png";
 import kickMuayImg from "../../assets/SVG/kickboxing-svgrepo-com.png";
+import kyokushinImg from "../../assets/kyokushin-budokai-all-round-fighting-logo-em.png";
 const Detail = () => {
   return (
     <>
-      <img
-        className="immagineThai"
-        src={MainImage}
-        alt="Viaggio studio Thailandia"
-      />
+     
       <div className="DetailContainer">
-        <div className="Viaggi ">
-          <h2 className="TITOLOTHAI">Viaggio Studio in Thailandia</h2>
-          <p className="thaiDescription">
-            Un’esperienza unica per scoprire le radici della Muay Thai, con
-            allenamenti intensi, cerimonie tradizionali e momenti
-            indimenticabili vissuti al Kombat Group di Pattaya.
-          </p>
-          <Link to="/viaggio-thailandia" className="red-button">
-            <p className="LinkToThailand">Leggi il racconto completo</p>
-          </Link>
-        </div>
-        <h2 className="SelezionaDisciplina">Seleziona una disciplina per approfondire</h2>
-        <div className="Riflessioni">
-          <Link to="/atleticTraining">
-            <div className="AtleticTraining section-card">
-              <h2>Allenamento Atletico</h2>
-              <img className="svg" src={atleticTrainingImg} alt="" />
-              <p>Preparazione fisica, potenza e resistenza.</p>
-            </div>
-          </Link>
-          <Link to="/boxe">
-            <div className="Boxe section-card">
-              <h2>Boxe / Gym Boxe</h2>
-              <img className="svg" src={boxeImg} alt="" />
-              <p>Tecnica, velocità e strategia pugilistica.</p>
-            </div>
-          </Link>
-          <Link to={"/kick-muay-thai"}>
-            <div className="KickMuay section-card">
-              <h2>Kick / Muay Thai</h2>
-              <img className="svg" src={kickMuayImg} alt="" />
-              <p>Disciplina, tecnica e spirito da combattente.</p>
-            </div>
-          </Link>
-          <Link to={"/kyokushin"}>
-            <div className="KyokushinBudokai section-card">
-              <h2>Kyokushin Budokai</h2>
-              <img className="svg" src={kickMuayImg} alt="" />
-              <p>Condizionamento ai colpi, combattimento in piedi e a terra.</p>
-            </div>
-          </Link>
-        </div>
+        
+        <section className="disciplines-section">
+          <div className="disciplines-header">
+            <h2 className="SelezionaDisciplina">Seleziona una disciplina per approfondire</h2>
+            <p className="disciplines-subtitle">
+              Scopri i nostri percorsi: tecnica, condizionamento e crescita personale in ogni disciplina.
+            </p>
+          </div>
+          <div className="Riflessioni">
+            <Link to="/atleticTraining" className="section-card-link">
+              <div className="AtleticTraining section-card">
+                <img className="svg" src={atleticTrainingImg} alt="" />
+                <h2>Allenamento Atletico</h2>
+                <p>Preparazione fisica, potenza e resistenza.</p>
+                <span className="section-card-cta">
+                  Scopri di più <span className="section-card-arrow">→</span>
+                </span>
+              </div>
+            </Link>
+            <Link to="/boxe" className="section-card-link">
+              <div className="Boxe section-card">
+                <img className="svg" src={boxeImg} alt="" />
+                <h2>Boxe / Gym Boxe</h2>
+                <p>Tecnica, velocità e strategia pugilistica.</p>
+                <span className="section-card-cta">
+                  Scopri di più <span className="section-card-arrow">→</span>
+                </span>
+              </div>
+            </Link>
+            <Link to={"/kick-muay-thai"} className="section-card-link">
+              <div className="KickMuay section-card">
+                <img className="svg" src={kickMuayImg} alt="" />
+                <h2>Kick / Muay Thai</h2>
+                <p>Disciplina, tecnica e spirito da combattente.</p>
+                <span className="section-card-cta">
+                  Scopri di più <span className="section-card-arrow">→</span>
+                </span>
+              </div>
+            </Link>
+            <Link to={"/kyokushin"} className="section-card-link">
+              <div className="KyokushinBudokai section-card">
+                <img className="svg" src={kyokushinImg} alt="" />
+                <h2>Kyokushin Budokai</h2>
+                <p>Condizionamento ai colpi, combattimento in piedi e a terra.</p>
+                <span className="section-card-cta">
+                  Scopri di più <span className="section-card-arrow">→</span>
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
         <div className="DiegoPromoSection">
           <div className="diego-promo-card">
             <div className="diego-promo-text">
@@ -69,6 +75,22 @@ const Detail = () => {
               </Link>
             </div>
           </div>
+        </div>
+        <img
+        className="immagineThai"
+        src={MainImage}
+        alt="Viaggio studio Thailandia"
+      />
+        <div className="Viaggi ">
+          <h2 className="TITOLOTHAI">Viaggio Studio in Thailandia</h2>
+          <p className="thaiDescription">
+            Un’esperienza unica per scoprire le radici della Muay Thai, con
+            allenamenti intensi, cerimonie tradizionali e momenti
+            indimenticabili vissuti al Kombat Group di Pattaya.
+          </p>
+          <Link to="/viaggio-thailandia" className="red-button">
+            <p className="LinkToThailand">Leggi il racconto completo</p>
+          </Link>
         </div>
         <div className="ArticoliDetail">
           <h2 className="ArticoliTitleDetail">Articoli Recenti</h2>

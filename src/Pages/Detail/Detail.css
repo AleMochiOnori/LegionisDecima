@@ -53,11 +53,34 @@
 }
 
 .SelezionaDisciplina {
-  margin-top: 2rem;
-  margin-bottom: -.5rem;
+  margin: 0;
   font-size: 3rem;
   font-weight: 600;
   color: var(--nero-legionis);
+  font-family: var(--font-detail);
+}
+
+.disciplines-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  padding: 1rem 0 5rem;
+}
+
+.disciplines-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+}
+
+.disciplines-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 760px;
+  margin: 0 auto;
   font-family: var(--font-detail);
 }
 
@@ -91,9 +114,15 @@
 
 .Riflessioni {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.6rem;
   align-items: stretch;
+}
+
+.section-card-link {
+  text-decoration: none;
+  display: flex;
+  height: 100%;
 }
 
 
@@ -101,13 +130,15 @@
   background: linear-gradient(180deg, #fff 0%, #fff 60%);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 2.6rem 2rem;
   text-align: center;
   transition: transform 0.32s cubic-bezier(.2,.8,.2,1), box-shadow 0.32s;
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  width: 100%;
+  height: 100%;
   transition: 
     border-color 0.3s ease,
     box-shadow 0.3s ease,
@@ -137,7 +168,29 @@
 .svg {
   width: 100%;
   max-width: 100px;
+  height: 100px;
+  object-fit: contain;
   margin: 0 auto;
+}
+
+.section-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: var(--rosso-legionis);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.section-card-arrow {
+  transition: transform 0.3s ease;
+}
+
+.section-card:hover .section-card-arrow {
+  transform: translateX(4px);
 }
 
 .section-card:hover {
@@ -323,7 +376,7 @@
 
 @media (max-width: 900px) {
   .Riflessioni {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .DetailContainer { padding: 2rem; }
@@ -351,6 +404,8 @@
   .introAllenamenti{
     font-size: 2rem;
   }
+  .Riflessioni { grid-template-columns: 1fr; }
+  .disciplines-subtitle { font-size: 1.1rem; }
   .section-card { padding: 1.1rem; }
   .section-card h2 { font-size: 1.8rem; }
 
