@@ -46,6 +46,8 @@
     letter-spacing: -0.01em;
     max-width: 550px;
     margin: 0 auto;
+    margin-top: 30px;
+    text-align: justify;
 }
 
 .image-content {

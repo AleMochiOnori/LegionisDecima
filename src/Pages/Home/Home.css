@@ -34,6 +34,7 @@
 .PrimaryImage {
     width: 1100px;
     box-shadow: 20px solid black;
+    margin-top: 3rem;
 }
 
 .marging {
@@ -160,8 +161,19 @@
         font-size: 1.5rem;
     }
 
-    .PrimaryImage{
-        width: 350px;
+   
+
+}
+@media (max-width : 1000px) {
+     .PrimaryImage{
+        width: 850px;
+    }
+
+}
+
+@media (max-width : 650px) {
+     .PrimaryImage{
+        width: 550px;
     }
 
 }
@@ -187,9 +199,7 @@
         margin-top: 6rem;
     }
 
-    .PrimaryImage{
-        width: 250px;
-    }
+ 
 
     .Section2Boxe {
         margin-bottom: -1px;
