@@ -199,7 +199,9 @@
         margin-top: 6rem;
     }
 
- 
+    .PrimaryImage{
+        width: 430px;
+    }
 
     .Section2Boxe {
         margin-bottom: -1px;
